@@ -10,9 +10,9 @@ At the top, the name, venue and date of the show are displayed. The **pencil but
 
 Under **Setup**, all setup steps for the show are listed (e.g. "2x PAR 64 CP61 on stand", "Floor strip at downstage edge"). Each step can be marked as **done** by tapping it — the text is then shown with a strikethrough.
 
-<img src="./img/aufbau-setup.png" alt="Setup checklist open" class="ios-screenshot">
+<img src="/img/ios/aufbau-setup.png" alt="Setup checklist open" class="ios-screenshot">
 
-<img src="./img/aufbau-setup-abgehakt.png" alt="Setup checklist checked" class="ios-screenshot">
+<img src="/img/ios/aufbau-setup-abgehakt.png" alt="Setup checklist checked" class="ios-screenshot">
 
 ## Special notes
 

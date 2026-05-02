@@ -4,7 +4,7 @@ Der **Einleuchten**-Tab ist die zentrale Fokussier-Ansicht der Show. Er zeigt al
 
 ## Kanalanzeige
 
-<img src="./img/einleuchten-kanalliste.png" alt="Kanalliste" class="ios-screenshot">
+<img src="/img/ios/einleuchten-kanalliste.png" alt="Kanalliste" class="ios-screenshot">
 
 Jeder Kanal wird als Karte mit folgenden Elementen dargestellt:
 
@@ -28,14 +28,14 @@ Das Suchfeld oben filtert die Kanalliste in Echtzeit nach Name, Gerät oder Noti
 1. Kanal in der Liste suchen oder scrollen
 2. **Toggle** einschalten → die App sendet @ Full an das EOS-Pult (Karte wird farblich hinterlegt)
 
-<img src="./img/einleuchten-osc-toggle.png" alt="OSC-Toggle aktiv" class="ios-screenshot">
+<img src="/img/ios/einleuchten-osc-toggle.png" alt="OSC-Toggle aktiv" class="ios-screenshot">
 
 3. Scheinwerfer physisch fokussieren
 4. **Checkmark** antippen → Kanal gilt als abgehakt (roter Haken, Nummer rot) und Scheinwerfer wird über das EOS-Pult ausgeschaltet. Alternativ, ohne den Scheinwerfer als erledigt abzuhaken: Toggle ausschalten
 
-<img src="./img/einleuchten-fokussiert.png" alt="Kanal fokussiert" class="ios-screenshot">
+<img src="/img/ios/einleuchten-fokussiert.png" alt="Kanal fokussiert" class="ios-screenshot">
 
-<img src="./img/einleuchten-alle-fokussiert.png" alt="Alle Kanäle fokussiert" class="ios-screenshot">
+<img src="/img/ios/einleuchten-alle-fokussiert.png" alt="Alle Kanäle fokussiert" class="ios-screenshot">
 
 5. → weiter zum nächsten Kanal
 

@@ -4,7 +4,7 @@ The **Focus** tab is the central focusing view of the show. It displays all chan
 
 ## Channel display
 
-<img src="./img/einleuchten-kanalliste.png" alt="Channel list" class="ios-screenshot">
+<img src="/img/ios/einleuchten-kanalliste.png" alt="Channel list" class="ios-screenshot">
 
 Each channel is displayed as a card with the following elements:
 
@@ -28,14 +28,14 @@ The search field at the top filters the channel list in real time by name, fixtu
 1. Find the channel in the list by searching or scrolling
 2. Switch **toggle** on → the app sends @ Full to the EOS console (card is highlighted in colour)
 
-<img src="./img/einleuchten-osc-toggle.png" alt="OSC toggle active" class="ios-screenshot">
+<img src="/img/ios/einleuchten-osc-toggle.png" alt="OSC toggle active" class="ios-screenshot">
 
 3. Physically focus the fixture
 4. Tap **checkmark** → channel is marked as done (red checkmark, number turns red) and the fixture is switched off via the EOS console. Alternatively, without marking the fixture as done: switch toggle off
 
-<img src="./img/einleuchten-fokussiert.png" alt="Channel focused" class="ios-screenshot">
+<img src="/img/ios/einleuchten-fokussiert.png" alt="Channel focused" class="ios-screenshot">
 
-<img src="./img/einleuchten-alle-fokussiert.png" alt="All channels focused" class="ios-screenshot">
+<img src="/img/ios/einleuchten-alle-fokussiert.png" alt="All channels focused" class="ios-screenshot">
 
 5. → continue to the next channel
 

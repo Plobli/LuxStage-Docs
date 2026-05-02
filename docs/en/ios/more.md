@@ -8,7 +8,7 @@ The Photos view shows all images uploaded to the show. Photos are managed in the
 
 ### Channel filter
 
-<img src="./img/more-fotos-galerie.png" alt="Photo gallery" class="ios-screenshot">
+<img src="/img/ios/more-fotos-galerie.png" alt="Photo gallery" class="ios-screenshot">
 
 At the top of the view there are filter buttons:
 
@@ -19,7 +19,7 @@ At the top of the view there are filter buttons:
 
 Tapping a photo opens the full-screen view. The assigned **channel numbers** are shown at the bottom (e.g. `# 651, 652, 653, 654`). Tap **Done** to return to the gallery.
 
-<img src="./img/more-foto-vollbild.png" alt="Photo full screen" class="ios-screenshot">
+<img src="/img/ios/more-foto-vollbild.png" alt="Photo full screen" class="ios-screenshot">
 
 ### Add photos
 

@@ -18,9 +18,9 @@ The four sub-views are switched via the segment control at the top: **Numpad**, 
 
 The classic EOS numpad input. The command line entered is displayed above the numpad; recently sent commands appear as a history below.
 
-<img src="./img/osc-numpad.png" alt="Numpad" class="ios-screenshot">
+<img src="/img/ios/osc-numpad.png" alt="Numpad" class="ios-screenshot">
 
-<img src="./img/osc-numpad-eingabe.png" alt="Numpad with input" class="ios-screenshot">
+<img src="/img/ios/osc-numpad-eingabe.png" alt="Numpad with input" class="ios-screenshot">
 
 | Key | Function |
 |-----|----------|
@@ -45,7 +45,7 @@ The classic EOS numpad input. The command line entered is displayed above the nu
 
 The Playback view shows the live state of EOS and provides the most important playback buttons.
 
-<img src="./img/osc-playback.png" alt="Playback" class="ios-screenshot">
+<img src="/img/ios/osc-playback.png" alt="Playback" class="ios-screenshot">
 
 At the top, the EOS address, user and currently active cue (`LIVE: Cue 1`) are shown, with the most recently triggered cue event below.
 
@@ -63,7 +63,7 @@ At the top, the EOS address, user and currently active cue (`LIVE: Cue 1`) are s
 
 The Fader view provides up to five **fader banks** (Bank 1–5). Each bank shows a list of sub-masters:
 
-<img src="./img/osc-fader.png" alt="Fader" class="ios-screenshot">
+<img src="/img/ios/osc-fader.png" alt="Fader" class="ios-screenshot">
 
 | Element | Function |
 |---------|----------|
@@ -78,7 +78,7 @@ The Fader view provides up to five **fader banks** (Bank 1–5). Each bank shows
 
 The ML view controls the parameters of the moving light currently selected on EOS.
 
-<img src="./img/osc-ml.png" alt="ML Moving Light" class="ios-screenshot">
+<img src="/img/ios/osc-ml.png" alt="ML Moving Light" class="ios-screenshot">
 
 At the top, the **Active Chan** is shown (e.g. "705 [0] GLP Impression_X4S_High_Res @ 1613") along with the current live cue.
 

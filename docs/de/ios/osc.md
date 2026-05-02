@@ -18,9 +18,9 @@ Die vier Unteransichten werden über die Segment-Leiste oben gewechselt: **Numpa
 
 Die klassische EOS-Numpad-Eingabe. Die eingegebene Befehlszeile wird oberhalb des Numpads angezeigt, darunter erscheinen zuletzt gesendete Befehle als Verlauf.
 
-<img src="./img/osc-numpad.png" alt="Numpad" class="ios-screenshot">
+<img src="/img/ios/osc-numpad.png" alt="Numpad" class="ios-screenshot">
 
-<img src="./img/osc-numpad-eingabe.png" alt="Numpad mit Eingabe" class="ios-screenshot">
+<img src="/img/ios/osc-numpad-eingabe.png" alt="Numpad mit Eingabe" class="ios-screenshot">
 
 | Taste | Funktion |
 |-------|----------|
@@ -45,7 +45,7 @@ Die klassische EOS-Numpad-Eingabe. Die eingegebene Befehlszeile wird oberhalb de
 
 Die Playback-Ansicht zeigt den Live-Zustand der EOS und bietet die wichtigsten Ablauf-Tasten.
 
-<img src="./img/osc-playback.png" alt="Playback" class="ios-screenshot">
+<img src="/img/ios/osc-playback.png" alt="Playback" class="ios-screenshot">
 
 Oben erscheinen EOS-Adresse, User und der aktuell aktive Cue (`LIVE: Cue 1`), darunter das zuletzt ausgelöste Cue-Event.
 
@@ -63,7 +63,7 @@ Oben erscheinen EOS-Adresse, User und der aktuell aktive Cue (`LIVE: Cue 1`), da
 
 Die Fader-Ansicht stellt bis zu fünf **Fader-Bänke** (Bank 1–5) zur Verfügung. Jede Bank zeigt eine Liste von Sub-Masters:
 
-<img src="./img/osc-fader.png" alt="Fader" class="ios-screenshot">
+<img src="/img/ios/osc-fader.png" alt="Fader" class="ios-screenshot">
 
 | Element | Funktion |
 |---------|----------|
@@ -78,7 +78,7 @@ Die Fader-Ansicht stellt bis zu fünf **Fader-Bänke** (Bank 1–5) zur Verfügu
 
 Die ML-Ansicht steuert die Parameter des aktuell an der EOS selektierten Moving Lights.
 
-<img src="./img/osc-ml.png" alt="ML Moving Light" class="ios-screenshot">
+<img src="/img/ios/osc-ml.png" alt="ML Moving Light" class="ios-screenshot">
 
 Oben wird der **Active Chan** angezeigt (z. B. „705 [0] GLP Impression_X4S_High_Res @ 1613") sowie der aktuelle Live-Cue.
 

@@ -8,7 +8,7 @@ Die Fotos-Ansicht zeigt alle zur Show hochgeladenen Bilder. Fotos werden in der 
 
 ### Kanal-Filter
 
-<img src="./img/more-fotos-galerie.png" alt="Fotos-Galerie" class="ios-screenshot">
+<img src="/img/ios/more-fotos-galerie.png" alt="Fotos-Galerie" class="ios-screenshot">
 
 Oben in der Ansicht befinden sich Filter-Buttons:
 
@@ -19,7 +19,7 @@ Oben in der Ansicht befinden sich Filter-Buttons:
 
 Ein Tippen auf ein Foto öffnet die Vollbildansicht. Am unteren Rand werden die zugeordneten **Kanalnummern** eingeblendet (z. B. `# 651, 652, 653, 654`). Mit **Fertig** kehrt man zur Galerie zurück.
 
-<img src="./img/more-foto-vollbild.png" alt="Foto Vollbild" class="ios-screenshot">
+<img src="/img/ios/more-foto-vollbild.png" alt="Foto Vollbild" class="ios-screenshot">
 
 ### Fotos hinzufügen
 

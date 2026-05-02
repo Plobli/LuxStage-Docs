@@ -10,9 +10,9 @@ Oben werden Name, Spielort und Datum der Show angezeigt. Der **Stift-Button** ob
 
 Unter **Setup** sind alle Aufbauschritte der Show aufgelistet (z. B. „2x PAR 64 CP61 auf Stativ", „Bodenrampe an Vorbühnenkante"). Jeder Schritt kann durch Antippen als **erledigt** markiert werden — der Text wird dann durchgestrichen dargestellt.
 
-<img src="./img/aufbau-setup.png" alt="Setup-Checkliste offen" class="ios-screenshot">
+<img src="/img/ios/aufbau-setup.png" alt="Setup-Checkliste offen" class="ios-screenshot">
 
-<img src="./img/aufbau-setup-abgehakt.png" alt="Setup-Checkliste abgehakt" class="ios-screenshot">
+<img src="/img/ios/aufbau-setup-abgehakt.png" alt="Setup-Checkliste abgehakt" class="ios-screenshot">
 
 ## Besonderheiten
 

@@ -2,7 +2,7 @@
 
 **Settings** are accessible via the tab of the same name in the global tab bar (from the shows overview, not within a show).
 
-<img src="./img/einstellungen.png" alt="Settings" class="ios-screenshot">
+<img src="/img/ios/einstellungen.png" alt="Settings" class="ios-screenshot">
 
 ## Server
 

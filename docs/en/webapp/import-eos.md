@@ -7,12 +7,12 @@ The EOS export must be configured as follows:
 - Setup → Export → CSV → choose save location
 - In the export dialog: only activate "Cues" and "Values"
 
-![EOS export dialog](./img/import-eos/eos-export-dialog.png)
+![EOS export dialog](/img/webapp/import-eos/eos-export-dialog.png)
 
 - Import the exported CSV in LuxStage in the corresponding show via Import → Import from EOS → Select CSV
 - Review the import in the merge dialog
 
-![Merge preview](./img/import-eos/merge-vorschau.png)
+![Merge preview](/img/webapp/import-eos/merge-vorschau.png)
 
 - Start the import by clicking "Import"
 

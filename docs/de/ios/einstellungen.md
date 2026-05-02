@@ -2,7 +2,7 @@
 
 Die **Einstellungen** sind über den gleichnamigen Tab in der globalen Tab-Leiste erreichbar (von der Shows-Übersicht aus, nicht innerhalb einer Show).
 
-<img src="./img/einstellungen.png" alt="Einstellungen" class="ios-screenshot">
+<img src="/img/ios/einstellungen.png" alt="Einstellungen" class="ios-screenshot">
 
 ## Server
 

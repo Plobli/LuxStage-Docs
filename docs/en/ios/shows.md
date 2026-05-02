@@ -4,7 +4,7 @@ The **Shows** tab is the home screen of the app. It lists all existing shows as 
 
 ## Shows overview
 
-<img src="./img/shows-uebersicht.png" alt="Shows overview" class="ios-screenshot">
+<img src="/img/ios/shows-uebersicht.png" alt="Shows overview" class="ios-screenshot">
 
 Each tile contains the **show name** and the **date** of the production. Shows without an assigned venue appear below a separator line; shows with a venue are grouped under the respective venue name as a heading (e.g. "Venue 1").
 

@@ -4,7 +4,7 @@ Der **Shows**-Tab ist die Startseite der App. Er listet alle vorhandenen Shows a
 
 ## Shows-Übersicht
 
-<img src="./img/shows-uebersicht.png" alt="Shows-Übersicht" class="ios-screenshot">
+<img src="/img/ios/shows-uebersicht.png" alt="Shows-Übersicht" class="ios-screenshot">
 
 Jede Kachel enthält den **Shownamen** und das **Datum** der Produktion. Shows ohne zugewiesenen Spielort erscheinen unterhalb eines Trennstrichs, Shows mit Spielort werden unter dem jeweiligen Spielortnamen als Überschrift gruppiert (z. B. „Venue 1").
 
