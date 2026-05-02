@@ -94,7 +94,7 @@ export default {
 
         footer: {
           message: 'Open Source & selbst gehostet',
-          copyright: 'LuxStage © 2026'
+          copyright: '<a href="/de/datenschutz">Datenschutz</a> · LuxStage © 2026'
         },
 
         outline: {
@@ -188,7 +188,7 @@ export default {
 
         footer: {
           message: 'Open source & self-hosted',
-          copyright: 'LuxStage © 2026'
+          copyright: '<a href="/en/privacy">Privacy Policy</a> · LuxStage © 2026'
         },
 
         outline: {

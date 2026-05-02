@@ -28,6 +28,12 @@ Siehe die [Installationsanleitung](./guide/installation). Der Server wird mit zw
 
 LuxStage Server und WebApp sind Open Source und selbst gehostet. Kein Abo, keine laufenden Kosten. Die iOS-App ist optional und gegen eine monatliche Gebühr im App Store erhältlich. 
 
+## Welche Daten sammelt die iOS-App?
+
+Die iOS-App sammelt **keine personenbezogenen Daten**. Gespeichert werden ausschließlich Server-URL, EOS-User-ID und Spracheinstellung – lokal auf deinem Gerät. Show-Daten werden nur mit deinem eigenen Server synchronisiert. Kein Tracking, keine Analyse, keine Werbung.
+
+Weitere Details: [Datenschutzerklärung](./datenschutz)
+
 ## Wo bekomme ich Hilfe?
 
 - [GitHub Issues](https://github.com/Plobli/LuxStage) — Probleme melden oder Fragen stellen
