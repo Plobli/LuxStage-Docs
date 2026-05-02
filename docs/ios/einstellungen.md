@@ -12,17 +12,16 @@ Im Feld **Server** wird die URL des LuxStage-Servers eingetragen, z. B. `http://
 
 Über das **Sprache**-Menü lässt sich die Anzeigesprache der App wählen (z. B. Deutsch).
 
-## OSC pro Bühne
+## OSC pro Bühnen-Template
 
-Jede Spielstätte kann eine eigene EOS-IP-Adresse erhalten. Diese Zuordnung wird **lokal auf dem Gerät** gespeichert und ist unabhängig vom LuxStage-Server.
+Die Liste der Bühnen-Templates wird automatisch vom LuxStage-Server geladen. Für jedes Bühnen-Template wird angezeigt:
 
-- **Venue hinzufügen** — neues Venue mit IP-Adresse anlegen
-- Bestehende Venues werden mit Namen und IP-Adresse aufgelistet (z. B. `Venue · 172.20.10.3`)
-- Ein Venue ohne eingetragene IP zeigt „Keine IP" als Hinweis
-- Ein Tippen auf einen Venue-Eintrag öffnet die Detailansicht zum Bearbeiten der IP-Adresse
+- **Name** — read-only, wird in der WebApp gepflegt
+- **IP-Adresse** — read-only, wird in der [WebApp unter Bühnen-Templates](../webapp/spielstaette-vorlage) gesetzt; „Nicht konfiguriert" wenn kein Eintrag vorhanden
+- **EOS-User-ID** — Stepper zum Einstellen des EOS-Users (1–99); wird **lokal auf dem Gerät** gespeichert und kann pro Gerät unterschiedlich sein
 
 ::: tip
-Die hier angelegten Venues stehen im [OSC-Tab](./osc) als auswählbare Verbindungsziele zur Verfügung.
+Die IP-Adresse wird zentral in der WebApp gesetzt und gilt für alle Geräte. Die EOS-User-ID ist gerätespezifisch und bleibt nach App-Neustart erhalten.
 :::
 
 ## Abmelden

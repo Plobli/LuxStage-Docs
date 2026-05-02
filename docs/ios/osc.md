@@ -2,9 +2,9 @@
 
 Der **OSC**-Tab ist die direkte Fernsteuerung der EOS-Lichtsteuerkonsole über das Netzwerk. Er steht sowohl innerhalb einer Show als auch global (ohne geöffnete Show) zur Verfügung.
 
-## Venue-Auswahl
+## Bühnen-Template-Auswahl
 
-Oben links zeigt ein Dropdown den aktuell aktiven **Venue**. Ein Tippen öffnet die Liste aller konfigurierten EOS-Adressen (z. B. „Venue", „Venue 2", „venue-1") — der aktive Venue ist mit einem Haken markiert. Die Venues werden in den [Einstellungen](./einstellungen) gepflegt.
+Oben links zeigt ein Dropdown das aktuell aktive **Bühnen-Template**. Ein Tippen öffnet die Liste aller Bühnen-Templates vom Server — das aktive ist mit einem Haken markiert. Die IP-Adressen werden in der [WebApp](../webapp/spielstaette-vorlage) gepflegt, die EOS-User-ID in den [Einstellungen](./einstellungen).
 
 Der Verbindungsstatus erscheint als grüner Punkt mit „Verbunden · User 1", sobald die Verbindung zur EOS steht. Der EOS-User kann in den [Einstellungen](./einstellungen) festgelegt werden.
 

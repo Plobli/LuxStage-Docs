@@ -1,19 +1,19 @@
-# Spielstätten-Vorlage anlegen
+# Bühnen-Template anlegen
 
-Eine Spielstätten-Vorlage enthält die feste Kanalstruktur deiner Bühne — Scheinwerfer, DMX-Adressen, Positionen und Notiz-Sektionen. Einmal angelegt, kannst du sie bei jeder neuen Produktion mit einem Klick übernehmen.
+Ein Bühnen-Template enthält die feste Kanalstruktur deiner Bühne — Scheinwerfer, DMX-Adressen, Positionen und Notiz-Sektionen. Einmal angelegt, kannst du es bei jeder neuen Produktion mit einem Klick übernehmen.
 
-## Vorlage aus CSV importieren
+## Bühnen-Template aus CSV importieren
 
 Die schnellste Methode: eine bestehende Kanalliste als CSV importieren.
 
-1. Navigiere zu **Vorlagen** in der Seitenleiste.
+1. Navigiere zu **Bühnen-Templates** in der Seitenleiste.
 2. Klicke auf **„Upload CSV"**.
 3. Wähle deine CSV-Datei aus (semikolon-getrennt, z. B. aus Excel oder ETC EOS).
-4. Vergib der Vorlage einen Namen im Feld **„Template name"**.
+4. Vergib dem Bühnen-Template einen Namen im Feld **„Template name"**.
 5. Klicke auf **„Import template"**.
 6. Schließe den Dialog mit **„Close"**.
 
-Die Vorlage ist jetzt gespeichert und bei jeder neuen Show verfügbar.
+Das Bühnen-Template ist jetzt gespeichert und bei jeder neuen Show verfügbar.
 
 ## CSV-Format
 
@@ -32,14 +32,37 @@ Die CSV-Datei sollte folgende Spalten enthalten:
 CSV-Exporte aus ETC EOS können direkt importiert werden — aktive Kanäle werden automatisch erkannt.
 :::
 
-## Vorlage manuell anlegen
+## Bühnen-Template manuell anlegen
 
-Alternativ kannst du eine Vorlage auch direkt in LuxStage aufbauen:
+Alternativ kannst du ein Bühnen-Template auch direkt in LuxStage aufbauen:
 
-1. Klicke auf **„+ Neue Spielstätte"**.
+1. Klicke auf **„+ Neues Bühnen-Template"**.
 2. Trage Name und Grunddaten ein.
 3. Füge Kanäle manuell hinzu oder importiere sie nachträglich per CSV.
 
-## Vorlage bei neuer Produktion verwenden
+## Bühnen-Template umbenennen
 
-Wenn du eine neue Show anlegst, wählst du eine Spielstätte aus. Die Kanalstruktur und Notiz-Sektionen werden automatisch übernommen — du kannst sie dann pro Show individuell anpassen.
+Ein Klick auf das **Stift-Symbol** neben dem Namen öffnet ein Eingabefeld. Name eingeben, mit **Enter** oder Klick außerhalb bestätigen. Alle Shows, die diesem Bühnen-Template zugeordnet sind, übernehmen den neuen Namen automatisch.
+
+## OSC-IP-Adresse
+
+In der Detailansicht eines Bühnen-Templates gibt es das Feld **OSC-IP**. Hier wird die IP-Adresse der EOS-Lichtsteuerkonsole für diese Bühne eingetragen (z. B. `192.168.1.10`). Das Feld ist optional — leer bedeutet kein OSC.
+
+Die IP-Adresse gilt für alle Benutzer und Geräte, die mit diesem Bühnen-Template arbeiten. Die EOS-User-ID wird separat pro Gerät in der iOS-App gesetzt.
+
+## Template-Liste
+
+Die Übersicht zeigt pro Bühnen-Template:
+
+- **Name** des Bühnen-Templates
+- **Kanalanzahl** — Anzahl der gespeicherten Kanäle
+- **OSC-IP** — konfigurierte IP-Adresse (falls vorhanden)
+- **Zuletzt geändert** — Datum der letzten Änderung
+
+## Bühnen-Template bei neuer Produktion verwenden
+
+Wenn du eine neue Show anlegst, wählst du ein Bühnen-Template aus. Die Kanalstruktur und Notiz-Sektionen werden automatisch übernommen — du kannst sie dann pro Show individuell anpassen.
+
+## Show nachträglich einem Bühnen-Template zuordnen
+
+Auf der Show-Karte in der Übersicht öffnet das **Stift-Symbol** einen Dialog zur Template-Zuordnung. Dort lässt sich das Bühnen-Template ändern — die Kanäle der Show bleiben dabei unverändert, nur die Metadaten (Bühnenname, OSC-Einstellungen) werden aktualisiert.
