@@ -2,9 +2,9 @@
 
 Der **OSC**-Tab ist die direkte Fernsteuerung der EOS-Lichtsteuerkonsole über das Netzwerk. Er steht sowohl innerhalb einer Show als auch global (ohne geöffnete Show) zur Verfügung.
 
-## Venue-Auswahl
+## Bühnen-Template-Auswahl
 
-Oben links zeigt ein Dropdown den aktuell aktiven **Venue**. Ein Tippen öffnet die Liste aller konfigurierten EOS-Adressen (z. B. „Venue", „Venue 2", „venue-1") — der aktive Venue ist mit einem Haken markiert. Die Venues werden in den [Einstellungen](./einstellungen) gepflegt.
+Oben links zeigt ein Dropdown das aktuell aktive **Bühnen-Template**. Ein Tippen öffnet die Liste aller Bühnen-Templates vom Server — das aktive ist mit einem Haken markiert. Die IP-Adressen werden in der [WebApp](../webapp/spielstaette-vorlage) gepflegt, die EOS-User-ID in den [Einstellungen](./einstellungen).
 
 Der Verbindungsstatus erscheint als grüner Punkt mit „Verbunden · User 1", sobald die Verbindung zur EOS steht. Der EOS-User kann in den [Einstellungen](./einstellungen) festgelegt werden.
 
@@ -18,9 +18,9 @@ Die vier Unteransichten werden über die Segment-Leiste oben gewechselt: **Numpa
 
 Die klassische EOS-Numpad-Eingabe. Die eingegebene Befehlszeile wird oberhalb des Numpads angezeigt, darunter erscheinen zuletzt gesendete Befehle als Verlauf.
 
-<img src="/img/ios/osc-numpad.png" alt="Numpad" class="ios-screenshot">
+<img src="./img/osc-numpad.png" alt="Numpad" class="ios-screenshot">
 
-<img src="/img/ios/osc-numpad-eingabe.png" alt="Numpad mit Eingabe" class="ios-screenshot">
+<img src="./img/osc-numpad-eingabe.png" alt="Numpad mit Eingabe" class="ios-screenshot">
 
 | Taste | Funktion |
 |-------|----------|
@@ -45,7 +45,7 @@ Die klassische EOS-Numpad-Eingabe. Die eingegebene Befehlszeile wird oberhalb de
 
 Die Playback-Ansicht zeigt den Live-Zustand der EOS und bietet die wichtigsten Ablauf-Tasten.
 
-<img src="/img/ios/osc-playback.png" alt="Playback" class="ios-screenshot">
+<img src="./img/osc-playback.png" alt="Playback" class="ios-screenshot">
 
 Oben erscheinen EOS-Adresse, User und der aktuell aktive Cue (`LIVE: Cue 1`), darunter das zuletzt ausgelöste Cue-Event.
 
@@ -63,7 +63,7 @@ Oben erscheinen EOS-Adresse, User und der aktuell aktive Cue (`LIVE: Cue 1`), da
 
 Die Fader-Ansicht stellt bis zu fünf **Fader-Bänke** (Bank 1–5) zur Verfügung. Jede Bank zeigt eine Liste von Sub-Masters:
 
-<img src="/img/ios/osc-fader.png" alt="Fader" class="ios-screenshot">
+<img src="./img/osc-fader.png" alt="Fader" class="ios-screenshot">
 
 | Element | Funktion |
 |---------|----------|
@@ -78,7 +78,7 @@ Die Fader-Ansicht stellt bis zu fünf **Fader-Bänke** (Bank 1–5) zur Verfügu
 
 Die ML-Ansicht steuert die Parameter des aktuell an der EOS selektierten Moving Lights.
 
-<img src="/img/ios/osc-ml.png" alt="ML Moving Light" class="ios-screenshot">
+<img src="./img/osc-ml.png" alt="ML Moving Light" class="ios-screenshot">
 
 Oben wird der **Active Chan** angezeigt (z. B. „705 [0] GLP Impression_X4S_High_Res @ 1613") sowie der aktuelle Live-Cue.
 
