@@ -1,6 +1,6 @@
 # Installation
 
-Automatische Installation auf Linux oder Raspberry Pi. Ein Script kümmert sich um alles — Docker, Reverse Proxy, Datenbank.
+Automatische Installation auf Linux oder Raspberry Pi. Ein Script kümmert sich um alles — Node.js, Reverse Proxy und Datenbank.
 
 ::: warning Installation auf eigene Gefahr
 Bitte sichern Sie Ihre Daten und führen Sie das Script nur auf Systemen aus, auf denen Sie vollständige Kontrolle haben.
@@ -30,6 +30,12 @@ Führe diese zwei Befehle aus:
 curl -fsSL https://raw.githubusercontent.com/Plobli/LuxStage/main/install.sh -o /tmp/luxstage-install.sh
 sudo bash /tmp/luxstage-install.sh
 ```
+
+::: tip Lieber Docker?
+Wenn du Docker bevorzugst, kannst du LuxStage auch per `docker compose` betreiben —
+siehe die `docker-compose.yml` im Repository. Der Installer unten ist der
+Docker-freie Weg (Node.js + PM2 direkt auf dem System).
+:::
 
 ## Schritt 3 — Konfiguration eingeben
 
@@ -65,10 +71,10 @@ Das Script generiert am Ende automatisch ein separates Passwort für das `tech`-
 
 ## Schritt 4 — Was wird eingerichtet
 
-- **LuxStage-Server** — startet automatisch beim Systemstart
+- **LuxStage-Server** — startet automatisch beim Systemstart (via PM2)
 - **Web-App** — im Browser aufrufbar, volle Funktionalität
 - **Caddy Reverse Proxy** — automatisches HTTPS, kein Port nötig
-- **PostgreSQL & Redis** — Datenbank und Cache, vorkonfiguriert
+- **SQLite-Datenbank** — eine Datei, kein separater Datenbankdienst nötig
 
 ## Schritt 5 — Neustart
 
