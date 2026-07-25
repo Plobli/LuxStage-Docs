@@ -29,6 +29,7 @@ The toolbar above each text area provides the following formatting options:
 | **H** | Heading |
 | ≡ | Bullet list |
 | 1. | Numbered list |
+| ⊞ | Insert table (with buttons to add/delete rows and columns) |
 
 Simply click in the text area and start typing. Changes are saved automatically.
 

@@ -1,6 +1,10 @@
 # Einstellungen
 
-Die **Einstellungen** sind über das Zahnrad-Symbol (⚙️) in der linken Seitenleiste erreichbar. Die Seite ist in sieben Tabs unterteilt.
+Die **Einstellungen** sind über das Zahnrad-Symbol (⚙️) in der linken Seitenleiste erreichbar. Die Tabs **Konto**, **Darstellung** und **Backup** sieht jede Nutzerin und jeder Nutzer. Die Tabs **Server**, **Benutzerverwaltung**, **E-Mail / SMTP** und **Update** sind nur für Admins sichtbar.
+
+::: tip Gehostetes Team (luxstage.app)
+Bei einem gehosteten Team unter [luxstage.app](https://luxstage.app) übernimmt der Betreiber Serverbetrieb, Mailversand und Updates zentral.
+:::
 
 ---
 
@@ -21,8 +25,7 @@ Die **Einstellungen** sind über das Zahnrad-Symbol (⚙️) in der linken Seite
 
 Legt fest, wie viele Fotos beim Drucken auf eine A4-Seite passen.
 
-- Standard: **4**
-- Auswahl: 1, 2, 4, 6, 8 (je nach Größe der Fotos)
+- Auswahl: 1, 2, 4, 6, 8, 9, 12
 
 ---
 
@@ -32,14 +35,24 @@ Klick auf **„Abmelden"** beendet die aktuelle Sitzung.
 
 ---
 
-## Sprache
+## Darstellung
+
+**Sprache**
 
 Wähle die Anzeigesprache der App:
 
-- 🔴 **Deutsch** (aktuell aktiv)
-- ⚫ **English**
+- **Deutsch**
+- **English**
 
 Klick auf die gewünschte Option – die App wechselt sofort die Sprache.
+
+---
+
+**Maßeinheit**
+
+Einheit für Längen und Höhen an Zugstangen:
+
+- **m**, **cm** oder **mm**
 
 ---
 
@@ -83,15 +96,21 @@ Alle aktuellen Daten werden durch den Backup-Stand überschrieben.
 
 **Benutzer**
 
-Liste aller vorhandenen Benutzer mit E-Mail-Adresse und Rollen-Badges:
+Liste aller vorhandenen Benutzer mit E-Mail-Adresse, Rollen-Badge und Quelle-Badge:
 
 | Rolle | Beschreibung |
 |-------|-------------|
 | **Admin** | Vollzugriff inkl. Einstellungen und Benutzerverwaltung |
 | **Techniker** | Zugriff auf Shows, Kanäle, Info, Fotos, Grundriss |
-| **DB** | Datenbank-Rolle (technisch) |
 
-Jeder Benutzer hat einen **„Löschen"**-Button.
+Das zweite Badge zeigt die Quelle des Benutzers:
+
+| Quelle | Beschreibung |
+|--------|-------------|
+| **DB** | In der Datenbank angelegt – kann gelöscht werden |
+| **Env** | Über Umgebungsvariable konfiguriert – kann nicht gelöscht werden |
+
+Nur Benutzer mit Quelle **DB** haben einen **„Löschen"**-Button.
 
 ---
 

@@ -6,12 +6,12 @@ Ein Bühnen-Template enthält die feste Kanalstruktur deiner Bühne — Scheinwe
 
 Die schnellste Methode: eine bestehende Kanalliste als CSV importieren.
 
-1. Navigiere zu **Bühnen-Templates** in der Seitenleiste.
-2. Klicke auf **„Upload CSV"**.
+1. Navigiere zu **Templates** in der Seitenleiste.
+2. Klicke auf **„CSV hochladen"**.
 3. Wähle deine CSV-Datei aus (semikolon-getrennt, z. B. aus Excel oder ETC EOS).
-4. Vergib dem Bühnen-Template einen Namen im Feld **„Template name"**.
-5. Klicke auf **„Import template"**.
-6. Schließe den Dialog mit **„Close"**.
+4. Vergib dem Bühnen-Template einen Namen im Feld **„Name"**.
+5. Klicke auf **„Bühnen-Template importieren"**.
+6. Schließe den Dialog mit **„Schließen"**.
 
 Das Bühnen-Template ist jetzt gespeichert und bei jeder neuen Show verfügbar.
 
@@ -36,7 +36,7 @@ CSV-Exporte aus ETC EOS können direkt importiert werden — aktive Kanäle werd
 
 Alternativ kannst du ein Bühnen-Template auch direkt in LuxStage aufbauen:
 
-1. Klicke auf **„+ Neues Bühnen-Template"**.
+1. Klicke auf **„Neues Bühnen-Template"**.
 2. Trage Name und Grunddaten ein.
 3. Füge Kanäle manuell hinzu oder importiere sie nachträglich per CSV.
 

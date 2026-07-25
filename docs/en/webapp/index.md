@@ -30,4 +30,7 @@ The vertical sidebar on the left contains four icons:
 - [Channels](./kanaele) — maintain the channel plan
 - [Photos](./fotos) — visual documentation
 - [Floor Plan](./grundriss) — store the stage plan
-- [Import & Export](./import-export) — EOS import, PDF and CSV export
+- [Import from EOS](./import-eos) — bring in channel data from the lighting console
+- [Import CSV](./import-csv) — bring in channel data from CSV
+- [Export PDF](./export-pdf) — output the channel plan as PDF
+- [Export CSV](./export-csv) — output the channel plan as CSV

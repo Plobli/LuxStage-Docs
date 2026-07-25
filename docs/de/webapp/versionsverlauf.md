@@ -17,7 +17,9 @@ Das Panel zeigt eine Liste aller gespeicherten Versionen mit **Datum und Uhrzeit
 
 ## Version wiederherstellen
 
-Klick auf einen Versionseintrag → Der Zustand der Show zu diesem Zeitpunkt wird wiederhergestellt.
+1. Klick auf einen Versionseintrag → die Detailansicht zeigt Datum, Kanalanzahl und die vollständige Kanalliste zu diesem Zeitpunkt (Kanal, Gerät, Notizen)
+2. Klick auf **„Wiederherstellen"** unten im Panel → der Zustand der Show zu diesem Zeitpunkt wird übernommen
+3. Mit **„← Zurück"** oben lässt sich zur Versionsliste zurückkehren, ohne wiederherzustellen
 
 ::: warning Achtung
 Das Wiederherstellen einer alten Version überschreibt den aktuellen Stand. Stelle sicher, dass du den aktuellen Stand vorher gesichert hast, falls nötig.

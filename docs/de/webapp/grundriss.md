@@ -24,8 +24,19 @@ Der **Grundriss**-Tab bietet einen interaktiven Vektor-Editor für den Bühnengr
 | Symbol | Funktion | Tastaturkürzel |
 |--------|----------|----------------|
 | ↩ | **Rückgängig** | Ctrl+Z |
-| ↪ | **Wiederholen** | Ctrl+Y |
+| ↪ | **Wiederholen** | Ctrl+Y / Ctrl+Shift+Z |
 | 🗑 | **Auswahl löschen** | Delete |
+
+### Weitere Tastaturkürzel
+
+| Aktion | Tastaturkürzel |
+|--------|----------------|
+| Ansicht zurücksetzen | F / Ctrl+0 |
+| Auswahl verschieben | Pfeiltasten |
+| Kopieren / Einfügen | Ctrl+C / Ctrl+V |
+| Duplizieren | Ctrl+D |
+| Alles auswählen | Ctrl+A |
+| Werkzeug abbrechen | Esc |
 
 ### Optionsleiste (oben links)
 

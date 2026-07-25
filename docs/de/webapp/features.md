@@ -143,7 +143,7 @@ Spielstätten mit fester Kanalstruktur einmal als Vorlage speichern — bei jede
 Automatischer Versionsverlauf, vollständige Backups und Wiederherstellung auf Knopfdruck — für den Fall der Fälle, und auch einfach zur Beruhigung.
 
 **Automatischer Versionsverlauf**
-Alle 10 Minuten wird ein Snapshot des Show-Zustands gespeichert. Timeline mit Datum, Uhrzeit und Nutzer-Info — beliebigen älteren Zustand wiederherstellen.
+Alle 10 Minuten wird ein Snapshot des Show-Zustands gespeichert. Timeline mit Datum und Uhrzeit — beliebigen älteren Zustand wiederherstellen.
 
 **Vollständiges Backup**
 Alle Daten — Datenbank und Fotos — als ZIP-Datei herunterladen. Zeitstempel automatisch im Dateinamen enthalten. Für externe Archivierung oder vor größeren Änderungen.

@@ -16,8 +16,8 @@ Alle hochgeladenen Fotos werden als Galerie-Raster dargestellt. Die Anzahl der v
 
 Jedes Foto bietet zwei Felder:
 
-- **Beschreibung** – Freitext zur Dokumentation, z. B. Position, Gerät oder Hinweis
-- **Kanal** – kommagetrennte Kanalnummern, die dem Foto zugeordnet sind (z. B. `651, 652, 653, 654`). Diese Fotos sind dann in der iOS-App dem entsprechenden Kanälen zugeordnet und können beim Fokussieren aufgerufen werden.
+- **Beschriftung** – Freitext zur Dokumentation, z. B. Position, Gerät oder Hinweis
+- **Kanal** – Kanalnummer, die dem Foto zugeordnet ist (z. B. `42`). Dieses Foto ist dann in der iOS-App dem entsprechenden Kanal zugeordnet und kann beim Fokussieren aufgerufen werden.
 
 ## Fotos drucken
 

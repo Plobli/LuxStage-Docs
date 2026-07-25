@@ -29,6 +29,7 @@ Die Werkzeugleiste über jedem Textbereich bietet folgende Formatierungen:
 | **H** | Überschrift |
 | ≡ | Aufzählungsliste |
 | 1. | Nummerierte Liste |
+| ⊞ | Tabelle einfügen (mit Buttons zum Hinzufügen/Löschen von Zeilen und Spalten) |
 
 Einfach in den Textbereich klicken und tippen. Änderungen werden automatisch gespeichert.
 

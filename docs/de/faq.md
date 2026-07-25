@@ -10,7 +10,7 @@ Die Web-App läuft auf Mac, Windows, iPad und iPhone im Browser. Die native iOS-
 
 ## Wie wird LuxStage betrieben?
 
-LuxStage läuft als selbst gehosteter Server – z. B. auf einem Raspberry Pi im lokalen Theaternetz oder extern auf einem VPS. Keine propritäte Cloud und keine Abhängigkeit von Drittanbietern..
+Zwei Möglichkeiten: Selbst gehostet – z. B. auf einem Raspberry Pi im lokalen Theaternetz oder extern auf einem VPS – oder als gehosteter Service unter [luxstage.app](https://luxstage.app), bei dem der Server-Betrieb entfällt.
 
 ## Funktioniert LuxStage auch offline?
 
@@ -26,7 +26,7 @@ Siehe die [Installationsanleitung](./guide/installation). Der Server wird mit zw
 
 ## Ist LuxStage kostenlos?
 
-LuxStage Server und WebApp sind Open Source und selbst gehostet. Kein Abo, keine laufenden Kosten. Die iOS-App ist optional und gegen eine monatliche Gebühr im App Store erhältlich. 
+LuxStage Server und WebApp sind Open Source. Selbst gehostet fallen keine laufenden Kosten an. Alternativ gibt es LuxStage als gehosteten Service unter [luxstage.app](https://luxstage.app) gegen eine monatliche Gebühr. Die iOS-App ist optional und gegen eine monatliche Gebühr im App Store erhältlich.
 
 ## Welche Daten sammelt die iOS-App?
 

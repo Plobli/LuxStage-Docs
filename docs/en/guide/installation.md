@@ -2,6 +2,10 @@
 
 Automated installation on Linux or Raspberry Pi. A script takes care of everything — Node.js, reverse proxy, and database.
 
+::: tip Don't want to run your own server?
+This guide covers self-hosting. Alternatively, LuxStage is available as a hosted service at [luxstage.app](https://luxstage.app) — no server installation required.
+:::
+
 ::: warning Install at your own risk
 Please back up your data and only run the script on systems over which you have full control.
 :::

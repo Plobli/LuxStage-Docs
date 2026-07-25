@@ -1,6 +1,10 @@
 # Settings
 
-**Settings** are accessible via the gear icon (⚙️) in the left sidebar. The page is divided into seven tabs.
+**Settings** are accessible via the gear icon (⚙️) in the left sidebar. Every user sees the **Account**, **Display**, and **Backup** tabs. The **Server**, **User Management**, **Email / SMTP**, and **Update** tabs are only visible to admins.
+
+::: tip Hosted team (luxstage.app)
+On a hosted team at [luxstage.app](https://luxstage.app), the operator manages server operation, email delivery, and updates centrally.
+:::
 
 ---
 
@@ -21,8 +25,7 @@ Change the password for your account:
 
 Specifies how many photos fit on an A4 page when printing.
 
-- Default: **4**
-- Options: 1, 2, 4, 6, 8 (depending on photo size)
+- Options: 1, 2, 4, 6, 8, 9, 12
 
 ---
 
@@ -32,14 +35,24 @@ Clicking **"Sign out"** ends the current session.
 
 ---
 
-## Language
+## Display
+
+**Language**
 
 Select the display language of the app:
 
-- 🔴 **German** (currently active)
-- ⚫ **English**
+- **German**
+- **English**
 
 Click on the desired option – the app switches language immediately.
+
+---
+
+**Unit**
+
+Unit for lengths and heights on bars:
+
+- **m**, **cm**, or **mm**
 
 ---
 
@@ -83,15 +96,21 @@ All current data will be overwritten by the backup.
 
 **Users**
 
-List of all existing users with email address and role badges:
+List of all existing users with email address, a role badge, and a source badge:
 
 | Role | Description |
 |------|-------------|
 | **Admin** | Full access incl. settings and user management |
 | **Technician** | Access to shows, channels, info, photos, floor plan |
-| **DB** | Database role (technical) |
 
-Each user has a **"Delete"** button.
+The second badge shows the user's source:
+
+| Source | Description |
+|--------|-------------|
+| **DB** | Created in the database – can be deleted |
+| **Env** | Configured via environment variable – cannot be deleted |
+
+Only users with source **DB** have a **"Delete"** button.
 
 ---
 

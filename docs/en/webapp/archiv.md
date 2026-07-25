@@ -10,12 +10,17 @@ If no shows have been archived, the message **"No archived shows"** is displayed
 
 ## Archive a show
 
-In the **Shows overview**, click the trash icon (⊟) on a show card. The show is immediately moved to the archive.
+In the **Shows overview**, hover over a show row and click the archive icon on the right. The show is immediately moved to the archive.
 
 ## View archived shows
 
-In the archive, all archived shows are displayed as cards – the same layout as in the normal shows overview.
+The archive displays all archived shows as a list, with name, date, season, and last edited by – the same layout as in the normal shows overview.
 
-::: tip Note
-Archived shows can be reactivated at any time. Find the show in the archive and use the reactivation option.
+Hovering over a row reveals two buttons on the right:
+
+- **Restore** – moves the show back to the normal shows overview
+- **Delete** – permanently deletes the show after confirmation, including all data
+
+::: warning Note
+Permanent deletion cannot be undone.
 :::

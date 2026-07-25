@@ -10,12 +10,17 @@ Wenn keine Shows archiviert wurden, erscheint der Hinweis: **„Keine archiviert
 
 ## Show archivieren
 
-In der **Shows-Übersicht** auf das Ablagekorb-Symbol (⊟) einer Show-Karte klicken. Die Show wird sofort ins Archiv verschoben.
+In der **Shows-Übersicht** beim Überfahren einer Show-Zeile auf das Archivieren-Symbol rechts klicken. Die Show wird sofort ins Archiv verschoben.
 
 ## Archivierte Shows einsehen
 
-Im Archiv werden alle archivierten Shows als Karten angezeigt – gleiche Darstellung wie in der normalen Shows-Übersicht.
+Im Archiv werden alle archivierten Shows als Liste angezeigt, mit Name, Stand, Spielzeit und letzter Bearbeitung – gleiche Darstellung wie in der normalen Shows-Übersicht.
 
-::: tip Hinweis
-Archivierte Shows können jederzeit wieder reaktiviert werden. Suche die Show im Archiv und nutze die entsprechende Reaktivierungs-Option.
+Beim Überfahren einer Zeile erscheinen rechts zwei Buttons:
+
+- **Wiederherstellen** – verschiebt die Show zurück in die normale Shows-Übersicht
+- **Löschen** – löscht die Show nach Bestätigung endgültig, inklusive aller Daten
+
+::: warning Achtung
+Endgültiges Löschen kann nicht rückgängig gemacht werden.
 :::

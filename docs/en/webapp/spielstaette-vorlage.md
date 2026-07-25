@@ -6,11 +6,11 @@ A stage template contains the fixed channel structure of your stage — fixtures
 
 The fastest method: import an existing channel list as a CSV file.
 
-1. Navigate to **Stage Templates** in the sidebar.
+1. Navigate to **Templates** in the sidebar.
 2. Click **"Upload CSV"**.
 3. Select your CSV file (semicolon-separated, e.g. from Excel or ETC EOS).
-4. Enter a name for the stage template in the **"Template name"** field.
-5. Click **"Import template"**.
+4. Enter a name for the stage template in the **"Name"** field.
+5. Click **"Import stage template"**.
 6. Close the dialog with **"Close"**.
 
 The stage template is now saved and available for every new show.
@@ -36,7 +36,7 @@ CSV exports from ETC EOS can be imported directly — active channels are recogn
 
 Alternatively, you can build a stage template directly in LuxStage:
 
-1. Click **"+ New Stage Template"**.
+1. Click **"New stage template"**.
 2. Enter name and basic data.
 3. Add channels manually or import them later via CSV.
 

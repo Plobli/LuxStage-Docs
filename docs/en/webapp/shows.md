@@ -2,29 +2,31 @@
 
 ## Shows overview
 
-The home page shows all existing shows as cards. Each card contains:
+The home page shows all existing shows as a sortable list. Each row contains:
 
-- **Abbreviation** – First letters of the show name (coloured circle), e.g. "H" for Hamlet
-- **Show name** – e.g. "Hamlet"
-- **Date** – Performance date, e.g. "2026-04-30"
-- **Last edited by** – Email address and timestamp of the last change
-- **Archive button** – Trash icon (⊟) on the right of the card
+- **Name** – Show name, with the subtitle below it if set, e.g. "Hamlet"
+- **Date** – Performance date, e.g. "04/30/2026"
+- **Season** – e.g. "25/26" (visible from the lg breakpoint)
+- **Last edited by** – Email address of the last person to edit the show
+- **Archive button** – appears on the right when hovering over the row
 
-Shows are displayed in two groups:
+The list can be sorted by clicking the column headers (Name, Date, Season, Last edited by).
 
-1. **Without venue** – Shows without an assigned venue appear in an anonymous section (indicated by a separator "—")
-2. **With venue** – Shows are grouped under the respective venue name as a heading (e.g. "Venue 1")
+Shows are grouped by venue, with the venue name as a heading. Shows without an assigned venue appear under "—".
 
 ## Create a new show
 
-1. Click **"New Show"** (top right)
+1. Click **"New Show"** (button in the bottom right)
 2. Fill in the fields in the dialog:
 
 | Field | Description |
 |-------|-------------|
 | **Name** | Title of the production (e.g. "Hamlet") |
 | **Date** | Performance date (default: today's date) |
+| **Subtitle** | Optional additional text |
+| **Season** | Optional, e.g. "25/26" |
 | **Venue** | Select a venue template or leave as "No venue" |
+| **Setup areas** | Enable lighting towers and/or bars |
 
 3. Click **"Create Show"**
 
@@ -34,11 +36,11 @@ If a venue is selected, the new show automatically inherits the channel template
 
 ## Open a show
 
-Simply click on the desired show card. The show opens in the **Channels** tab.
+Simply click on the desired show row. The show opens in the **Channels** tab.
 
 ## Archive a show
 
-Click the **archive icon** (⊟) on the show card. The show disappears from the home page and appears in the **Archive**.
+Hovering over a show row reveals an **archive icon** on the right. After confirming, the show disappears from the home page and appears in the **Archive**.
 
 ::: warning Note
 Archiving can be undone in the archive. Permanent deletion is possible via the archive section.

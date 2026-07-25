@@ -30,4 +30,7 @@ Die vertikale Seitenleiste links enthält vier Symbole:
 - [Kanäle](./kanaele) — Kanalplan pflegen
 - [Fotos](./fotos) — Visuelle Dokumentation
 - [Grundriss](./grundriss) — Bühnenplan hinterlegen
-- [Importieren & Exportieren](./import-export) — EOS-Import, PDF- und CSV-Export
+- [Aus EOS importieren](./import-eos) — Kanaldaten vom Lichtpult übernehmen
+- [CSV importieren](./import-csv) — Kanaldaten aus CSV übernehmen
+- [PDF exportieren](./export-pdf) — Kanalplan als PDF ausgeben
+- [CSV exportieren](./export-csv) — Kanalplan als CSV ausgeben

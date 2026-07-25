@@ -16,8 +16,8 @@ All uploaded photos are displayed as a gallery grid. The number of photos is sho
 
 Each photo has two fields:
 
-- **Description** – Free text for documentation, e.g. position, fixture or note
-- **Channel** – Comma-separated channel numbers assigned to the photo (e.g. `651, 652, 653, 654`). These photos are then assigned to the corresponding channels in the iOS app and can be accessed during focusing.
+- **Caption** – Free text for documentation, e.g. position, fixture or note
+- **Channel** – Channel number assigned to the photo (e.g. `42`). This photo is then assigned to the corresponding channel in the iOS app and can be accessed during focusing.
 
 ## Print photos
 

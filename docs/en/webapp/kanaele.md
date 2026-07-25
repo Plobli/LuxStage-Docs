@@ -4,12 +4,13 @@ The **Channels** tab is the main view of a show and displays the complete channe
 
 ## Channel plan structure
 
-The table has four columns:
+The table has five columns:
 
 | Column | Meaning |
 |--------|---------|
 | **CHANNEL** | Channel name in the console (left) / Dimmer address (right, after the "/") |
 | **COLOUR** | Colour filter (gel code), e.g. "L201/R371" or "RGB", "variable" |
+| **QTY** | Number of identical fixtures at this position |
 | **FIXTURE** | Fixture name, e.g. "ETC Source Four 26°" |
 | **NOTES** | Free-text note, e.g. "Key light stage left, narrow spot" |
 
@@ -36,9 +37,22 @@ The **channel number** appears green (note added), yellow (after an EOS CSV impo
 
 Below each position there is a **"+ Add channel"** button. Clicking it adds a new empty channel to that position.
 
-## Delete a channel
+## Delete or clear a channel
 
-Click the channel (to activate it), then click the **×** icon on the right of the row.
+Click the channel (to activate it), then click the **×** icon on the right of the row. A dialog offers two options:
+
+- **Clear channel** – removes only the note and colour, the row remains
+- **Delete row** – removes the channel entirely
+
+## Assign a channel to an installation spot
+
+Hovering over a channel row reveals the **"Assign"** button on the right (before the delete button), with three options:
+
+- **Place in floor plan** – opens the [Floor Plan](./grundriss) and places the channel there
+- **Assign lighting rig slot** – opens the [Setup](./setup) area to assign it to a rig
+- **Assign bar** – opens the [Setup](./setup) area to place it on a bar
+
+If the channel is already assigned to a rig slot or a bar, the installation spot is additionally shown as a small badge below the note.
 
 ## Change order (drag & drop)
 

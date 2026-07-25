@@ -17,7 +17,9 @@ The panel shows a list of all saved versions with **date and time**, e.g.:
 
 ## Restore a version
 
-Click on a version entry → the state of the show at that point in time is restored.
+1. Click on a version entry → the detail view shows the date, channel count, and the full channel list at that point in time (channel, fixture, notes)
+2. Click **"Restore"** at the bottom of the panel → the state of the show at that point in time is applied
+3. Use **"← Back"** at the top to return to the version list without restoring
 
 ::: warning Note
 Restoring an old version overwrites the current state. Make sure you have backed up the current state first if needed.

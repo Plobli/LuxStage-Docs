@@ -24,8 +24,19 @@ The **Floor Plan** tab provides an interactive vector editor for the stage plan.
 | Icon | Function | Keyboard shortcut |
 |------|----------|-------------------|
 | ↩ | **Undo** | Ctrl+Z |
-| ↪ | **Redo** | Ctrl+Y |
+| ↪ | **Redo** | Ctrl+Y / Ctrl+Shift+Z |
 | 🗑 | **Delete selection** | Delete |
+
+### More keyboard shortcuts
+
+| Action | Keyboard shortcut |
+|--------|-------------------|
+| Reset view | F / Ctrl+0 |
+| Move selection | Arrow keys |
+| Copy / Paste | Ctrl+C / Ctrl+V |
+| Duplicate | Ctrl+D |
+| Select all | Ctrl+A |
+| Cancel tool | Esc |
 
 ### Options bar (top left)
 

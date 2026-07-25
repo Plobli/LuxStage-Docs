@@ -36,6 +36,6 @@ Kanalplan als PDF ausgeben und drucken. Shows archivieren und bei Wiederaufnahme
 ## Nächste Schritte
 
 - [Installation](./installation) — Server einrichten
-- [Web-App](/webapp/) — Anleitung für die Browser-Anwendung
-- [iOS-App](/ios/) — Anleitung für iPhone & iPad
-- [FAQ](/faq) — häufige Fragen
+- [Web-App](/de/webapp/) — Anleitung für die Browser-Anwendung
+- [iOS-App](/de/ios/) — Anleitung für iPhone & iPad
+- [FAQ](/de/faq) — häufige Fragen
