@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Erste Schritte
-      link: /guide/
+      link: /de/guide/
     - theme: alt
       text: Installation
-      link: /guide/installation
+      link: /de/guide/installation
 
 features:
   - title: Kanalverwaltung
