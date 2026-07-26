@@ -66,3 +66,15 @@ When creating a new show, select a venue template. The channel structure and not
 ## Assign a show to a venue template afterwards
 
 On the show card in the overview, the **pencil icon** opens a dialog for template assignment. The venue template can be changed there — the show's channels remain unchanged; only the metadata (venue name, OSC settings) is updated.
+
+## Apply template changes to existing shows
+
+If a venue template was later extended with sections or lighting rigs, these additions can be applied to **all** shows assigned to that template:
+
+1. Click **"Apply to all shows"** (for sections or lighting rigs)
+2. The dialog names the affected shows before anything happens
+3. Confirm — a result reports how many shows were checked and how many elements were added
+
+::: tip Safe operation
+Only **missing** elements are added. Sections, bars, or lighting rigs a show already has remain unchanged — nothing is overwritten or deleted.
+:::
