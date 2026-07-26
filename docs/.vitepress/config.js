@@ -53,7 +53,6 @@ export default {
               items: [
                 { text: 'Anmeldung', link: '/de/webapp/login' },
                 { text: 'Shows', link: '/de/webapp/shows' },
-                { text: 'Spielstätten-Vorlage anlegen', link: '/de/webapp/spielstaette-vorlage' },
                 { text: 'Kanäle', link: '/de/webapp/kanaele' },
                 { text: 'Setup — Beleuchtungsgestelle', link: '/de/webapp/setup-gestelle' },
                 { text: 'Setup — Zugstangen', link: '/de/webapp/setup-zugstangen' },
@@ -61,8 +60,6 @@ export default {
                 { text: 'Fotos', link: '/de/webapp/fotos' },
                 { text: 'Grundriss', link: '/de/webapp/grundriss' },
                 { text: 'Versionsverlauf', link: '/de/webapp/versionsverlauf' },
-                { text: 'Archiv', link: '/de/webapp/archiv' },
-                { text: 'Einstellungen', link: '/de/webapp/einstellungen' },
               ]
             },
             {
@@ -72,6 +69,14 @@ export default {
                 { text: 'CSV importieren', link: '/de/webapp/import-csv' },
                 { text: 'PDF exportieren', link: '/de/webapp/export-pdf' },
                 { text: 'CSV exportieren', link: '/de/webapp/export-csv' },
+              ]
+            },
+            {
+              text: 'Verwaltung',
+              items: [
+                { text: 'Archiv', link: '/de/webapp/archiv' },
+                { text: 'Spielstätten-Vorlage anlegen', link: '/de/webapp/spielstaette-vorlage' },
+                { text: 'Einstellungen', link: '/de/webapp/einstellungen' },
               ]
             },
             {
@@ -155,7 +160,6 @@ export default {
               items: [
                 { text: 'Login', link: '/en/webapp/login' },
                 { text: 'Shows', link: '/en/webapp/shows' },
-                { text: 'Venue Template', link: '/en/webapp/spielstaette-vorlage' },
                 { text: 'Channels', link: '/en/webapp/kanaele' },
                 { text: 'Setup — Lighting Rigs', link: '/en/webapp/setup-gestelle' },
                 { text: 'Setup — Bars', link: '/en/webapp/setup-zugstangen' },
@@ -163,8 +167,6 @@ export default {
                 { text: 'Photos', link: '/en/webapp/fotos' },
                 { text: 'Floor Plan', link: '/en/webapp/grundriss' },
                 { text: 'Version History', link: '/en/webapp/versionsverlauf' },
-                { text: 'Archive', link: '/en/webapp/archiv' },
-                { text: 'Settings', link: '/en/webapp/einstellungen' },
               ]
             },
             {
@@ -174,6 +176,14 @@ export default {
                 { text: 'Import CSV', link: '/en/webapp/import-csv' },
                 { text: 'Export PDF', link: '/en/webapp/export-pdf' },
                 { text: 'Export CSV', link: '/en/webapp/export-csv' },
+              ]
+            },
+            {
+              text: 'Management',
+              items: [
+                { text: 'Archive', link: '/en/webapp/archiv' },
+                { text: 'Venue Template', link: '/en/webapp/spielstaette-vorlage' },
+                { text: 'Settings', link: '/en/webapp/einstellungen' },
               ]
             },
             {
