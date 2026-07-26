@@ -17,5 +17,5 @@ Ein Tippen auf eine Kachel öffnet die Show direkt im **Aufbau**-Tab.
 3. Bestätigen — die Show erscheint sofort in der Liste
 
 ::: tip
-Wird ein Spielort ausgewählt, übernimmt die neue Show automatisch das Kanaltemplate und den Grundriss des gewählten Spielorts.
+Wird ein Spielort ausgewählt, übernimmt die neue Show automatisch die Kanalstruktur und den Grundriss des gewählten Spielorts.
 :::
