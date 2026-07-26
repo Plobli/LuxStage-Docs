@@ -706,4 +706,10 @@ Die Punkte 1–3 sind reine Textänderungen in `shared/locales/*.json` und zusam
 
 **Hinweis:** Die Begriffsvereinheitlichung (2.1, 2.2) sollte **vor** der Doku-Überarbeitung erfolgen — sonst wird die Doku zweimal geschrieben.
 
+### 12 — Nachtrag aus Doku-Runde (Punkt M): unübersetzter Key in en.json
+
+`gassenturm.field.name` = **„Bezeichnung"** in [en.json](LuxStage/shared/locales/en.json) — einziger gefundener unübersetzter String bei einer Stichprobe der Beleuchtungsgestell-/Zugstangen-Keys. Englische Nutzer sehen im Bearbeiten-Dialog eines Beleuchtungsgestells das deutsche Wort „Bezeichnung" statt „Name" oder „Designation".
+
+**Fix:** `"gassenturm.field.name": "Name"` (oder „Designation", je nach gewünschter Abgrenzung zu `field.name`).
+
 **Anweisung:** Nach jedem Punkt einen commit machen ohne Versionserhöhung
