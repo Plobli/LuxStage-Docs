@@ -25,6 +25,13 @@ export default {
           { text: 'Web-App', link: '/de/webapp/' },
           { text: 'iOS-App', link: '/de/ios/' },
           { text: 'FAQ', link: '/de/faq' },
+          {
+            text: 'Rechtliches',
+            items: [
+              { text: 'Datenschutz', link: '/de/datenschutz' },
+              { text: 'Impressum', link: 'https://luxstage.app/impressum.html' },
+            ]
+          },
         ],
 
         sidebar: {
@@ -133,6 +140,13 @@ export default {
           { text: 'Web App', link: '/en/webapp/' },
           { text: 'iOS App', link: '/en/ios/' },
           { text: 'FAQ', link: '/en/faq' },
+          {
+            text: 'Legal',
+            items: [
+              { text: 'Privacy Policy', link: '/en/privacy' },
+              { text: 'Legal Notice', link: 'https://luxstage.app/impressum.html' },
+            ]
+          },
         ],
 
         sidebar: {
