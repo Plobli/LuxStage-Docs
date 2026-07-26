@@ -1,6 +1,6 @@
 # Settings
 
-**Settings** are accessible via the gear icon (⚙️) in the left sidebar. Every user sees the **Account**, **Display**, and **Backup** tabs. The **Server**, **User Management**, **Email / SMTP**, and **Update** tabs are only visible to admins.
+**Settings** are accessible via the gear icon (⚙️) in the left sidebar. Every user sees the **Account** and **Display** tabs. The **Backup**, **Server**, **User Management**, **Email / SMTP**, and **Update** tabs are only visible to admins.
 
 ::: tip Hosted team (luxstage.app)
 On a hosted team at [luxstage.app](https://luxstage.app), the operator manages server operation, email delivery, and updates centrally.
@@ -23,7 +23,7 @@ Change the password for your account:
 
 **Photos per print page**
 
-Specifies how many photos fit on an A4 page when printing.
+Specifies how many photos fit on an A4 page — applies equally to browser printing and PDF export.
 
 - Options: 1, 2, 4, 6, 8, 9, 12
 
@@ -58,6 +58,10 @@ Unit for lengths and heights on bars:
 
 ## Backup
 
+::: tip Admins only
+Creating and restoring backups is restricted to admins — the ZIP contains the complete database, including password hashes for all users.
+:::
+
 **Create backup**
 
 Downloads all show data as a ZIP archive.
@@ -69,14 +73,15 @@ Downloads all show data as a ZIP archive.
 
 **Restore backup**
 
-Restores all show data and photos from a previously created ZIP backup. The server restarts automatically afterwards.
+Restores all show data from a previously created ZIP backup. Photos are **added, not replaced** — existing photos with no counterpart in the backup remain in place. The server shuts itself down after restoring and only restarts automatically if a process manager (e.g. PM2, the default for self-hosting) is supervising it.
 
 1. Click **"Select ZIP file …"**
 2. Choose a ZIP backup file from the file system
-3. Restoration starts automatically
+3. Click **"Restore"**
+4. Confirm the confirmation dialog
 
 ::: warning Note
-All current data will be overwritten by the backup.
+The database (shows, channels, sections) is completely replaced by the backup. Photos are only added — photos missing from the backup remain in place.
 :::
 
 ---
@@ -85,10 +90,10 @@ All current data will be overwritten by the backup.
 
 | Field | Description |
 |-------|-------------|
-| **Server URL** | API server address (default: http://localhost:3000) |
+| **Server URL** | API server address (default: http://localhost:3000). Takes effect **immediately** when leaving the field, with no save button — a typo can make the app unusable. |
 | **App version** | Currently installed app version |
 | **Server version** | Currently installed server version |
-| **Disk (free)** | Available storage space on the server |
+| **Disk (free)** | Available storage space on the server — only shown when the server is reachable. Otherwise a connection error is shown instead. |
 
 ---
 
@@ -146,9 +151,13 @@ SMTP configuration for automatic emails (welcome, password reset):
 | **Password** | SMTP password | – |
 | **Sender (From)** | Sender address | LuxStage <noreply@example.com> |
 
+::: tip Saved password
+A previously saved SMTP password is never displayed for security reasons — the field stays empty, with only a placeholder (••••••••) indicating one is set. Saving without filling in the field keeps the old password.
+:::
+
 **Buttons:**
 - **"Save"** – Save settings
-- **"Send test email"** – Send a test email to verify the configuration
+- **"Send test email"** – Opens a dialog to enter the recipient address (pre-filled with your own email), then sends a test email to verify the configuration
 
 ---
 
@@ -156,5 +165,6 @@ SMTP configuration for automatic emails (welcome, password reset):
 
 Checks for new versions and updates the server. If an error occurs, the old state is automatically restored.
 
-1. Select **branch** (e.g. main, dev)
-2. Click **"Update now"**
+1. Select **branch** — the list comes from the server, the first entry is preselected. The update check starts automatically when opening the tab or switching branches.
+2. If an update is available, the page shows the number of new commits and a changelog. Without an available update, the **"Update now"** button is disabled.
+3. Clicking **"Update now"** starts the update. A progress bar and a live terminal log show the process in real time.
