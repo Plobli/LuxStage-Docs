@@ -51,14 +51,14 @@ Control the console directly from the app.
 
 Cable routes, positions, agreements with the director, special features of the venue — setup notes are attached to each show and synchronised in real time.
 
-**Rich-text editor with Markdown**
-WYSIWYG editor with formatting options — bold, lists, headings (H1–H4), links and images. Those who prefer writing Markdown can do so directly.
+**Rich-text editor**
+WYSIWYG editor with formatting options — bold, italic, heading, bullet list, numbered list, and tables.
 
 **Structured fields**
-In addition to free text: self-definable fields per section for height specifications or positions with measurements.
+In addition to free text: self-definable fields per section for height specifications or positions with measurements, including an optional unit.
 
-**Template sections**
-Each venue brings its own standard sections — "Setup", "Special features" and more. Customisable per show.
+**Freely addable sections**
+Each venue template brings its own default sections — "Setup", "Notes" and more. You can also add your own sections (text or fields) per show.
 
 **Live synchronisation**
 Multiple users can edit simultaneously. Changes appear in real time.
@@ -130,7 +130,7 @@ Save venues with a fixed channel structure as a template — apply it to each ne
 
 **Template contains:**
 - **Channel list** — fixtures, DMX addresses, fixture types and positions of the venue
-- **Note sections** — "Setup", "Special features" and any number of custom sections
+- **Note sections** — "Setup", "Notes" and any number of custom sections
 - **Structured fields** — measurements, positions
 - **Floor plan** – stage floor plan
 
