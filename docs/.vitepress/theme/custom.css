@@ -1,7 +1,7 @@
 :root {
-  --vp-c-brand-1: #fc4e4e;
-  --vp-c-brand-2: #fc4e4e;
-  --vp-c-brand-3: #fc4e4e;
+  --vp-c-brand-1: #e96161
+  --vp-c-brand-2: #e96161;
+  --vp-c-brand-3: #e96161;
 }
 
 /* iOS-Screenshots: hochkant, daher auf max. 320px begrenzen */
@@ -11,8 +11,4 @@
   margin: 1.5rem auto;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
-
-.vp-doc a {
-  color: #fc4e4e;
 }
