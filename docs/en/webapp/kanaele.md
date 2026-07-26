@@ -6,6 +6,16 @@ The **Channels** tab is the main view of a show and displays the complete channe
 Next to the column headers of the channel table and in the Setup area, small help icons show brief explanations for each field directly in the app.
 :::
 
+## Live collaboration (presence)
+
+When multiple people work on a show at the same time, small coloured avatars (initials) for each signed-in person appear at the top of the show bar:
+
+- **Green ring/dot** – the person is actively editing the show right now
+- **📱 badge** – the person is connected via the iOS app
+- Hovering shows a tooltip with the name and connected devices (iOS and/or web)
+
+Avatars only appear once two or more people are connected at the same time; beyond four, the rest are summarized as "+N". Other users' changes appear in real time, without reloading the page.
+
 ## Channel plan structure
 
 The table has five columns:
