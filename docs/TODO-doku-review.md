@@ -246,13 +246,13 @@ Verifiziert gegen [server/photos.js](LuxStage/server/photos.js) und [server/conf
 
 Verifiziert gegen [server/backup.js](LuxStage/server/backup.js).
 
-- [ ] **Fotos werden beim Wiederherstellen ERGÄNZT, nicht ersetzt.** Die Doku warnt: „Alle aktuellen Daten werden durch den Backup-Stand überschrieben." Für die Datenbank stimmt das (atomarer Austausch, [backup.js:175](LuxStage/server/backup.js#L175)). Fotos werden dagegen lediglich aus dem ZIP **in den bestehenden Ordner entpackt** ([backup.js:147-156](LuxStage/server/backup.js#L147-L156)) — vorhandene Dateien bleiben erhalten, sofern sie nicht gleich heißen. Ergebnis: Fotos, die es im Backup nicht gab, überleben die Wiederherstellung und liegen verwaist herum. **Die Warnung in der Doku ist irreführend.**
-- [ ] **Das Backup wird vor dem Einspielen geprüft.** Drei Stufen: enthält das ZIP eine `luxstage.db`, besteht sie `PRAGMA integrity_check`, und erst danach werden Fotos entpackt ([backup.js:101-134](LuxStage/server/backup.js#L101-L134)). Bei Fehlschlag bleibt der bestehende Stand **unangetastet**. Das ist eine beruhigende Zusage, die in der Doku fehlt — `features.md` erwähnt „mit Validierung" nur beiläufig.
-- [ ] **Konkrete Fehlermeldungen dokumentieren:** „ZIP enthält keine luxstage.db", „Datenbank ist beschädigt oder ungültig", „Upload zu groß". Gehört in eine Troubleshooting-Sektion.
-- [ ] **Maximale Backup-Größe beim Wiederherstellen: 500 MB** ([backup.js:46](LuxStage/server/backup.js#L46)). Bei größeren Datenbeständen scheitert die Wiederherstellung über die Web-App. Harte Grenze, die ein wachsendes Theater erreichen kann — muss dokumentiert werden, inklusive Hinweis auf den manuellen Weg über die Kommandozeile.
-- [ ] **Der Dateiname enthält nur das Datum, nicht die Uhrzeit** (`luxstage-backup-2026-07-25.zip`, [backup.js:188](LuxStage/server/backup.js#L188)). `features.md` verspricht „Zeitstempel automatisch im Dateinamen". Zwei Backups am selben Tag heißen identisch und überschreiben sich im Download-Ordner.
-- [ ] **Nur Fotos mit den Endungen jpg, jpeg, png, gif, webp werden zurückgespielt** ([backup.js:146](LuxStage/server/backup.js#L146)), alles andere wird stillschweigend verworfen.
-- [ ] **Der Server beendet sich nach der Wiederherstellung selbst** (`process.exit(0)`, [backup.js:179](LuxStage/server/backup.js#L179)). Er startet nur wieder, wenn ein Prozessmanager ihn überwacht — bei der Standardinstallation erledigt das PM2. Wer LuxStage manuell per `node index.js` betreibt, muss von Hand starten. Die Doku sagt pauschal „Der Server startet danach automatisch neu".
+- [x] **Fotos werden beim Wiederherstellen ERGÄNZT, nicht ersetzt.** — ✅ erledigt (2026-07-26): in `einstellungen.md` (DE+EN) korrigiert (siehe auch Abschnitt R).
+- [x] **Das Backup wird vor dem Einspielen geprüft.** — ✅ erledigt (2026-07-26): in `einstellungen.md` (DE+EN) ergänzt.
+- [x] **Konkrete Fehlermeldungen dokumentieren** — ✅ erledigt (2026-07-26): alle drei in `einstellungen.md` (DE+EN) aufgelistet.
+- [x] **Maximale Backup-Größe beim Wiederherstellen: 500 MB** — ✅ erledigt (2026-07-26): inkl. Hinweis auf Kommandozeilen-Weg ergänzt.
+- [x] **Der Dateiname enthält nur das Datum, nicht die Uhrzeit** — ✅ erledigt (2026-07-26): in `einstellungen.md` (DE+EN) ergänzt.
+- [x] **Nur Fotos mit den Endungen jpg, jpeg, png, gif, webp werden zurückgespielt** — ✅ erledigt (2026-07-26): ergänzt.
+- [x] **Der Server beendet sich nach der Wiederherstellung selbst** — ✅ erledigt (2026-07-26): bereits in Abschnitt R korrigiert.
 
 ## W. Grundriss — Hintergrundbild
 
