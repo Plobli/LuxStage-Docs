@@ -1,5 +1,7 @@
 # PDF exportieren
 
+Über den Button **„Exportieren"** in der oberen Menüleiste einer Show → **„PDF"** auswählen. Der Download startet direkt, ohne Vorschau-Dialog.
+
 Exportiert den vollständigen Kanalplan als druckfertiges **PDF-Dokument**. Der Export enthält:
 
 - Showname und Datum
