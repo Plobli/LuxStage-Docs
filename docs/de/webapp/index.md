@@ -26,7 +26,7 @@ Die vertikale Seitenleiste links enthält vier Symbole:
 ## Einstieg
 
 - [Shows](./shows) — Shows anlegen und öffnen
-- [Spielstätten-Vorlage anlegen](./spielstaette-vorlage) — Kanaltemplate einmalig definieren
+- [Spielort-Vorlage anlegen](./spielstaette-vorlage) — Kanaltemplate einmalig definieren
 - [Kanäle](./kanaele) — Kanalplan pflegen
 - [Fotos](./fotos) — Visuelle Dokumentation
 - [Grundriss](./grundriss) — Bühnenplan hinterlegen
