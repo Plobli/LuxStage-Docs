@@ -12,12 +12,12 @@ Im Feld **Server** wird die URL des LuxStage-Servers eingetragen, z. B. `http://
 
 Über das **Sprache**-Menü lässt sich die Anzeigesprache der App wählen (z. B. Deutsch).
 
-## OSC pro Bühnen-Template
+## OSC pro Spielort
 
-Die Liste der Bühnen-Templates wird automatisch vom LuxStage-Server geladen. Für jedes Bühnen-Template wird angezeigt:
+Die Liste der Spielorte wird automatisch vom LuxStage-Server geladen. Für jeden Spielort wird angezeigt:
 
 - **Name** — read-only, wird in der WebApp gepflegt
-- **IP-Adresse** — read-only, wird in der [WebApp unter Bühnen-Templates](../webapp/spielstaette-vorlage) gesetzt; „Nicht konfiguriert" wenn kein Eintrag vorhanden
+- **IP-Adresse** — read-only, wird in der [WebApp unter Spielort-Vorlagen](../webapp/spielstaette-vorlage) gesetzt; „Nicht konfiguriert" wenn kein Eintrag vorhanden
 - **EOS-User-ID** — Stepper zum Einstellen des EOS-Users (1–99); wird **lokal auf dem Gerät** gespeichert und kann pro Gerät unterschiedlich sein
 
 ::: tip
