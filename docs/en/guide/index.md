@@ -19,19 +19,21 @@ The native SwiftUI app for iPhone and iPad. Fast, responsive and optimised for t
 
 The web application runs in the browser on Mac, Windows, iPad or any other device. The self-hosted server is installed with just two commands, e.g. on a Raspberry Pi 4 or your own VPS.
 
-## Workflow
+## Quick start in 10 minutes
 
-### 1. Set up venue
-Create a template for the venue – define the channel structure once, available immediately for every new production.
+After [installation](./installation) — this order gets you to your first show fastest:
 
-### 2. Plan & focus channels
-Import from EOS or fill in manually. The iOS app and web app are in sync – all lighting technicians always see the same thing.
+### 1. Create a venue template
+[Venue template](/en/webapp/spielstaette-vorlage) — define the channel structure once (via CSV import or manually), available immediately for every new production. Optional: makes sense right after self-hosting installation, before creating the first show.
 
-### 3. Focus the show
-The plan with all instructions for focusing the fixtures is available digitally and all fixtures can be controlled directly – no separate paperwork needed.
+### 2. Create a show
+[Shows](/en/webapp/shows) — create a new show and optionally assign it a venue template. Channel structure and floor plan are inherited automatically.
+
+### 3. Plan & focus channels
+[Import from EOS](/en/webapp/import-eos) or fill in [channels](/en/webapp/kanaele) manually. The iOS app and web app are in sync – all lighting technicians always see the same state.
 
 ### 4. Export & archive
-Output the channel plan as a PDF and print it. Archive shows and reactivate them for revivals – with complete version history.
+[Export as PDF](/en/webapp/export-pdf) for printing, [archive](/en/webapp/archiv) the show once done — with a full [version history](/en/webapp/versionsverlauf) for later.
 
 ## Next steps
 
