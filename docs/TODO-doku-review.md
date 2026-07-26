@@ -146,17 +146,17 @@ Methodik: `install.sh`, `bootstrap.js`, `history.js`, `pdf.js` und der Tastatur-
 
 Verifiziert gegen [install.sh](LuxStage/install.sh) und [server/bootstrap.js](LuxStage/server/bootstrap.js).
 
-- [ ] **Der Installer fragt das Admin-Passwort ZWEIMAL ab.** Die Doku zeigt nur eine Eingabezeile. `install.sh:48-49` fragt „Admin-Passwort" und „Admin-Passwort bestätigen". Nach **drei Fehlversuchen bricht die Installation ab** (`install.sh:64`) — nicht dokumentiert.
-- [ ] **Prompt-Text weicht ab.** Doku: `Systemnutzer [luxstage]:`. Tatsächlich: `Systemnutzer für LuxStage [luxstage]:` (`install.sh:30`).
+- [x] **Der Installer fragt das Admin-Passwort ZWEIMAL ab.** — ✅ erledigt (2026-07-26): in `installation.md` (DE+EN) ergänzt, inkl. Hinweis auf drei Fehlversuche.
+- [x] **Prompt-Text weicht ab.** — ✅ erledigt (2026-07-26): auf „Systemnutzer für LuxStage [luxstage]:" (DE+EN) korrigiert.
 - [x] **Externe Domain: Doku zeigt falsches Format.** — ✅ erledigt (2026-07-26): DE + EN auf `https://luxstage.example.com` (mit Schema) korrigiert.
 - [ ] **Zugangsdaten sind tatsächlich Benutzernamen, keine E-Mail-Adressen.** `bootstrap.js` legt via `INSERT INTO users (username, ...)` die Konten `admin` und `tech` an. Damit ist der offene Punkt aus Runde 2 geklärt: Die Doku hat recht, **die App ist falsch beschriftet** (`auth.username` = „E-Mail-Adresse"). Gehört in die Code-ToDo, nicht in die Doku.
-- [ ] **Voraussetzungen fehlen komplett.** Der Installer benötigt: Root/`sudo` (`install.sh:11`), ein **TTY** (kein Pipe-Aufruf), Internetzugang, **`apt-get`** — also Debian/Ubuntu/Raspberry Pi OS. Die Doku sagt pauschal „Linux". Auf Fedora, Arch oder Alpine schlägt das Script fehl. Muss ausdrücklich stehen.
-- [ ] **Der Installer ändert den System-Hostname** (`hostnamectl set-hostname`) und **editiert `/etc/hosts`** (`install.sh:124-125`). Ein Eingriff mit Auswirkungen über LuxStage hinaus — muss in der Warnbox stehen.
-- [ ] **Installierte Fremdpakete nicht genannt:** `build-essential`, `python3`, `unzip`, `caddy`, `avahi-daemon`, dazu **nvm, Node.js 22 und PM2** über ein Fremdscript von GitHub (`install.sh:145`). Für Admins mit Compliance-Vorgaben relevant.
-- [ ] **Doku sagt „Das Script lädt alles herunter" — tatsächlich wird das neueste GitHub-**Release** (`luxstage-release.zip`) geladen, nicht der `main`-Branch (`install.sh:159`). Erklärt, warum die Version nach der Installation von `main` abweichen kann.
+- [x] **Voraussetzungen fehlen komplett.** — ✅ erledigt (2026-07-26): Warnbox in `installation.md` (DE+EN) ergänzt (root/sudo, TTY, apt-get, Debian/Ubuntu/RPi OS).
+- [x] **Der Installer ändert den System-Hostname** — ✅ erledigt (2026-07-26): in derselben Warnbox erwähnt.
+- [x] **Installierte Fremdpakete nicht genannt** — ✅ erledigt (2026-07-26): in `installation.md` (DE+EN) unter Schritt 4 aufgelistet.
+- [x] **Doku sagt „Das Script lädt alles herunter"** — ✅ erledigt (2026-07-26): auf „lädt das neueste GitHub-Release, nicht main" korrigiert (DE+EN).
 - [ ] **Port 3000 ist fest verdrahtet** (`ecosystem.config.cjs`, `install.sh:224`) — das Troubleshooting beschreibt die Änderung korrekt.
-- [ ] **Doku: „Der Server startet neu und die LuxStage-Services starten automatisch."** Der Installer sagt lediglich „Neustart **empfohlen** damit der neue Hostname aktiv wird" (`install.sh:272`). Der Reboot ist optional — die Doku stellt ihn als Pflichtschritt dar.
-- [ ] **CORS wird automatisch konfiguriert** (`CORS_ORIGINS` aus Hostname, Server-IP und externer Domain). Wer die App später unter einer weiteren Adresse aufruft, bekommt Fehler — Hinweis fehlt.
+- [x] **Doku: „Der Server startet neu und die LuxStage-Services starten automatisch."** — ✅ erledigt (2026-07-26): Reboot als „empfohlen, nicht zwingend" dargestellt (DE+EN).
+- [x] **CORS wird automatisch konfiguriert** — ✅ erledigt (2026-07-26): Hinweis in Schritt 4 ergänzt (DE+EN).
 
 ## O. `versionsverlauf.md` — Verhalten unvollständig
 
