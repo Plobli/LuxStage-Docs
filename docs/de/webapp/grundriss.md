@@ -25,18 +25,19 @@ Der **Grundriss**-Tab bietet einen interaktiven Vektor-Editor für den Bühnengr
 |--------|----------|----------------|
 | ↩ | **Rückgängig** | Ctrl+Z |
 | ↪ | **Wiederholen** | Ctrl+Y / Ctrl+Shift+Z |
-| 🗑 | **Auswahl löschen** | Delete |
+| 🗑 | **Auswahl löschen** | Delete / Backspace |
 
 ### Weitere Tastaturkürzel
 
 | Aktion | Tastaturkürzel |
 |--------|----------------|
 | Ansicht zurücksetzen | F / Ctrl+0 |
-| Auswahl verschieben | Pfeiltasten |
+| Ansicht temporär verschieben | Leertaste gedrückt halten |
+| Auswahl verschieben | Pfeiltasten (10 Einheiten mit Umschalt) |
 | Kopieren / Einfügen | Ctrl+C / Ctrl+V |
 | Duplizieren | Ctrl+D |
 | Alles auswählen | Ctrl+A |
-| Werkzeug abbrechen | Esc |
+| Werkzeug abbrechen / Auswahl aufheben | Esc |
 
 ### Optionsleiste (oben links)
 
@@ -55,7 +56,7 @@ Der **Grundriss**-Tab bietet einen interaktiven Vektor-Editor für den Bühnengr
 
 Ein Hintergrundbild (z. B. ein Scan des Bühnenplans) kann auf zwei Wegen hinzugefügt werden:
 
-- **Über den Template-Grundriss:** Wird im Spielort-Template hinterlegt und automatisch in alle Shows übernommen
+- **Über die Spielort-Vorlage:** Wird in der Spielort-Vorlage hinterlegt und automatisch in alle Shows übernommen
 - **Manuell:** Klick auf das **↑ Upload**-Symbol in der Werkzeugleiste → Bilddatei auswählen
 
 Zum Entfernen: Klick auf das **⊠**-Symbol.
