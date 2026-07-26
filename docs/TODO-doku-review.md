@@ -258,10 +258,10 @@ Verifiziert gegen [server/backup.js](LuxStage/server/backup.js).
 
 Verifiziert gegen [server/floorplan.js](LuxStage/server/floorplan.js).
 
-- [ ] **Erlaubte Formate: PNG, JPG, SVG, WebP** ([floorplan.js:7](LuxStage/server/floorplan.js#L7)). `grundriss.md` sagt nur „Bilddatei auswählen". Ein PDF-Bühnenplan — das gängigste Austauschformat im Theater — wird **abgelehnt**. Nutzer müssen vorher umwandeln. Gehört ausdrücklich in die Doku, samt Hinweis auf die Fehlermeldung „Ungültiger Dateityp. Erlaubt: PNG, JPG, SVG, WebP".
-- [ ] **Pro Vorlage ist nur EIN Hintergrundbild möglich.** Beim Hochladen werden alle vorhandenen Bilder des Templates gelöscht ([floorplan.js:20-24](LuxStage/server/floorplan.js#L20-L24)) — ohne Rückfrage. Ein neues Bild ersetzt das alte endgültig.
-- [ ] **Für das Hintergrundbild gibt es keine Größenbeschränkung und keine Komprimierung** — anders als bei Fotos wird die Datei unverändert gespeichert ([floorplan.js:30](LuxStage/server/floorplan.js#L30)). Ein 20-MB-Scan bleibt 20 MB und wird bei jedem Öffnen des Grundrisses geladen (`Cache-Control: no-cache`, [floorplan.js:85](LuxStage/server/floorplan.js#L85)). Empfehlung zur Vorbereitung des Bildes in die Doku aufnehmen.
-- [ ] **Der Grundriss wird als PNG-Momentaufnahme für den PDF-Export gespeichert** (`saveFloorplanSnapshot`, [floorplan.js:48](LuxStage/server/floorplan.js#L48)). Das erklärt, warum im PDF gegebenenfalls ein älterer Stand erscheint, wenn der Grundriss nach der letzten Anzeige geändert wurde — Verhalten prüfen und dokumentieren.
+- [x] **Erlaubte Formate: PNG, JPG, SVG, WebP** — ✅ erledigt (2026-07-26): in `grundriss.md` (DE+EN) ergänzt, inkl. Fehlermeldung.
+- [x] **Pro Vorlage ist nur EIN Hintergrundbild möglich.** — ✅ erledigt (2026-07-26): Warnbox in `grundriss.md` (DE+EN) ergänzt.
+- [x] **Für das Hintergrundbild gibt es keine Größenbeschränkung und keine Komprimierung** — ✅ erledigt (2026-07-26): in derselben Warnbox ergänzt, inkl. Empfehlung zur Vorbereitung.
+- [x] **Der Grundriss wird als PNG-Momentaufnahme für den PDF-Export gespeichert** — ✅ erledigt (2026-07-26): geprüft (Snapshot entsteht bei jeder Änderung und beim Öffnen im Grundriss-Tab, über `emit('change'/'snapshot')` in `FloorplanEditor.vue`). In `export-pdf.md` (DE+EN) erklärt.
 
 ## Priorität (aktualisiert)
 
