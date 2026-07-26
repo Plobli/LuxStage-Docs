@@ -163,10 +163,10 @@ Verifiziert gegen [install.sh](LuxStage/install.sh) und [server/bootstrap.js](Lu
 Verifiziert gegen [server/history.js](LuxStage/server/history.js).
 
 - [x] **Maximal 50 Versionen pro Show** — ✅ erledigt (2026-07-26): in `versionsverlauf.md` (DE+EN) ergänzt.
-- [ ] **Snapshots nur bei tatsächlicher Änderung.** `history.js` bildet einen SHA-256-Hash über Kanäle und Abschnitte; bei Gleichheit entsteht kein Eintrag (`history.js:53`). Erklärt dem Nutzer, warum bei ruhigen Phasen keine Einträge auftauchen.
-- [ ] **Zusätzlicher Snapshot beim Öffnen einer Show** (`takeSnapshotNow`, `history.js:107`) — nicht nur alle 10 Minuten.
+- [x] **Snapshots nur bei tatsächlicher Änderung.** — ✅ erledigt (2026-07-26): neuer Abschnitt „Wann werden Versionen gespeichert?" in `versionsverlauf.md` (DE+EN).
+- [x] **Zusätzlicher Snapshot beim Öffnen einer Show** — ✅ erledigt (2026-07-26): im selben Abschnitt ergänzt.
 - [x] **Das 10-Minuten-Intervall stimmt** (`INTERVAL_MS`, `history.js:20`). Offener Prüfpunkt aus Runde 1 erledigt. ✓
-- [ ] **Archivierte Shows erhalten keine Snapshots** (`WHERE archived = 0`, `history.js:46`). Relevant vor dem Archivieren.
+- [x] **Archivierte Shows erhalten keine Snapshots** — ✅ erledigt (2026-07-26): im selben Abschnitt ergänzt.
 - [x] **Der Verlauf umfasst nur Kanäle und Abschnitte** — ✅ erledigt (2026-07-26): in `versionsverlauf.md` (DE+EN) klargestellt, inkl. Bestätigungsdialog-Text.
 
 ## P. `grundriss.md` — Tastaturkürzel-Tabelle fehlerhaft
