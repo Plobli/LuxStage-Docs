@@ -187,9 +187,9 @@ Verifiziert gegen den Handler in [FloorplanEditor.vue:1439-1470](LuxStage/web-ap
 Verifiziert gegen [server/pdf.js](LuxStage/server/pdf.js).
 
 - [x] **„Fotos pro Druckseite" wirkt im PDF NICHT.** — ✅ überholt (2026-07-26): Code-Todo 7.1 hat das Verhalten geändert — die Einstellung liegt jetzt serverseitig und wirkt auf **beide** Ausgaben gleich. `fotos.md`, `export-pdf.md`, `einstellungen.md` (DE+EN) entsprechend bestätigt/korrigiert.
-- [ ] **Der Grundriss ist im PDF enthalten** (`generatePDF(..., floorplan, unit)`, `pdf.js:65`). In der `features.md`-Tabelle fehlt er — die zählt nur Titelseite, Kanalliste, Aufbaunotizen und Fotogalerie.
-- [ ] **Fotos ohne lesbare Datei werden übersprungen** (`validPhotos`-Filter, `pdf.js:300`) — stillschweigend. Erklärt fehlende Fotos im Export.
-- [ ] **Foto-Beschriftungen werden einzeilig abgeschnitten** (`lineBreak: false, ellipsis: true`, `pdf.js:346`). Nutzer sollten wissen, dass lange Beschriftungen im PDF gekürzt erscheinen.
+- [x] **Der Grundriss ist im PDF enthalten** — ✅ erledigt (2026-07-26): `features.md`-Tabelle (DE+EN) um „Grundriss" ergänzt.
+- [x] **Fotos ohne lesbare Datei werden übersprungen** — ✅ erledigt (2026-07-26): Hinweis in `export-pdf.md` (DE+EN) ergänzt.
+- [x] **Foto-Beschriftungen werden einzeilig abgeschnitten** — ✅ erledigt (2026-07-26): im selben Hinweis ergänzt.
 
 ---
 
