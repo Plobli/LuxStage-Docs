@@ -34,6 +34,7 @@ export default {
               items: [
                 { text: 'Übersicht & Konzept', link: '/de/guide/' },
                 { text: 'Installation', link: '/de/guide/installation' },
+                { text: 'Glossar', link: '/de/glossar' },
               ]
             },
           ],
@@ -43,6 +44,7 @@ export default {
               text: 'Web-App',
               items: [
                 { text: 'Übersicht', link: '/de/webapp/' },
+                { text: 'Glossar', link: '/de/glossar' },
               ]
             },
             {
@@ -89,6 +91,7 @@ export default {
                 { text: 'OSC', link: '/de/ios/osc' },
                 { text: 'Fotos & Grundriss', link: '/de/ios/more' },
                 { text: 'Einstellungen', link: '/de/ios/einstellungen' },
+                { text: 'Glossar', link: '/de/glossar' },
               ]
             },
           ],
@@ -130,6 +133,7 @@ export default {
               items: [
                 { text: 'Overview & Concept', link: '/en/guide/' },
                 { text: 'Installation', link: '/en/guide/installation' },
+                { text: 'Glossary', link: '/en/glossar' },
               ]
             },
           ],
@@ -139,6 +143,7 @@ export default {
               text: 'Web App',
               items: [
                 { text: 'Overview', link: '/en/webapp/' },
+                { text: 'Glossary', link: '/en/glossar' },
               ]
             },
             {
@@ -185,6 +190,7 @@ export default {
                 { text: 'OSC', link: '/en/ios/osc' },
                 { text: 'Photos & Floor Plan', link: '/en/ios/more' },
                 { text: 'Settings', link: '/en/ios/einstellungen' },
+                { text: 'Glossary', link: '/en/glossar' },
               ]
             },
           ],

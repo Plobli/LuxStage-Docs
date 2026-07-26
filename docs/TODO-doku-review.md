@@ -123,7 +123,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 
 ## L. Verständlichkeit für Erstnutzer
 
-- [ ] **Kein durchgehender „Von null zur ersten Show"-Pfad.** `guide/index.md` skizziert vier Schritte, verlinkt aber nicht auf die passenden Detailseiten in der richtigen Reihenfolge. Nutzer nach der Installation weiß nicht, ob er zuerst Vorlage, Show oder Benutzer anlegt. Ein „Schnellstart in 10 Minuten" würde die meisten Supportfragen abfangen.
+- [x] **Kein durchgehender „Von null zur ersten Show"-Pfad.** — ✅ erledigt (2026-07-26): `guide/index.md` (DE+EN) zu „Schnellstart in 10 Minuten" mit direkten Links zu jedem Schritt umgebaut.
 - [ ] **Fachbegriffe ungeklärt** (verschärft Punkt F): Slot, Zugstange, Obermaschinerie, Gassenturm, Gel, Hängerei, Portalbrücke, Dimmer-Adresse vs. Kanalnummer, DMX. Die App erklärt „Slot" per Inline-Hilfe besser als die Doku.
 - [x] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — ✅ erledigt (2026-07-26): Beispiel „1/001" ergänzt (DE+EN).
 - [ ] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** und behandelt zwei getrennte Themen (Gestelle, Zugstangen). Aufteilen in zwei Seiten, passend zu den zwei Sidebar-Einträgen der App.
