@@ -104,6 +104,7 @@ Generate a complete, print-ready report with one click. The PDF contains:
 | Title page | Production name, date, venue |
 | Channel list | Sorted by position & channel, with DMX, fixture, gel, notes |
 | Setup notes | All sections incl. structured fields |
+| Floor plan | Stage floor plan, if present |
 | Photo gallery | All production photos embedded |
 
 ---
