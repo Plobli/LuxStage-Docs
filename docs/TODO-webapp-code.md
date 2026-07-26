@@ -588,12 +588,13 @@ Zwei Probleme:
 
 **Nicht angefasst:** 8.6 (Rollback-Erkennung über Textvergleich) — betrifft Fehlerbehandlung, nicht Übersetzung, eigener Punkt.
 
-**Lücke, bei Punkt 10 aufgefallen (Zeile `10a`):** Der verwendete Grep suchte nach Texten mit Großbuchstaben-Anfang und hat dadurch **`placeholder`-Attribute mit Kleinbuchstaben** übersehen — vor allem Beispielwerte der Form `z. B. …`. Betroffen sind rund 14 Stellen, die meisten in [TemplatesView.vue](LuxStage/web-app/src/views/TemplatesView.vue) (Zeilen 48, 405, 429, 458, 462, 466, 490, 494, 498), dazu [ShowsView.vue:90,94](LuxStage/web-app/src/views/ShowsView.vue#L90) und [RegisterView.vue:30](LuxStage/web-app/src/views/RegisterView.vue#L30). Drei weitere in FloorplanEditor wurden bei 5.3 direkt mitbehoben.
+**10a — ✅ erledigt (2026-07-26).** Der verwendete Grep suchte nach Texten mit Großbuchstaben-Anfang und hat dadurch **`placeholder`-Attribute mit Kleinbuchstaben** übersehen — vor allem Beispielwerte der Form `z. B. …`. Drei Stellen in FloorplanEditor waren schon bei 5.3 mitbehoben worden.
 
-Zum Auffinden des Rests:
-```
-grep -rnoE 'placeholder="[^"{][^"]*"' web-app/src/views/ web-app/src/components/
-```
+**Umgesetzt** in [TemplatesView.vue](LuxStage/web-app/src/views/TemplatesView.vue): OSC-Host-Placeholder, Zugnummer, Tower-Name (letzterer nutzt den schon vorhandenen `gassenturm.field.name.placeholder` wieder). Kanal/Gerät/Farbe kamen im Tower-Slot- **und** im Bar-Fixture-Dialog identisch vor — dafür neue gemeinsame Keys `template.fixture.channel|device|color.placeholder` statt vier Duplikaten.
+
+**Dabei zusätzlich gefunden:** [ShowsView.vue](LuxStage/web-app/src/views/ShowsView.vue) hat einen eigenen Show-Anlegen-Dialog mit demselben Meta-Block wie [ShowHeader.vue](LuxStage/web-app/src/components/show/ShowHeader.vue) (Untertitel, Spielzeit, Aufbau-Bereiche, Beleuchtungsgestelle, Zugstangen) — komplett hardcodiert deutsch, auch die Großbuchstaben-Stellen, die der ursprüngliche Punkt-9-Scan nicht erfasst hatte, weil diese Datei damals nicht im Suchumfang war. Alle passenden Keys existierten schon aus dem ShowHeader-Fix und wurden nur wiederverwendet.
+
+**`RegisterView.vue:30` bewusst ausgelassen** — gehört zu Punkt 11 (i18n Register/Forgot-Seiten) und wird dort im Zusammenhang behandelt, nicht isoliert.
 
 ### 8.6 Rollback-Erkennung über Textvergleich — **fragil**
 [UpdateView.vue:193](LuxStage/web-app/src/views/settings/UpdateView.vue#L193):
@@ -680,7 +681,7 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | 8a | **Neu aus 2.3:** Auto-Anlage des Aufbau-Abschnitts verlangt Admin | offen | Trifft nur leere Shows ohne Vorlage |
 | ~~9~~ | ~~3. übrige hardcodierte Strings~~ | ✅ | ~96 Stellen in 14 Dateien, labels-Defaults, tote Datei entfernt |
 | ~~10~~ | ~~5.x UI-Kontext ergänzen~~ | ✅ | Vorschau-Dialog, Farb-Legende, Hilfetexte; 5.4 war überholt |
-| 10a | **Nachtrag zu 9:** ~14 hardcodierte `placeholder`-Attribute mit Kleinbuchstaben-Anfang | offen | Vom Punkt-9-Grep verpasst |
+| ~~10a~~ | ~~Nachtrag zu 9: Kleinbuchstaben-Platzhalter~~ | ✅ | TemplatesView + ShowsView-Anlegen-Dialog gefunden |
 | 11 | 3. i18n Register/Forgot-Seiten | Halber Tag | Ersteindruck für EN-Neukunden |
 
 Die Punkte 1–3 sind reine Textänderungen in `shared/locales/*.json` und zusammen in unter einer Stunde erledigt.
