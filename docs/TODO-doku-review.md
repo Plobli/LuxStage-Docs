@@ -199,16 +199,16 @@ Methodik: `SmtpView`, `BackupView`, `UpdateView`, `ServerView` vollständig gele
 
 ## R. `einstellungen.md` — Abweichungen im Detail
 
-- [ ] **„Test-Mail senden" fragt nach einer Empfängeradresse.** Die Doku sagt nur „Test-E-Mail senden zur Überprüfung der Konfiguration". Tatsächlich öffnet sich ein Browser-Dialog „Test-Mail senden an:", vorbelegt mit der eigenen E-Mail aus dem Token ([SmtpView.vue:102](LuxStage/web-app/src/views/settings/SmtpView.vue#L102)). Abbrechen bricht den Versand ab.
-- [ ] **SMTP-Passwort wird beim Laden nie angezeigt.** Ein gespeichertes Passwort erscheint als Platzhalter `••••••••`, das Feld selbst bleibt leer ([SmtpView.vue:82-83](LuxStage/web-app/src/views/settings/SmtpView.vue#L82-L83)). Wer speichert, ohne das Feld auszufüllen, behält das alte Passwort. Nicht dokumentiert und nicht selbsterklärend.
-- [ ] **Backup herunterladen dürfen ALLE Benutzer, Wiederherstellen nur Admins.** [BackupView.vue:21](LuxStage/web-app/src/views/settings/BackupView.vue#L21) blendet den Restore-Bereich per `v-if="isAdmin"` aus. Die Doku führt „Backup" pauschal als Tab für alle — der Unterschied fehlt. Sicherheitsrelevant: Ein Techniker kann die gesamte Datenbank samt Fotos herunterladen.
-- [ ] **Wiederherstellen ist zweistufig.** Erst Datei wählen, dann erscheint ein separater Button „↑ Wiederherstellen", danach folgt ein Bestätigungsdialog. Die Doku behauptet: „Wiederherstellung startet automatisch" (Schritt 3) — **falsch**, es sind zwei weitere Klicks nötig.
-- [ ] **Update-Button ist gesperrt, solange keine Aktualisierung vorliegt** (`:disabled="updating || !checkResult?.available"`, [UpdateView.vue:37](LuxStage/web-app/src/views/settings/UpdateView.vue#L37)). Die Doku beschreibt „Branch auswählen → Jetzt aktualisieren" als freie Handlung. Bei aktuellem Stand ist der Button grau — ohne Doku wirkt das wie ein Fehler.
-- [ ] **Die Branch-Liste kommt vom Server** (`/api/update/branches`), die Doku nennt beispielhaft „main, dev". Vorausgewählt ist immer der erste Eintrag, und die Prüfung startet automatisch beim Öffnen des Tabs.
-- [ ] **Live-Protokoll während des Updates** — Fortschrittsbalken und mitlaufende Terminal-Ausgabe per SSE ([UpdateView.vue:45-61](LuxStage/web-app/src/views/settings/UpdateView.vue#L45-L61)). Unerwähnt, obwohl es der auffälligste Teil des Vorgangs ist.
-- [ ] **„Prüfe auf Updates" zeigt die Zahl der neuen Änderungen** (`{commits} neue Änderung(en) verfügbar`) plus Commit-Log. Fehlt in der Doku.
-- [ ] **Server-Tab: die Doku listet vier Felder, es sind drei plus Eingabefeld.** „Festplatte (frei)" erscheint **nur**, wenn der Server erreichbar ist ([ServerView.vue:34](LuxStage/web-app/src/views/settings/ServerView.vue#L34)). Bei Verbindungsfehler steht dort stattdessen „Keine Verbindung zum Server".
-- [ ] **Server-URL wirkt sofort beim Verlassen des Feldes** (`@change="applyServer"`) — kein Speichern-Button. Eine falsche Eingabe macht die App unbedienbar; der Wert liegt im `localStorage` (`server_url`). Braucht einen Warnhinweis samt Rückweg.
+- [x] **„Test-Mail senden" fragt nach einer Empfängeradresse.** — ✅ erledigt (2026-07-26): in `einstellungen.md` (DE+EN) ergänzt. Hinweis: Code-Todo 8.5 hat den `prompt()` bereits durch einen echten Dialog ersetzt.
+- [x] **SMTP-Passwort wird beim Laden nie angezeigt.** — ✅ erledigt (2026-07-26): Tipp-Box in `einstellungen.md` (DE+EN) ergänzt.
+- [x] **Backup herunterladen dürfen ALLE Benutzer, Wiederherstellen nur Admins.** — ✅ überholt (2026-07-26): Code-Todo 8.2 hat Download wieder admin-only gemacht (Sicherheitsgrund: ZIP enthält Passwort-Hashes). Doku entsprechend auf „beide admin-only" korrigiert.
+- [x] **Wiederherstellen ist zweistufig.** — ✅ erledigt (2026-07-26): Schritt-für-Schritt-Anleitung in `einstellungen.md` (DE+EN) korrigiert.
+- [x] **Update-Button ist gesperrt, solange keine Aktualisierung vorliegt** — ✅ erledigt (2026-07-26): in `einstellungen.md` (DE+EN) ergänzt.
+- [x] **Die Branch-Liste kommt vom Server** — ✅ erledigt (2026-07-26): im selben Absatz ergänzt.
+- [x] **Live-Protokoll während des Updates** — ✅ erledigt (2026-07-26): im selben Absatz ergänzt.
+- [x] **„Prüfe auf Updates" zeigt die Zahl der neuen Änderungen** — ✅ erledigt (2026-07-26): im selben Absatz ergänzt.
+- [x] **Server-Tab: die Doku listet vier Felder, es sind drei plus Eingabefeld.** — ✅ erledigt (2026-07-26): „Festplatte (frei)" als bedingt beschrieben.
+- [x] **Server-URL wirkt sofort beim Verlassen des Feldes** — ✅ erledigt (2026-07-26): Warnhinweis in der Tabelle ergänzt.
 
 ## S. EOS-Import — Merge-Dialog dokumentieren
 
