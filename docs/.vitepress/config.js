@@ -76,6 +76,7 @@ export default {
               text: 'Referenz',
               items: [
                 { text: 'Alle Features', link: '/de/webapp/features' },
+                { text: 'Was tun bei Problemen?', link: '/de/webapp/troubleshooting' },
               ]
             },
           ],
@@ -175,6 +176,7 @@ export default {
               text: 'Reference',
               items: [
                 { text: 'All Features', link: '/en/webapp/features' },
+                { text: 'Troubleshooting', link: '/en/webapp/troubleshooting' },
               ]
             },
           ],
