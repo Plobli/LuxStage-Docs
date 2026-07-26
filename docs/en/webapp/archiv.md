@@ -14,7 +14,7 @@ In the **Shows overview**, hover over a show row and click the archive icon on t
 
 ## View archived shows
 
-The archive displays all archived shows as a list, with name, date, season, and last edited by – the same layout as in the normal shows overview.
+The archive displays all archived shows as a list, with name, date, season, and last edited by – the same columns as in the normal shows overview, **but without sorting and without search**.
 
 Hovering over a row reveals two buttons on the right:
 
