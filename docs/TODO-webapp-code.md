@@ -489,7 +489,11 @@ const to = prompt('Test-Mail senden an:', userEmail.value || '')
 ```
 Drei Probleme: hardcodiert deutsch (umgeht die Sprachwahl), nativer Browser-Dialog statt der vorhandenen Dialog-Komponenten, und keine Formatprüfung der Adresse. Die App bringt `useConfirm` und `Dialog` bereits mit.
 
-### 8.5 Weitere hardcodierte deutsche Strings (Ergänzung zu Abschnitt 3)
+### 8.5 Weitere hardcodierte deutsche Strings — ✅ **erledigt (2026-07-26)**
+Deutlich größerer Umfang als die drei gelisteten Stellen: rund 96 hardcodierte Template-Texte in 14 Dateien (inkl. `title`-Tooltips und `HelpIcon`-Texten, die der ursprüngliche Grep nicht erfasste), plus die `labels`-Prop-Defaults in acht Komponenten, plus die vier Register/Login-Views (vorgezogen aus Punkt 11). In sechs Commits umgesetzt, siehe Priority-Tabelle unten für die Aufteilung.
+
+<details><summary>Ursprünglicher Befund</summary>
+
 | Ort | Text |
 |-----|------|
 | [ShowsView.vue:26-35](LuxStage/web-app/src/views/ShowsView.vue#L26-L35) | Spaltenköpfe „Name", „Stand", „Spielzeit", „Bearbeitung" |
@@ -520,6 +524,18 @@ Zwei Probleme:
 [TemplatesView.vue:408](LuxStage/web-app/src/views/TemplatesView.vue#L408) ruft `t('zugstange.field.length')` auf. Den Key gibt es nicht — vorhanden sind nur `zugstange.field.length_cm` und `zugstange.field.length_unit`. Der Nutzer sieht in der Vorlagen-Ansicht wörtlich „zugstange.field.length". Da die Einheit im Template daneben schon in Klammern steht (`({{ unit }})`), passt hier `zugstange.field.length_cm` nicht; sinnvoll wäre ein neuer Key „Länge" ohne Einheit oder der Wechsel auf `length_unit` samt Entfernen der Klammer.
 
 **Fix:** `labels` auf `required: true` ohne Default. Fehlende Schlüssel fallen dann in der Konsole auf, statt still deutschen oder leeren Text zu zeigen. Vorher je Komponente prüfen, welche Aufrufer welche Schlüssel tatsächlich übergeben — bei TemplatesView fehlen z. B. sämtliche `*Help`-Labels, dort vermutlich beabsichtigt.
+</details>
+
+**Umgesetzt, in sechs Teilschritten:**
+
+1. **Die drei ursprünglichen Stellen** — ShowsView-Spaltenköpfe (neu: `field.spielzeit`, `field.last_edited`; ArchiveView hatte identische, ebenfalls hardcodierte Spalten und wurde mitgezogen), UpdateView (`✗ Fehler` → `settings.update.failed`; dabei ein doppeltes Häkchen entdeckt und entfernt — Template-`✓` vor einem Locale-Text, der selbst schon mit `✓` beginnt), SmtpView (`prompt()` durch einen echten Dialog mit Formatprüfung ersetzt, nach dem Muster der vorhandenen Dialog-Komponenten).
+2. **[ZugstangenView.vue](LuxStage/web-app/src/components/show/ZugstangenView.vue)** — 22 Stellen. Dabei gefunden: `zugstange.hint` war doppelt definiert mit **widersprüchlichem** Inhalt; `confirmDeleteBar` nutzte natives `confirm()` statt des im selben File vorhandenen `useConfirm`-Musters; `zugstange.field.length` (der in 2.2 gefundene fehlende Key) angelegt.
+3. **[FloorplanEditor.vue](LuxStage/web-app/src/components/FloorplanEditor.vue)** — 21 sichtbare Labels plus 18 `title`-Tooltips mit Tastenkürzeln.
+4. **[GassenturmView.vue](LuxStage/web-app/src/components/show/GassenturmView.vue)** — 13 Stellen plus zwei `HelpIcon`-Texte. Derselbe `confirm()`-Bug wie in ZugstangenView, gleiche Lösung.
+5. **[ShowHeader.vue](LuxStage/web-app/src/components/show/ShowHeader.vue)** (Meta-Dialog), **[ShowDetailView.vue](LuxStage/web-app/src/views/ShowDetailView.vue)** (Aus-Vorlage-Dialog, `'Medien'`-Gruppentitel, `'Aufbau'`-Vorschlagstitel aus 2.3), **[GeneratedTextAccordion.vue](LuxStage/web-app/src/components/show/GeneratedTextAccordion.vue)** (hatte noch kein `useLocale`), **[DisplayView.vue](LuxStage/web-app/src/views/settings/DisplayView.vue)**. `DialogHeader.vue` (ui/dialog) bewusst ausgelassen — einzige `ui/`-Komponente, die Text führen würde; alle anderen sind sprachneutral, Locale-Anbindung geschieht beim Aufrufer.
+6. **`labels`-Prop-Defaults**: sechs Komponenten auf `required: true` ohne Default umgestellt (ChannelTable, ShowHeader, HistorySlideOver, ShowActionBar, PhotoGallery, SectionEditor) — vorher jeden Aufrufer auf Vollständigkeit geprüft. `ShowHealthBadge.vue` brauchte keine Änderung, `labels` war dort bereits über TypeScript ohne `?` verpflichtend. **`ShowSidebar.vue` hatte gar keinen Aufrufer mehr** im gesamten Projekt — offenbar durch die inline generierten Sidebar-Items in ShowDetailView ersetzt. Gelöscht.
+
+**Nicht angefasst:** 8.6 (Rollback-Erkennung über Textvergleich) — betrifft Fehlerbehandlung, nicht Übersetzung, eigener Punkt.
 
 ### 8.6 Rollback-Erkennung über Textvergleich — **fragil**
 [UpdateView.vue:193](LuxStage/web-app/src/views/settings/UpdateView.vue#L193):
@@ -605,7 +621,7 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | ~~7~~ | ~~2.2 Spielort-Begriffe vereinheitlichen~~ | ✅ | „Spielort-Vorlage" in Web + iOS; Doku zieht im Doku-Review nach |
 | ~~8~~ | ~~2.3 Icon-Zuordnung entkoppeln~~ | ✅ | Neue Spalte `icon`; behebt zusätzlich doppelte Aufbau-Abschnitte |
 | 8a | **Neu aus 2.3:** Auto-Anlage des Aufbau-Abschnitts verlangt Admin | offen | Trifft nur leere Shows ohne Vorlage |
-| 9 | 3. übrige hardcodierte Strings | Halber Tag | Vollständige Zweisprachigkeit |
+| ~~9~~ | ~~3. übrige hardcodierte Strings~~ | ✅ | ~96 Stellen in 14 Dateien, labels-Defaults, tote Datei entfernt |
 | 10 | 5.x UI-Kontext ergänzen | Nach Bedarf | Reduziert Supportfragen |
 | 11 | 3. i18n Register/Forgot-Seiten | Halber Tag | Ersteindruck für EN-Neukunden |
 
