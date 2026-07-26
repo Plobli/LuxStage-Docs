@@ -26,8 +26,8 @@ The app is organised in two levels:
 ## Next steps
 
 - [Shows](./shows) — open and create shows
-- [Setup](./aufbau) — setup checklist
-- [Focus](./einleuchten) — focus fixtures
+- [Setup](./setup) — setup checklist
+- [Focus](./focus) — focus fixtures
 - [OSC](./osc) — remote control EOS console
 - [Photos & Floor Plan](./more) — visual documentation
-- [Settings](./einstellungen) — configure server and OSC venues
+- [Settings](./settings) — configure server and OSC venues

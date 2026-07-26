@@ -12,7 +12,7 @@ The **Setup** area manages the physical structure of the stage. This page covers
 
 Click the desired position on the bar line → the channel picker opens → search and select a channel → confirm the position (in cm, 0 = centre of the bar).
 
-If the selected channel has a **quantity** greater than 1 (see [Channels](./kanaele)), several markers are placed automatically, spaced next to each other.
+If the selected channel has a **quantity** greater than 1 (see [Channels](./channels)), several markers are placed automatically, spaced next to each other.
 
 ## Move a fixture
 
@@ -28,7 +28,7 @@ Hovering over the marker reveals a red **×** icon in the top right. After confi
 
 ## Length, height, and note
 
-For each bar, length and height (in the measurement unit chosen under [Settings](./einstellungen)) as well as a free-text note can be edited inline directly.
+For each bar, length and height (in the measurement unit chosen under [Settings](./settings)) as well as a free-text note can be edited inline directly.
 
 ## Reorder bars
 

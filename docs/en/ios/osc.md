@@ -4,9 +4,9 @@ The **OSC** tab is the direct remote control of the EOS lighting console over th
 
 ## Venue selection
 
-A dropdown in the top left shows the currently active **venue**. Tapping it opens the list of all venues from the server — the active one is marked with a checkmark. IP addresses are managed in the [WebApp](../webapp/spielstaette-vorlage); the EOS User ID is set in [Settings](./einstellungen).
+A dropdown in the top left shows the currently active **venue**. Tapping it opens the list of all venues from the server — the active one is marked with a checkmark. IP addresses are managed in the [WebApp](../webapp/venue-template); the EOS User ID is set in [Settings](./settings).
 
-The connection status appears as a green dot with "Connected · User 1" once the connection to EOS is established. The EOS user can be set in [Settings](./einstellungen).
+The connection status appears as a green dot with "Connected · User 1" once the connection to EOS is established. The EOS user can be set in [Settings](./settings).
 
 ## Sub-views
 

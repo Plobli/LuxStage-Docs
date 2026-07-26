@@ -39,4 +39,4 @@ Overview of all web app keyboard shortcuts in one place.
 | Cancel tool / clear selection | Esc |
 | Show/hide grid | G |
 
-Details in [Floor Plan](./grundriss).
+Details in [Floor Plan](./floor-plan).

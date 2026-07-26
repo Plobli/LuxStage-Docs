@@ -68,7 +68,7 @@ Click the channel (to activate it), then click the **×** icon on the right of t
 
 Hovering over a channel row reveals the **"Assign"** button on the right (before the delete button), with three options:
 
-- **Place in floor plan** – opens the [Floor Plan](./grundriss) and places the channel there
+- **Place in floor plan** – opens the [Floor Plan](./floor-plan) and places the channel there
 - **Assign lighting rig slot** – opens [Setup — Lighting Rigs](./setup-gestelle) to assign it to a rig
 - **Assign bar** – opens [Setup — Bars](./setup-zugstangen) to place it on a bar
 

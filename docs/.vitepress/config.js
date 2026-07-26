@@ -142,7 +142,7 @@ export default {
               items: [
                 { text: 'Overview & Concept', link: '/en/guide/' },
                 { text: 'Installation', link: '/en/guide/installation' },
-                { text: 'Glossary', link: '/en/glossar' },
+                { text: 'Glossary', link: '/en/glossary' },
                 { text: 'All Features', link: '/en/features' },
               ]
             },
@@ -153,7 +153,7 @@ export default {
               text: 'Web App',
               items: [
                 { text: 'Overview', link: '/en/webapp/' },
-                { text: 'Glossary', link: '/en/glossar' },
+                { text: 'Glossary', link: '/en/glossary' },
               ]
             },
             {
@@ -161,13 +161,13 @@ export default {
               items: [
                 { text: 'Login', link: '/en/webapp/login' },
                 { text: 'Shows', link: '/en/webapp/shows' },
-                { text: 'Channels', link: '/en/webapp/kanaele' },
+                { text: 'Channels', link: '/en/webapp/channels' },
                 { text: 'Setup — Lighting Rigs', link: '/en/webapp/setup-gestelle' },
                 { text: 'Setup — Bars', link: '/en/webapp/setup-zugstangen' },
                 { text: 'Info', link: '/en/webapp/info' },
-                { text: 'Photos', link: '/en/webapp/fotos' },
-                { text: 'Floor Plan', link: '/en/webapp/grundriss' },
-                { text: 'Version History', link: '/en/webapp/versionsverlauf' },
+                { text: 'Photos', link: '/en/webapp/photos' },
+                { text: 'Floor Plan', link: '/en/webapp/floor-plan' },
+                { text: 'Version History', link: '/en/webapp/version-history' },
               ]
             },
             {
@@ -182,15 +182,15 @@ export default {
             {
               text: 'Management',
               items: [
-                { text: 'Archive', link: '/en/webapp/archiv' },
-                { text: 'Venue Template', link: '/en/webapp/spielstaette-vorlage' },
-                { text: 'Settings', link: '/en/webapp/einstellungen' },
+                { text: 'Archive', link: '/en/webapp/archive' },
+                { text: 'Venue Template', link: '/en/webapp/venue-template' },
+                { text: 'Settings', link: '/en/webapp/settings' },
               ]
             },
             {
               text: 'Reference',
               items: [
-                { text: 'Keyboard Shortcuts', link: '/en/webapp/tastaturkuerzel' },
+                { text: 'Keyboard Shortcuts', link: '/en/webapp/keyboard-shortcuts' },
                 { text: 'Troubleshooting', link: '/en/webapp/troubleshooting' },
               ]
             },
@@ -202,12 +202,12 @@ export default {
               items: [
                 { text: 'Overview', link: '/en/ios/' },
                 { text: 'Shows', link: '/en/ios/shows' },
-                { text: 'Setup', link: '/en/ios/aufbau' },
-                { text: 'Focus', link: '/en/ios/einleuchten' },
+                { text: 'Setup', link: '/en/ios/setup' },
+                { text: 'Focus', link: '/en/ios/focus' },
                 { text: 'OSC', link: '/en/ios/osc' },
                 { text: 'Photos & Floor Plan', link: '/en/ios/more' },
-                { text: 'Settings', link: '/en/ios/einstellungen' },
-                { text: 'Glossary', link: '/en/glossar' },
+                { text: 'Settings', link: '/en/ios/settings' },
+                { text: 'Glossary', link: '/en/glossary' },
                 { text: 'All Features', link: '/en/features' },
               ]
             },

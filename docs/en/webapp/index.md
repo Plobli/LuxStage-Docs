@@ -26,10 +26,10 @@ The vertical sidebar on the left contains four icons:
 ## Getting started
 
 - [Shows](./shows) — create and open shows
-- [Venue Template](./spielstaette-vorlage) — define a channel structure once
-- [Channels](./kanaele) — maintain the channel plan
-- [Photos](./fotos) — visual documentation
-- [Floor Plan](./grundriss) — store the stage plan
+- [Venue Template](./venue-template) — define a channel structure once
+- [Channels](./channels) — maintain the channel plan
+- [Photos](./photos) — visual documentation
+- [Floor Plan](./floor-plan) — store the stage plan
 - [Import from EOS](./import-eos) — bring in channel data from the lighting console
 - [Import CSV](./import-csv) — bring in channel data from CSV
 - [Export PDF](./export-pdf) — output the channel plan as PDF
