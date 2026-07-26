@@ -35,6 +35,7 @@ export default {
                 { text: 'Übersicht & Konzept', link: '/de/guide/' },
                 { text: 'Installation', link: '/de/guide/installation' },
                 { text: 'Glossar', link: '/de/glossar' },
+                { text: 'Alle Features', link: '/de/features' },
               ]
             },
           ],
@@ -76,7 +77,6 @@ export default {
             {
               text: 'Referenz',
               items: [
-                { text: 'Alle Features', link: '/de/webapp/features' },
                 { text: 'Was tun bei Problemen?', link: '/de/webapp/troubleshooting' },
               ]
             },
@@ -94,6 +94,7 @@ export default {
                 { text: 'Fotos & Grundriss', link: '/de/ios/more' },
                 { text: 'Einstellungen', link: '/de/ios/einstellungen' },
                 { text: 'Glossar', link: '/de/glossar' },
+                { text: 'Alle Features', link: '/de/features' },
               ]
             },
           ],
@@ -136,6 +137,7 @@ export default {
                 { text: 'Overview & Concept', link: '/en/guide/' },
                 { text: 'Installation', link: '/en/guide/installation' },
                 { text: 'Glossary', link: '/en/glossar' },
+                { text: 'All Features', link: '/en/features' },
               ]
             },
           ],
@@ -177,7 +179,6 @@ export default {
             {
               text: 'Reference',
               items: [
-                { text: 'All Features', link: '/en/webapp/features' },
                 { text: 'Troubleshooting', link: '/en/webapp/troubleshooting' },
               ]
             },
@@ -195,6 +196,7 @@ export default {
                 { text: 'Photos & Floor Plan', link: '/en/ios/more' },
                 { text: 'Settings', link: '/en/ios/einstellungen' },
                 { text: 'Glossary', link: '/en/glossar' },
+                { text: 'All Features', link: '/en/features' },
               ]
             },
           ],
