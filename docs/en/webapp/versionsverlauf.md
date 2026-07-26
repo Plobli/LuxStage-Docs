@@ -2,6 +2,12 @@
 
 LuxStage automatically saves a **version history** of all changes to channels and sections of a show. This allows earlier states to be restored. The history contains a maximum of 50 versions; older ones are automatically removed.
 
+## When are versions saved?
+
+- Automatically every 10 minutes — but only if channels or sections have actually changed since the last snapshot. During quiet periods with no changes, no new entries are created.
+- Additionally when opening a show, independent of the 10-minute interval.
+- **Archived shows** no longer receive automatic snapshots. It's worth checking the current state before archiving.
+
 ## Open version history
 
 Click the **"History"** button in the top menu bar of a show. A side panel opens on the right.
