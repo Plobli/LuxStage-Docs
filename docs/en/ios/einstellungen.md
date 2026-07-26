@@ -12,12 +12,12 @@ In the **Server** field, enter the URL of the LuxStage server, e.g. `http://192.
 
 Use the **Language** menu to select the display language of the app (e.g. English).
 
-## OSC per stage template
+## OSC per venue
 
-The list of stage templates is loaded automatically from the LuxStage server. For each stage template the following is shown:
+The list of venues is loaded automatically from the LuxStage server. For each venue the following is shown:
 
 - **Name** — read-only, managed in the WebApp
-- **IP address** — read-only, set in the [WebApp under Stage Templates](../webapp/spielstaette-vorlage); "Not configured" if no address has been entered
+- **IP address** — read-only, set in the [WebApp under Venue Templates](../webapp/spielstaette-vorlage); "Not configured" if no address has been entered
 - **EOS User ID** — stepper to set the EOS user (1–99); saved **locally on the device** and can differ per device
 
 ::: tip
