@@ -55,7 +55,7 @@ System user [luxstage]: ⏎
 Hostname [luxstage]: ⏎
 ```
 
-**External domain (optional)** — If you want LuxStage to be accessible from outside, enter your domain (e.g. `luxstage.example.com`). Otherwise just skip:
+**External domain (optional)** — If you want LuxStage to be accessible from outside, enter your domain with schema (e.g. `https://luxstage.example.com`). Otherwise just skip:
 ```
 External domain []: ⏎
 ```
