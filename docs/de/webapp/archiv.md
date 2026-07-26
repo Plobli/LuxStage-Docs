@@ -14,7 +14,7 @@ In der **Shows-Übersicht** beim Überfahren einer Show-Zeile auf das Archiviere
 
 ## Archivierte Shows einsehen
 
-Im Archiv werden alle archivierten Shows als Liste angezeigt, mit Name, Stand, Spielzeit und letzter Bearbeitung – gleiche Darstellung wie in der normalen Shows-Übersicht.
+Im Archiv werden alle archivierten Shows als Liste angezeigt, mit Name, Stand, Spielzeit und letzter Bearbeitung – gleiche Spalten wie in der normalen Shows-Übersicht, **aber ohne Sortierung und ohne Suche**.
 
 Beim Überfahren einer Zeile erscheinen rechts zwei Buttons:
 

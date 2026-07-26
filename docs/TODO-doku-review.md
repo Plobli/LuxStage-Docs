@@ -214,12 +214,9 @@ Methodik: `SmtpView`, `BackupView`, `UpdateView`, `ServerView` vollständig gele
 
 Verifiziert gegen [EosMergePreviewDialog.vue](LuxStage/web-app/src/components/EosMergePreviewDialog.vue).
 
-- [ ] Der Dialog zeigt **drei Gruppen**, die `import-eos.md` nicht benennt:
-  - **Neu aktiv ({n})** — Kanäle, die im Pult neu bespielt werden
-  - **Nicht mehr aktiv ({n})** — vormals aktive Kanäle, die jetzt fehlen
-  - **Unangetastet – hat Beschreibung ({n})** — bereits beschriftete Kanäle, die der Import **nicht** überschreibt
-- [ ] Die dritte Gruppe beantwortet die zentrale Nutzerfrage beim Re-Import: **Bestehende Notizen bleiben erhalten.** Genau das steht nirgends in der Doku und ist der häufigste Zweifel vor einem zweiten Import.
-- [ ] Bei fehlenden Änderungen erscheint „Keine Änderungen." — Import trotzdem bestätigbar.
+- [x] Der Dialog zeigt **drei Gruppen** — ✅ erledigt (2026-07-26): alle drei in `import-eos.md` (DE+EN) benannt.
+- [x] Die dritte Gruppe beantwortet die zentrale Nutzerfrage beim Re-Import — ✅ erledigt (2026-07-26): Tipp-Box „Bestehende Notizen bleiben erhalten" ergänzt.
+- [x] Bei fehlenden Änderungen erscheint „Keine Änderungen." — ✅ erledigt (2026-07-26): ergänzt.
 
 ## T. Shows- und Archiv-Ansicht
 

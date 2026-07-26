@@ -10,9 +10,13 @@ Die Startseite zeigt alle vorhandenen Shows als sortierbare Liste. Jede Zeile en
 - **Bearbeitung** – E-Mail-Adresse der letzten bearbeitenden Person
 - **Archivieren-Button** – erscheint beim Überfahren der Zeile rechts
 
-Über den Spaltenüberschriften (Name, Stand, Spielzeit, Bearbeitung) lässt sich die Liste sortieren.
+Über den Spaltenüberschriften (Name, Stand, Spielzeit, Bearbeitung) lässt sich die Liste sortieren. Standardmäßig ist die Liste nach **„Stand" absteigend** sortiert (neueste zuerst), nicht alphabetisch. Ein Pfeil (↑/↓) an der Spaltenüberschrift zeigt die aktive Sortierrichtung; erneutes Klicken kehrt sie um. Bei „Name" ist die Vorbelegung aufsteigend, bei allen anderen Spalten absteigend.
 
-Shows werden nach Spielort gruppiert angezeigt, mit dem Spielort-Namen als Überschrift. Shows ohne zugewiesenen Spielort erscheinen unter „—".
+Shows werden nach Spielort gruppiert angezeigt, mit dem Spielort-Namen als Überschrift. Shows ohne zugewiesenen Spielort erscheinen unter „—". Die Sortierung wirkt **innerhalb** der Spielort-Gruppen — die Gruppen selbst stehen immer alphabetisch, unabhängig von der gewählten Sortierung.
+
+::: tip Spalten je nach Fensterbreite
+„Spielzeit" erscheint erst ab mittlerer Bildschirmbreite, „Stand" und „Bearbeitung" erst ab kleiner Bildschirmbreite. Auf schmalen Bildschirmen (z. B. Tablet im Hochformat) sind entsprechend weniger Spalten sichtbar.
+:::
 
 ## Neue Show erstellen
 
