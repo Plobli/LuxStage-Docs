@@ -1,10 +1,10 @@
 # Info
 
-Der **Info**-Tab enthält frei konfigurierbare Textbereiche und Tabellen, die durch das **Spielort-Template** vorgegeben werden. Hier können technische Notizen, Rigging-Informationen und strukturierte Datenfelder hinterlegt werden.
+Der **Info**-Tab enthält frei konfigurierbare Textbereiche und Tabellen. Die **Spielort-Vorlage** bringt eigene Standard-Abschnitte mit, zusätzlich lässt sich pro Show ein eigener Abschnitt anlegen. Hier können technische Notizen, Rigging-Informationen und strukturierte Datenfelder hinterlegt werden.
 
 ## Abschnitte (Sektionen)
 
-Jedes Template definiert eigene Abschnitte. Typische Beispiele:
+Jede Spielort-Vorlage definiert eigene Standard-Abschnitte. Typische Beispiele:
 
 ### Rigging / Hanging (Textfeld-Typ)
 
@@ -35,10 +35,20 @@ Einfach in den Textbereich klicken und tippen. Änderungen werden automatisch ge
 
 ## Tabellen-Abschnitte (Felder-Typ)
 
-Abschnitte vom Typ **„Felder"** zeigen eine Tabelle mit „Label" und „Wert":
+Abschnitte vom Typ **„Felder"** zeigen eine Tabelle mit drei Spalten: **Label**, **Wert** und **Einheit** (z. B. „Meter").
 
-- **+ Feld** – Neue Zeile mit Label und Wert hinzufügen
+- **+ Feld** – Neue Zeile mit Label, Wert und optionaler Einheit hinzufügen
 - **+ Textfeld** – Einen freien Textblock innerhalb des Abschnitts einfügen
+
+## Eigenen Abschnitt anlegen
+
+Zusätzlich zu den Abschnitten aus der Spielort-Vorlage lässt sich pro Show ein eigener Abschnitt anlegen:
+
+1. Klick auf **„Neuer Tab"**
+2. Typ wählen: **Textfeld** oder **Felder**
+3. Namen vergeben und bestätigen
+
+Pro Show ist nur **ein** Felder-Abschnitt gleichzeitig möglich.
 
 ## Abschnitte schließen
 
