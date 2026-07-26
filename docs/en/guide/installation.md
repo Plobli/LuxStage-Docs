@@ -42,9 +42,9 @@ sudo bash /tmp/luxstage-install.sh
 ```
 
 ::: tip Prefer Docker?
-If you prefer Docker, you can also run LuxStage via `docker compose` — see the
-`docker-compose.yml` in the repository. The installer below is the Docker-free
-path (Node.js + PM2 directly on the system).
+If you prefer Docker, you can also run LuxStage via `docker compose` — see
+[Docker installation](#docker-installation) below. The installer here is the
+Docker-free path (Node.js + PM2 directly on the system).
 :::
 
 ## Step 3 — Enter configuration
@@ -177,6 +177,33 @@ Restart services:
 ```bash
 systemctl restart caddy && sudo -u luxstage pm2 restart all
 ```
+
+## Docker installation
+
+An alternative to the installer above: run LuxStage via `docker compose`. Works on any system with Docker, not limited to Debian/Ubuntu.
+
+1. Clone the repository or download `docker-compose.yml` and `.env.example`
+2. Create an `.env` file (copy from `.env.example`) and fill it in:
+
+```bash
+# Required: at least 32 random characters
+JWT_SECRET=$(openssl rand -hex 32)
+
+# Required: admin credentials for the first start
+ADMIN_EMAIL=you@example.com
+ADMIN_PASSWORD=yourPassword
+
+# Optional: comma-separated, additional addresses the web app is loaded from
+CORS_ORIGINS=http://192.168.1.100,https://luxstage.example.com
+```
+
+3. Start the containers:
+
+```bash
+docker compose up -d
+```
+
+The server is then reachable on port `3030` (default configuration, adjustable in the compose file), with data stored in the `luxstage-data` Docker volume. Unlike the script installer, no Caddy is set up automatically for HTTPS here — you'll need your own reverse proxy in front of the container.
 
 ## Help & Support
 
