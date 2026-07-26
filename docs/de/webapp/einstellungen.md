@@ -1,6 +1,6 @@
 # Einstellungen
 
-Die **Einstellungen** sind über das Zahnrad-Symbol (⚙️) in der linken Seitenleiste erreichbar. Die Tabs **Konto**, **Darstellung** und **Backup** sieht jede Nutzerin und jeder Nutzer. Die Tabs **Server**, **Benutzerverwaltung**, **E-Mail / SMTP** und **Update** sind nur für Admins sichtbar.
+Die **Einstellungen** sind über das Zahnrad-Symbol (⚙️) in der linken Seitenleiste erreichbar. Die Tabs **Konto** und **Darstellung** sieht jede Nutzerin und jeder Nutzer. Die Tabs **Backup**, **Server**, **Benutzerverwaltung**, **E-Mail / SMTP** und **Update** sind nur für Admins sichtbar.
 
 ::: tip Gehostetes Team (luxstage.app)
 Bei einem gehosteten Team unter [luxstage.app](https://luxstage.app) übernimmt der Betreiber Serverbetrieb, Mailversand und Updates zentral.
@@ -58,6 +58,10 @@ Einheit für Längen und Höhen an Zugstangen:
 
 ## Backup
 
+::: tip Nur für Admins
+Backup erstellen und wiederherstellen sind ausschließlich Admins zugänglich — das ZIP enthält die komplette Datenbank inklusive Passwort-Hashes aller Benutzer.
+:::
+
 **Backup erstellen**
 
 Lädt alle Show-Daten als ZIP-Archiv herunter.
@@ -69,14 +73,15 @@ Lädt alle Show-Daten als ZIP-Archiv herunter.
 
 **Backup wiederherstellen**
 
-Stellt alle Show-Daten und Fotos aus einem zuvor erstellten ZIP-Backup wieder her. Der Server startet danach automatisch neu.
+Stellt alle Show-Daten aus einem zuvor erstellten ZIP-Backup wieder her. Fotos werden dabei **ergänzt, nicht ersetzt** — vorhandene Fotos ohne Entsprechung im Backup bleiben erhalten. Der Server beendet sich nach der Wiederherstellung selbst und startet nur automatisch neu, wenn ein Prozessmanager (z. B. PM2, Standard bei Self-Hosting) ihn überwacht.
 
 1. Klick auf **„ZIP-Datei auswählen …"**
 2. ZIP-Backup-Datei aus dem Dateisystem wählen
-3. Wiederherstellung startet automatisch
+3. Klick auf **„Wiederherstellen"**
+4. Bestätigungsdialog bestätigen
 
 ::: warning Achtung
-Alle aktuellen Daten werden durch den Backup-Stand überschrieben.
+Die Datenbank (Shows, Kanäle, Abschnitte) wird vollständig durch den Backup-Stand ersetzt. Fotos werden nur ergänzt — Fotos, die im Backup fehlen, bleiben zusätzlich bestehen.
 :::
 
 ---
@@ -85,10 +90,10 @@ Alle aktuellen Daten werden durch den Backup-Stand überschrieben.
 
 | Feld | Beschreibung |
 |------|-------------|
-| **Server-URL** | API-Server-Adresse (Standard: http://localhost:3000) |
+| **Server-URL** | API-Server-Adresse (Standard: http://localhost:3000). Wirkt **sofort** beim Verlassen des Feldes, ohne Speichern-Button — eine falsche Eingabe macht die App unbedienbar. |
 | **App-Version** | Aktuell installierte App-Version |
 | **Server-Version** | Aktuell installierte Server-Version |
-| **Festplatte (frei)** | Verfügbarer Speicherplatz auf dem Server |
+| **Festplatte (frei)** | Verfügbarer Speicherplatz auf dem Server — erscheint nur, wenn der Server erreichbar ist. Sonst steht dort ein Verbindungsfehler. |
 
 ---
 
@@ -146,9 +151,13 @@ SMTP-Konfiguration für automatische E-Mails (Willkommen, Passwort-Reset):
 | **Passwort** | SMTP-Passwort | – |
 | **Absender (From)** | Absenderadresse | LuxStage <noreply@example.com> |
 
+::: tip Gespeichertes Passwort
+Ein bereits gespeichertes SMTP-Passwort wird aus Sicherheitsgründen nie angezeigt — das Feld bleibt leer, nur ein Platzhalter (••••••••) zeigt, dass eines hinterlegt ist. Speicherst du ohne das Feld auszufüllen, bleibt das alte Passwort erhalten.
+:::
+
 **Buttons:**
 - **„Speichern"** – Einstellungen speichern
-- **„Test-Mail senden"** – Test-E-Mail senden zur Überprüfung der Konfiguration
+- **„Test-Mail senden"** – Öffnet einen Dialog zur Eingabe der Empfängeradresse (vorbelegt mit deiner eigenen E-Mail), sendet danach eine Test-Mail zur Überprüfung der Konfiguration
 
 ---
 
@@ -156,5 +165,6 @@ SMTP-Konfiguration für automatische E-Mails (Willkommen, Passwort-Reset):
 
 Prüft auf neue Versionen und aktualisiert den Server. Bei Fehler wird der alte Zustand automatisch wiederhergestellt.
 
-1. **Branch** auswählen (z. B. main, dev)
-2. Klick auf **„Jetzt aktualisieren"**
+1. **Branch** auswählen — die Liste kommt vom Server, vorausgewählt ist immer der erste Eintrag. Die Prüfung auf Updates startet automatisch beim Öffnen des Tabs bzw. bei Branch-Wechsel.
+2. Ist ein Update verfügbar, zeigt die Seite die Anzahl neuer Commits und ein Änderungsprotokoll. Ohne verfügbares Update ist der Button **„Jetzt aktualisieren"** gesperrt.
+3. Klick auf **„Jetzt aktualisieren"** startet die Aktualisierung. Ein Fortschrittsbalken und ein mitlaufendes Terminal-Protokoll zeigen den Ablauf live.
