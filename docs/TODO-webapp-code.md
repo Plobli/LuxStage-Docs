@@ -233,7 +233,11 @@ Dass die Fragilität real ist, belegt die Migration `migration_section_rename_20
 
 ---
 
-## 3. Fehlende Übersetzung (bricht die Sprachumschaltung)
+## 3. Fehlende Übersetzung (bricht die Sprachumschaltung) — ✅ **erledigt**
+
+Die ShowHeader-, GassenturmView- und GeneratedTextAccordion-Zeilen wurden bei Punkt 9 miterledigt (siehe dort). Der Rest — Register/Login-Flow und `generateHangerei.ts` — bei Punkt 11.
+
+<details><summary>Ursprünglicher Befund</summary>
 
 Die App bietet eine Sprachwahl, aber mehrere sichtbare Texte sind fest auf Deutsch verdrahtet und ignorieren sie.
 
@@ -253,6 +257,9 @@ Besonders auffällig: `generateHangerei.ts` unterscheidet bereits die Sprache f�
 **Fix:** Strings in `shared/locales/*.json` überführen. Registrierungs- und Passwort-Seiten priorisieren — sie sind der Ersteindruck für Neukunden.
 
 Ein unübersetzter Key: `show.template.optional` = „Template (optional)" ist in `en.json` identisch. `template.apply_to_shows` existiert nur in `de.json` (Duplikat der `.bars`/`.sections`/`.towers`-Varianten, vermutlich ungenutzt — entfernen).
+</details>
+
+Siehe **11** für die Umsetzung des Register/Login-Flows und `generateHangerei.ts`. `show.template.optional` war bereits bei 2.2 als toter Key entfernt worden. `template.apply_to_shows` war **kein totes Duplikat**, sondern ein aktiv genutzter, in `en.json` fehlender Key — jetzt ergänzt, siehe 11.
 
 ---
 
@@ -596,6 +603,18 @@ Zwei Probleme:
 
 **`RegisterView.vue:30` bewusst ausgelassen** — gehört zu Punkt 11 (i18n Register/Forgot-Seiten) und wird dort im Zusammenhang behandelt, nicht isoliert.
 
+### 11 — i18n Register/Forgot-Seiten — ✅ **erledigt (2026-07-26)**
+
+**Umfang war größer als der Name sagt:** Nicht nur Register- und Forgot-Seite, sondern der komplette Erstkontakt-Flow — [RegisterView.vue](LuxStage/web-app/src/views/RegisterView.vue), [ForgotPasswordView.vue](LuxStage/web-app/src/views/ForgotPasswordView.vue), [ResetPasswordView.vue](LuxStage/web-app/src/views/ResetPasswordView.vue) und [ConfirmView.vue](LuxStage/web-app/src/views/ConfirmView.vue) hatten alle vier **kein einziges** `useLocale` — komplett hardcodiert deutsch. Genau die Seiten, die ein englischsprachiger Neukunde zuerst sieht.
+
+**Umgesetzt:** Alle vier Views auf `t()` umgestellt, ~35 neue Locale-Keys unter `register.*`, `forgot.*`, `reset.*`, `confirm.*`. Die clientseitig erzeugten Validierungsfehler (Team-Kürzel zu kurz, Passwort zu kurz, Passwörter stimmen nicht überein) sind jetzt übersetzt.
+
+**Bewusst nicht angefasst:** Fehlermeldungen, die der **Server** liefert (`routes/register.js`: „Team-Kürzel bereits vergeben" usw.). Die App reicht sie ungefiltert per `e?.message` durch. Eine Übersetzung bräuchte auf dem Server Fehlercodes statt fertiger Texte — eigenes, größeres Vorhaben, nicht Teil einer reinen Frontend-Übersetzung.
+
+**`generateHangerei.ts` mitbehoben:** `formatHangPosition()` gab „Mitte" / „Links" / „Rechts" immer deutsch aus, obwohl dieselbe Datei das Kanal-Präfix (`Ch.` / `V.`) bereits sprachabhängig über einen `locale`-Parameter löst. Der Parameter existierte in der Aufrufkette (`generateBarLine` nimmt ihn entgegen), floss nur nicht bis in `formatHangPosition` durch. Jetzt ergänzt und durchgereicht; Default `'de'` für Abwärtskompatibilität, da die Funktion nicht exportiert öffentlich genutzt wird außerhalb dieser Datei.
+
+**Nebenbefund:** `template.apply_to_shows` fehlte komplett in `en.json` — nur die `.bars`/`.sections`/`.towers`-Suffix-Varianten waren dort vorhanden. Der Basis-Key wird aber aktiv in [TemplatesView.vue:119](LuxStage/web-app/src/views/TemplatesView.vue#L119) gerufen; englische Nutzer hätten den rohen Key `template.apply_to_shows` gesehen. Ergänzt.
+
 ### 8.6 Rollback-Erkennung über Textvergleich — **fragil**
 [UpdateView.vue:193](LuxStage/web-app/src/views/settings/UpdateView.vue#L193):
 ```js
@@ -682,7 +701,7 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | ~~9~~ | ~~3. übrige hardcodierte Strings~~ | ✅ | ~96 Stellen in 14 Dateien, labels-Defaults, tote Datei entfernt |
 | ~~10~~ | ~~5.x UI-Kontext ergänzen~~ | ✅ | Vorschau-Dialog, Farb-Legende, Hilfetexte; 5.4 war überholt |
 | ~~10a~~ | ~~Nachtrag zu 9: Kleinbuchstaben-Platzhalter~~ | ✅ | TemplatesView + ShowsView-Anlegen-Dialog gefunden |
-| 11 | 3. i18n Register/Forgot-Seiten | Halber Tag | Ersteindruck für EN-Neukunden |
+| ~~11~~ | ~~3. i18n Register/Forgot-Seiten~~ | ✅ | Register, Forgot, Reset, Confirm + generateHangerei.ts |
 
 Die Punkte 1–3 sind reine Textänderungen in `shared/locales/*.json` und zusammen in unter einer Stunde erledigt.
 
