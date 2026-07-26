@@ -134,7 +134,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 ## M. Zweisprachigkeit — App vs. Doku
 
 - [x] **`de.json` und `en.json` sind vollständig synchron** — ✅ bestätigt (2026-07-26): aktuell 616 Keys in beiden Dateien, exakt gleiche Anzahl. `template.apply_to_shows` in EN ergänzt (Code-Todo 11), `show.template.optional` als toter Key entfernt (Code-Todo 2.2). **App-Übersetzung weiterhin in gutem Zustand.**
-- [ ] **Die englische Doku übersetzt deutsche Fachbegriffe, die in der App englisch anders lauten.** Beispiel: `en/webapp/kanaele.md` müsste die Button-Beschriftungen der englischen App zitieren. Prüfen, ob die EN-Doku die EN-Strings aus `en.json` verwendet oder frei übersetzt wurde — bei freier Übersetzung findet der englische Nutzer die Buttons nicht wieder.
+- [x] **Die englische Doku übersetzt deutsche Fachbegriffe, die in der App englisch anders lauten.** — ✅ erledigt (2026-07-26): `en/webapp/kanaele.md` gegen `en.json` geprüft und korrigiert (Spaltenköpfe „Chan"/„Qty." statt „CHANNEL"/„QTY", „Custom" statt „free text", „Search channels …"). **Randbefund:** `gassenturm.field.name` in `en.json` ist unübersetzt geblieben („Bezeichnung") — Code-Bug, siehe Punkt 12 in `TODO-webapp-code.md`, nicht in der Doku behebbar.
 
 ---
 
