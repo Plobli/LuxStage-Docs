@@ -6,7 +6,7 @@ Der **Setup**-Bereich verwaltet die physische Struktur der Bühne: **Beleuchtung
 Dieser Bereich ist nicht identisch mit dem „Aufbau"-Tab der iOS-App – dieser zeigt Checklisten und Freitext-Notizen aus dem [Info](./info)-Tab.
 :::
 
-Je nach Einstellung der Show (siehe [Shows](./shows)) ist der eine, der andere oder beide Bereiche als eigener Tab in der Seitenleiste sichtbar.
+Je nach Einstellung der Show (siehe [Shows](./shows)) ist der eine, der andere oder beide Bereiche als eigener Unter-Tab im Setup-Bereich sichtbar: Beleuchtungsgestelle als „Beleuchtungsgestelle", Zugstangen als **„Obermaschinerie"**.
 
 ## Beleuchtungsgestelle
 
@@ -60,7 +60,7 @@ Am unteren Rand jeder Gestell-Karte lässt sich per Klick auf **„+ Notiz"** ei
 
 Über das Lesezeichen-Symbol lässt sich ein Gestell in die Spielort-Vorlage übernehmen. Auswählbar sind dabei Grundstruktur (immer enthalten), Kanalnummer, Gerät und Farbe je Slot.
 
-## Zugstangen
+## Zugstangen (Tab „Obermaschinerie")
 
 ### Zugstange anlegen
 

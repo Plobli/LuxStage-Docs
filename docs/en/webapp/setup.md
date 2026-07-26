@@ -6,7 +6,7 @@ The **Setup** area manages the physical structure of the stage: **lighting rigs*
 This area is not the same as the "Aufbau" tab in the iOS app – that one shows checklists and free-text notes from the [Info](./info) tab.
 :::
 
-Depending on the show's settings (see [Shows](./shows)), one, the other, or both areas appear as their own tab in the sidebar.
+Depending on the show's settings (see [Shows](./shows)), one, the other, or both areas appear as their own sub-tab within Setup: lighting rigs as "Lighting rigs", bars as **"Fly System"**.
 
 ## Lighting rigs
 
