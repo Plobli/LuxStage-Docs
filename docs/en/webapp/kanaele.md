@@ -80,6 +80,15 @@ When hovering over a position heading, the **"Rename position"** button appears 
 
 In the search field at the top right (**"Search …"**) channels, fixtures or notes can be filtered in real time.
 
+## Completeness check
+
+Next to the channel table, a badge shows whether the show is complete:
+
+- **Green checkmark** – all channels fully filled in
+- **Yellow warning icon with a number** – number of channels with missing information
+
+Clicking the badge opens a breakdown by missing field (no fixture, no position, no address). Clicking a row filters the channel table to exactly those channels; an **×** next to the active filter clears it.
+
 ## Keyboard shortcuts
 
 | Action | Shortcut |
