@@ -88,7 +88,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [ ] **„Vorlage" vs. „Template"** — die Sidebar der App zeigt **„Templates"** (`nav.templates`), die Doku-Sidebar „Spielstätten-Vorlage". Nutzer sucht „Templates".
 - [ ] **„Spielort" vs. „Bühne" vs. „Spielstätte"** — im Show-Dialog heißt das Feld **„Spielort"** (`show.template`), das Zuweisen aber **„Bühnen-Template zuweisen"** (`show.assign_template`), die Kanaltabellen-Spalte **„Spielstätte"** (`field.venue`), das Template-Feld **„Theater-Name"** (`template.venue_name`). Vier Begriffe, eine Sache — Doku bildet das nicht ab.
 - [x] **Tab „Setup"** — ✅ erledigt (2026-07-26): `setup.md`/EN ergänzt, dass der Zugstangen-Abschnitt als Unter-Tab „Obermaschinerie" (`tab.obermaschinerie`) in der App erscheint. `tab.buehne` existiert in `de.json` nicht mehr (veraltet, ignoriert). Neuer Fund: **`tab.gassenturm` ist in der App selbst uneinheitlich übersetzt** — DE „Setup", EN „Stage Plan" (`en.json:349`), für denselben Tab. Gehört in die Code-ToDo, nicht in die Doku behoben.
-- [ ] **`tab.raum` = „Raum", `tab.hinweise` = „Hinweise"** — zwei Tabs, in der gesamten Doku nicht erwähnt. Prüfen, ob noch aktiv; falls ja, dokumentieren.
+- [x] **`tab.raum` = „Raum", `tab.hinweise` = „Hinweise"** — ✅ überholt (2026-07-26): Beide Keys existieren in `de.json` nicht mehr (Code-Todo 2.3 hat sie entfernt, Icon-Zuordnung läuft jetzt über `icon`-Spalte statt Titelvergleich). Keine Doku-Änderung nötig.
 
 ## I. Undokumentierte Funktionen (Runde 2)
 
@@ -99,7 +99,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [ ] **Show-Metadaten nachträglich ändern** (`show.edit` = „Show bearbeiten", `ShowHeader.vue` Meta-Dialog) — `shows.md` beschreibt nur das Anlegen. Wie ändert man Datum, Untertitel oder Spielzeit später? Nicht dokumentiert.
 - [x] **„Abschnitt hinzufügen" direkt in der Show** — ✅ erledigt (2026-07-26): neuer Abschnitt „Eigenen Abschnitt anlegen" in `info.md` (DE+EN).
 - [x] **Feld-Einheit** — ✅ erledigt (2026-07-26): dritte Spalte „Einheit" in `info.md` (DE+EN) ergänzt.
-- [ ] **Foto löschen** (`photo.delete`, `show.photo.delete.confirm`) — `fotos.md` erklärt Hinzufügen und Beschriften, aber nicht das Löschen.
+- [x] **Foto löschen** — ✅ erledigt (2026-07-26): Abschnitt „Foto löschen" in `fotos.md` (DE+EN) ergänzt (siehe Abschnitt U).
 - [ ] **Kanal-Farbwahl „No Color" / Freitext** (`color.no_color`, `color.picker.custom`) — `kanaele.md` nennt nur das Dropdown mit Gel-Codes. Freitexteingabe („z.B. R02 oder warm weiß") und „No Color" fehlen.
 - [ ] **404-Seite** (`not_found.*`) — unkritisch, nur der Vollständigkeit halber.
 

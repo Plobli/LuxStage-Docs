@@ -66,3 +66,15 @@ Wenn du eine neue Show anlegst, wählst du eine Spielort-Vorlage aus. Die Kanals
 ## Show nachträglich einer Spielort-Vorlage zuordnen
 
 Auf der Show-Karte in der Übersicht öffnet das **Stift-Symbol** einen Dialog zur Vorlagen-Zuordnung. Dort lässt sich die Spielort-Vorlage ändern — die Kanäle der Show bleiben dabei unverändert, nur die Metadaten (Bühnenname, OSC-Einstellungen) werden aktualisiert.
+
+## Änderungen an der Vorlage auf bestehende Shows anwenden
+
+Wurde eine Spielort-Vorlage nachträglich um Abschnitte oder Beleuchtungsgestelle erweitert, lassen sich diese Ergänzungen auf **alle** Shows übertragen, die dieser Vorlage zugeordnet sind:
+
+1. Klick auf **„Auf alle Shows anwenden"** (bei Abschnitten bzw. Beleuchtungsgestellen)
+2. Der Dialog zeigt die betroffenen Shows namentlich, bevor irgendetwas passiert
+3. Bestätigen — ein Ergebnis meldet, wie viele Shows geprüft und wie viele Elemente ergänzt wurden
+
+::: tip Ungefährliche Operation
+Es werden ausschließlich **fehlende** Elemente ergänzt. Bereits vorhandene Abschnitte, Zugstangen oder Beleuchtungsgestelle einer Show bleiben unverändert — nichts wird überschrieben oder gelöscht.
+:::
