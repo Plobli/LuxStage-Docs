@@ -15,7 +15,7 @@ hero:
 
 features:
   - title: Kanalverwaltung
-    details: Kanäle nach Position, Kategorie und DMX-Adresse verwalten. Farben, Geräte, Notizen – alles an einem Ort.
+    details: Kanäle nach Position und DMX-Adresse verwalten. Farben, Geräte, Notizen – alles an einem Ort.
   - title: EOS-Import
     details: CSV-Exporte aus ETC EOS direkt importieren. Aktive Kanäle werden automatisch erkannt.
   - title: PDF-Export

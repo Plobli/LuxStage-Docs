@@ -15,7 +15,7 @@ hero:
 
 features:
   - title: Channel Management
-    details: Manage channels by position, category and DMX address. Colours, fixtures, notes – everything in one place.
+    details: Manage channels by position and DMX address. Colours, fixtures, notes – everything in one place.
   - title: EOS Import
     details: Import CSV exports from ETC EOS directly. Active channels are recognised automatically.
   - title: PDF Export
