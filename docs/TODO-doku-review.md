@@ -95,17 +95,17 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [x] **„Auf alle Shows anwenden"** — ✅ erledigt (2026-07-26): Abschnitt in `spielstaette-vorlage.md` (DE+EN) ergänzt, inkl. Hinweis auf ungefährliche Operation (nur fehlende Elemente).
 - [ ] **Offline-Banner** (`offline.banner` = „Keine Verbindung zum Server – Änderungen werden nicht gespeichert") — das **widerspricht direkt** der FAQ-Aussage „Funktioniert LuxStage auch offline? Ja. … Änderungen werden synchronisiert, sobald die Verbindung wiederhergestellt ist." Die Web-App speichert offline **nicht**. FAQ korrigieren — sonst Datenverlust beim Nutzer, der sich auf die Zusage verlässt.
 - [ ] **Inline-Hilfe (⌘-Icons) in der App** — `HelpIcon` an jeder Spaltenüberschrift der Kanaltabelle und im Setup-Bereich. Diese Hilfetexte (`channel.help.*`) sind teils **präziser als die Doku**, z. B. die Farb-Legende. Doku sollte erwähnen, dass es diese Hilfe gibt.
-- [ ] **Doppelte-Adresse-Warnung** (`channel.dup_address` = „Doppelte DMX-Adresse!", `channel.dup_channel` = „Doppelte Kanalnummer!") — in `features.md` als Marketingpunkt erwähnt, in `kanaele.md` (der eigentlichen Anleitung) fehlt sie.
+- [x] **Doppelte-Adresse-Warnung** — ✅ erledigt (2026-07-26): Tipp-Box in `kanaele.md` (DE+EN) ergänzt.
 - [ ] **Show-Metadaten nachträglich ändern** (`show.edit` = „Show bearbeiten", `ShowHeader.vue` Meta-Dialog) — `shows.md` beschreibt nur das Anlegen. Wie ändert man Datum, Untertitel oder Spielzeit später? Nicht dokumentiert.
 - [x] **„Abschnitt hinzufügen" direkt in der Show** — ✅ erledigt (2026-07-26): neuer Abschnitt „Eigenen Abschnitt anlegen" in `info.md` (DE+EN).
 - [x] **Feld-Einheit** — ✅ erledigt (2026-07-26): dritte Spalte „Einheit" in `info.md` (DE+EN) ergänzt.
 - [x] **Foto löschen** — ✅ erledigt (2026-07-26): Abschnitt „Foto löschen" in `fotos.md` (DE+EN) ergänzt (siehe Abschnitt U).
-- [ ] **Kanal-Farbwahl „No Color" / Freitext** (`color.no_color`, `color.picker.custom`) — `kanaele.md` nennt nur das Dropdown mit Gel-Codes. Freitexteingabe („z.B. R02 oder warm weiß") und „No Color" fehlen.
+- [x] **Kanal-Farbwahl „No Color" / Freitext** — ✅ erledigt (2026-07-26): in `kanaele.md` (DE+EN) ergänzt.
 - [ ] **404-Seite** (`not_found.*`) — unkritisch, nur der Vollständigkeit halber.
 
 ## J. Widersprüche zwischen Doku und App-Texten
 
-- [ ] **Farb-Legende der Kanalnummer.** `kanaele.md` schreibt: „grün (Notiz hinzugefügt), gelb (nach dem Import eines EOS-CSV, aber ohne Notiz) oder **grau** (keine Notiz)". Die App sagt (`channel.help.status`): „**Weiß** = ohne Notiz / Grün = Notiz vorhanden / Gelb = **in der Show aktiv, aber die Notiz fehlt**". Zwei Abweichungen: grau/weiß und die Bedeutung von Gelb. App-Text ist maßgeblich.
+- [x] **Farb-Legende der Kanalnummer.** — ✅ erledigt (2026-07-26): in `kanaele.md` (DE+EN) auf App-Text korrigiert (Weiß/Grün/Gelb).
 - [ ] **Passwort-Mindestlänge.** `installation.md` sagt „Mindestens 8 Zeichen". Die App meldet beim Ändern (`settings.account.change_password.error.short`): „Passwort muss mindestens **4** Zeichen lang sein". `RegisterView.vue` sagt wieder „Mindestens 8 Zeichen". Drei Stellen, zwei Werte — im Code klären, dann einheitlich dokumentieren.
 - [ ] **Passwort vergessen.** Die Login-Seite zeigt „Passwort vergessen?" und dann den Hinweis (`auth.reset.hint`): „**Wende dich an deinen Administrator**". Gleichzeitig existieren `ForgotPasswordView.vue` und `ResetPasswordView.vue` mit E-Mail-Flow. Welcher Weg gilt für den Nutzer? Muss die Doku eindeutig beantworten — vermutlich abhängig davon, ob SMTP konfiguriert ist.
 - [ ] **Login-Feld heißt „E-Mail-Adresse"** (`auth.username`), die Fehlermeldung aber „Bitte **Benutzername** und Passwort prüfen" (`auth.login.error`), und `installation.md` nennt Zugangsdaten `admin` / `tech` ohne E-Mail-Form. Für einen Erstnutzer nach der Installation ist damit unklar, was er ins Login-Feld tippt. **Kritischster Punkt der gesamten Doku** — betrifft den allerersten Schritt.
@@ -125,7 +125,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 
 - [ ] **Kein durchgehender „Von null zur ersten Show"-Pfad.** `guide/index.md` skizziert vier Schritte, verlinkt aber nicht auf die passenden Detailseiten in der richtigen Reihenfolge. Nutzer nach der Installation weiß nicht, ob er zuerst Vorlage, Show oder Benutzer anlegt. Ein „Schnellstart in 10 Minuten" würde die meisten Supportfragen abfangen.
 - [ ] **Fachbegriffe ungeklärt** (verschärft Punkt F): Slot, Zugstange, Obermaschinerie, Gassenturm, Gel, Hängerei, Portalbrücke, Dimmer-Adresse vs. Kanalnummer, DMX. Die App erklärt „Slot" per Inline-Hilfe besser als die Doku.
-- [ ] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — für Einsteiger unverständlich. Beispiel ergänzen (`show.channel.address.example` = „1/001").
+- [x] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — ✅ erledigt (2026-07-26): Beispiel „1/001" ergänzt (DE+EN).
 - [ ] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** und behandelt zwei getrennte Themen (Gestelle, Zugstangen). Aufteilen in zwei Seiten, passend zu den zwei Sidebar-Einträgen der App.
 - [ ] **Keine Seite „Was tun bei Problemen?"** für die Web-App. Fehlermeldungen, die der Nutzer real sieht — `error.network` („Keine Verbindung zum Server"), `offline.banner`, `csv.error.*` („Pflicht-Spalte fehlt: {column}", „Ungültige Kanal-Nummer in Zeile {line}") — sind nirgends erklärt. Troubleshooting gibt es nur in `installation.md` und nur für den Server.
 - [ ] **CSV-Fehlermeldungen dokumentieren** — `csv.error.missing_header`, `csv.error.invalid_channel`, `csv.error.invalid_address`, `csv.error.duplicate_channel` verraten die **Pflichtspalten** des Imports. Genau das fehlt in `import-csv.md` (siehe C).

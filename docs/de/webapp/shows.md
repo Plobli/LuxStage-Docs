@@ -42,6 +42,10 @@ Wird ein Spielort ausgewählt, übernimmt die neue Show automatisch die Kanalstr
 
 Einfach auf die gewünschte Show-Zeile klicken. Die Show öffnet sich im **Kanäle**-Tab.
 
+## Show-Metadaten nachträglich ändern
+
+In der geöffneten Show lässt sich der **Showname** direkt anklicken und bearbeiten. Ein Klick auf das **Datum** (bzw. auf „Info", falls noch kein Datum gesetzt ist) neben dem Namen öffnet einen Dialog zum Bearbeiten von Datum, Untertitel und Spielzeit.
+
 ## Show archivieren
 
 Beim Überfahren der Show-Zeile erscheint rechts ein **Archivieren-Symbol**. Nach Bestätigung verschwindet die Show von der Startseite und erscheint im **Archiv**.
