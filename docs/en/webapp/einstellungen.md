@@ -64,7 +64,7 @@ Creating and restoring backups is restricted to admins — the ZIP contains the 
 
 **Create backup**
 
-Downloads all show data as a ZIP archive.
+Downloads all show data as a ZIP archive. The filename only contains the date (e.g. `luxstage-backup-2026-07-25.zip`), not the time — two backups on the same day have identical names and overwrite each other in the download folder.
 
 - Click **"Download ZIP backup"**
 - The download starts automatically
@@ -83,6 +83,14 @@ Restores all show data from a previously created ZIP backup. Photos are **added,
 ::: warning Note
 The database (shows, channels, sections) is completely replaced by the backup. Photos are only added — photos missing from the backup remain in place.
 :::
+
+The backup is validated before restoring: whether the ZIP contains a valid database, and whether it's undamaged. If validation fails, the current state remains **untouched**. Possible error messages:
+
+- "ZIP does not contain luxstage.db"
+- "Database is corrupted or invalid"
+- "Upload too large" — maximum backup size for restoring: **500 MB**. Larger data sets can only be restored via the command line on the server.
+
+Only photos with the extensions `jpg`, `jpeg`, `png`, `gif`, `webp` are restored — other file types in the ZIP are silently skipped.
 
 ---
 
