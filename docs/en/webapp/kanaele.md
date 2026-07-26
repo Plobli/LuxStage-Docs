@@ -8,7 +8,7 @@ The table has five columns:
 
 | Column | Meaning |
 |--------|---------|
-| **CHANNEL** | Channel name in the console (left) / Dimmer address (right, after the "/") |
+| **CHANNEL** | Channel name in the console (left) / Dimmer address (right, after the "/"), e.g. "1/001" |
 | **COLOUR** | Colour filter (gel code), e.g. "L201/R371" or "RGB", "variable" |
 | **QTY** | Number of identical fixtures at this position |
 | **FIXTURE** | Fixture name, e.g. "ETC Source Four 26°" |
@@ -25,13 +25,19 @@ Channels are grouped by **positions** (e.g. "FOH BAR LEFT", "OVERHEAD BAR 1", "S
 |-------|--------|
 | **Channel number (left)** | Click → enter number |
 | **Dimmer address (right)** | Click → enter address |
-| **Colour** | Click → dropdown with available gel codes appears (e.g. "L201 / R371 Full C.T. Blue") |
+| **Colour** | Click → dropdown with available gel codes appears (e.g. "L201 / R371 Full C.T. Blue"). Also selectable: **"No Color"** (no filter) or **free text** for custom entries (e.g. "R02" or "warm white") |
 | **Fixture** | Click → enter fixture name |
 | **Notes** | Click → enter free text |
 
 ## Toggle channel status
 
-The **channel number** appears green (note added), yellow (after an EOS CSV import, but without a note) or grey (no note).
+The **channel number** appears in three colours:
+
+- **White** – no note
+- **Green** – note present
+- **Yellow** – active in the show (e.g. after an EOS import), but the note is still missing
+
+The same legend is also available as inline help (help icon) next to the channel table in the app.
 
 ## Add a channel
 
@@ -53,6 +59,10 @@ Hovering over a channel row reveals the **"Assign"** button on the right (before
 - **Assign bar** – opens the [Setup](./setup) area to place it on a bar
 
 If the channel is already assigned to a rig slot or a bar, the installation spot is additionally shown as a small badge below the note.
+
+::: tip Duplicate warning
+Assigning the same DMX address or channel number twice triggers a warning: "Duplicate DMX address!" or "Duplicate channel number!".
+:::
 
 ## Change order (drag & drop)
 
