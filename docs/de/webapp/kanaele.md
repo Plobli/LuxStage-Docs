@@ -6,6 +6,16 @@ Der **Kanäle**-Tab ist die Hauptansicht einer Show und zeigt den vollständigen
 Neben den Spaltenüberschriften der Kanaltabelle und im Setup-Bereich zeigen kleine Hilfe-Icons Kurzerklärungen zu den jeweiligen Feldern direkt in der App.
 :::
 
+## Live-Zusammenarbeit (Presence)
+
+Arbeiten mehrere Personen gleichzeitig an einer Show, erscheinen oben in der Show-Leiste kleine, farbige Avatare (Initiale) für jede angemeldete Person:
+
+- **Grüner Ring/Punkt** – die Person bearbeitet die Show gerade aktiv
+- **📱-Badge** – die Person ist über die iOS-App verbunden
+- Tooltip beim Überfahren zeigt Name und verbundene Geräte (iOS und/oder Web)
+
+Die Avatare erscheinen erst ab zwei gleichzeitig verbundenen Personen; bei mehr als vier wird die Zahl der weiteren als „+N" zusammengefasst. Änderungen anderer Nutzer erscheinen in Echtzeit, ohne Neuladen der Seite.
+
 ## Aufbau des Kanalplans
 
 Die Tabelle hat fünf Spalten:
