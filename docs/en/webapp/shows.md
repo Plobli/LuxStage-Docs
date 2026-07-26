@@ -31,7 +31,7 @@ Shows are grouped by venue, with the venue name as a heading. Shows without an a
 3. Click **"Create Show"**
 
 ::: tip Note
-If a venue is selected, the new show automatically inherits the channel template, sections and floor plan of the chosen venue.
+If a venue is selected, the new show automatically inherits the channel structure, sections and floor plan of the chosen venue.
 :::
 
 ## Open a show

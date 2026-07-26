@@ -17,5 +17,5 @@ Tapping a tile opens the show directly in the **Setup** tab.
 3. Confirm — the show appears immediately in the list
 
 ::: tip
-If a venue is selected, the new show automatically inherits the channel template and floor plan of the chosen venue.
+If a venue is selected, the new show automatically inherits the channel structure and floor plan of the chosen venue.
 :::

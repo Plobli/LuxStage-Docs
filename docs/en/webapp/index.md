@@ -26,7 +26,7 @@ The vertical sidebar on the left contains four icons:
 ## Getting started
 
 - [Shows](./shows) — create and open shows
-- [Venue Template](./spielstaette-vorlage) — define a channel template once
+- [Venue Template](./spielstaette-vorlage) — define a channel structure once
 - [Channels](./kanaele) — maintain the channel plan
 - [Photos](./fotos) — visual documentation
 - [Floor Plan](./grundriss) — store the stage plan
