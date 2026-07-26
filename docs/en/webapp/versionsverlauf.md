@@ -1,6 +1,6 @@
 # Version History
 
-LuxStage automatically saves a **version history** of all changes to a show. This allows earlier states to be restored.
+LuxStage automatically saves a **version history** of all changes to channels and sections of a show. This allows earlier states to be restored. The history contains a maximum of 50 versions; older ones are automatically removed.
 
 ## Open version history
 
@@ -18,11 +18,12 @@ The panel shows a list of all saved versions with **date and time**, e.g.:
 ## Restore a version
 
 1. Click on a version entry → the detail view shows the date, channel count, and the full channel list at that point in time (channel, fixture, notes)
-2. Click **"Restore"** at the bottom of the panel → the state of the show at that point in time is applied
-3. Use **"← Back"** at the top to return to the version list without restoring
+2. Click **"Restore"** at the bottom of the panel → a confirmation dialog opens
+3. Confirm with **"Yes, restore"** to reset channels and sections to that state — photos, floor plan, bars and other data remain unchanged
+4. Use **"← Back"** at the top to return to the version list without restoring
 
 ::: warning Note
-Restoring an old version overwrites the current state. Make sure you have backed up the current state first if needed.
+Restoring an old version overwrites the current state **of channels and sections only**. The current state is automatically saved as a backup version before being overwritten.
 :::
 
 ## Close the panel
