@@ -697,7 +697,6 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | ~~5~~ | ~~2.1 Kategorie → Position~~ | ✅ | Keys, Props und interne Namen vereinheitlicht |
 | ~~7~~ | ~~2.2 Spielort-Begriffe vereinheitlichen~~ | ✅ | „Spielort-Vorlage" in Web + iOS; Doku zieht im Doku-Review nach |
 | ~~8~~ | ~~2.3 Icon-Zuordnung entkoppeln~~ | ✅ | Neue Spalte `icon`; behebt zusätzlich doppelte Aufbau-Abschnitte |
-| 8a | **Neu aus 2.3:** Auto-Anlage des Aufbau-Abschnitts verlangt Admin | offen | Trifft nur leere Shows ohne Vorlage |
 | ~~9~~ | ~~3. übrige hardcodierte Strings~~ | ✅ | ~96 Stellen in 14 Dateien, labels-Defaults, tote Datei entfernt |
 | ~~10~~ | ~~5.x UI-Kontext ergänzen~~ | ✅ | Vorschau-Dialog, Farb-Legende, Hilfetexte; 5.4 war überholt |
 | ~~10a~~ | ~~Nachtrag zu 9: Kleinbuchstaben-Platzhalter~~ | ✅ | TemplatesView + ShowsView-Anlegen-Dialog gefunden |

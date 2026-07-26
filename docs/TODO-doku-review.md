@@ -1,6 +1,9 @@
 # ToDo — Review Kunden-Dokumentation Web-App
 
-**Anweisung** Nach jedem Punkt einen commit machen ohne Versionserhöhung
+**Anweisung:** 
+- Nach jedem Punkt einen commit machen ohne Versionserhöhung
+- so wenig wie möglich Zwischentexte während der Bearbeitung ausgeben. 
+- Fertige Punkte abhaken
 
 Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-app/src` + `LuxStage/server`.
 

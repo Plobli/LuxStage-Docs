@@ -55,7 +55,7 @@ Systemnutzer [luxstage]: ⏎
 Hostname [luxstage]: ⏎
 ```
 
-**Externe Domain (optional)** — Falls du LuxStage von außen erreichbar machen möchtest, gib deine Domain ein (z.B. `luxstage.example.com`). Sonst einfach überspringen:
+**Externe Domain (optional)** — Falls du LuxStage von außen erreichbar machen möchtest, gib deine Domain mit Schema ein (z.B. `https://luxstage.example.com`). Sonst einfach überspringen:
 ```
 Externe Domain []: ⏎
 ```
