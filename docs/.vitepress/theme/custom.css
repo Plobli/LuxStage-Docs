@@ -1,3 +1,9 @@
+:root {
+  --vp-c-brand-1: #fc4e4e;
+  --vp-c-brand-2: #fc4e4e;
+  --vp-c-brand-3: #fc4e4e;
+}
+
 /* iOS-Screenshots: hochkant, daher auf max. 320px begrenzen */
 .ios-screenshot {
   max-width: 320px;
@@ -9,4 +15,4 @@
 
 .vp-doc a {
   color: #fc4e4e;
-}   
+}
