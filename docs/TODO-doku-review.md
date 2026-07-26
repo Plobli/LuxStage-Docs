@@ -154,7 +154,7 @@ Verifiziert gegen [install.sh](LuxStage/install.sh) und [server/bootstrap.js](Lu
 - [x] **Der Installer ändert den System-Hostname** — ✅ erledigt (2026-07-26): in derselben Warnbox erwähnt.
 - [x] **Installierte Fremdpakete nicht genannt** — ✅ erledigt (2026-07-26): in `installation.md` (DE+EN) unter Schritt 4 aufgelistet.
 - [x] **Doku sagt „Das Script lädt alles herunter"** — ✅ erledigt (2026-07-26): auf „lädt das neueste GitHub-Release, nicht main" korrigiert (DE+EN).
-- [ ] **Port 3000 ist fest verdrahtet** (`ecosystem.config.cjs`, `install.sh:224`) — das Troubleshooting beschreibt die Änderung korrekt.
+- [x] **Port 3000 ist fest verdrahtet** — Troubleshooting beschreibt die Änderung bereits korrekt, keine Änderung nötig. ✓
 - [x] **Doku: „Der Server startet neu und die LuxStage-Services starten automatisch."** — ✅ erledigt (2026-07-26): Reboot als „empfohlen, nicht zwingend" dargestellt (DE+EN).
 - [x] **CORS wird automatisch konfiguriert** — ✅ erledigt (2026-07-26): Hinweis in Schritt 4 ergänzt (DE+EN).
 
