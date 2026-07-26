@@ -2,7 +2,7 @@
 
 Fachbegriffe aus Theater- und Beleuchtungstechnik, wie sie in LuxStage verwendet werden.
 
-**Beleuchtungsgestell** — Ein Turm oder Gestell mit mehreren nummerierten Plätzen (Slots) für Scheinwerfer. Wird im [Setup](./webapp/setup)-Bereich verwaltet.
+**Beleuchtungsgestell** — Ein Turm oder Gestell mit mehreren nummerierten Plätzen (Slots) für Scheinwerfer. Wird im [Setup](./webapp/setup-gestelle)-Bereich verwaltet.
 
 **DMX** — Digital Multiplex, das Standard-Steuerprotokoll für Bühnenbeleuchtung. Jeder Scheinwerfer erhält eine DMX-Adresse, unter der ihn das Lichtpult anspricht.
 

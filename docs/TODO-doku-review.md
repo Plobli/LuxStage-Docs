@@ -127,7 +127,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [x] **Fachbegriffe ungeklärt** — ✅ erledigt (2026-07-26): alle genannten Begriffe im neuen `glossar.md` erklärt (siehe Abschnitt F).
 - [x] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — ✅ erledigt (2026-07-26): Beispiel „1/001" ergänzt (DE+EN).
 - [ ] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** und behandelt zwei getrennte Themen (Gestelle, Zugstangen). Aufteilen in zwei Seiten, passend zu den zwei Sidebar-Einträgen der App.
-- [ ] **Keine Seite „Was tun bei Problemen?"** für die Web-App. Fehlermeldungen, die der Nutzer real sieht — `error.network` („Keine Verbindung zum Server"), `offline.banner`, `csv.error.*` („Pflicht-Spalte fehlt: {column}", „Ungültige Kanal-Nummer in Zeile {line}") — sind nirgends erklärt. Troubleshooting gibt es nur in `installation.md` und nur für den Server.
+- [x] **Keine Seite „Was tun bei Problemen?"** — ✅ erledigt (2026-07-26): neue Seite `troubleshooting.md` (DE+EN), in Sidebar unter „Referenz" eingetragen. `csv.error.*` nicht aufgenommen — Keys sind tot (siehe unten).
 - [x] **CSV-Fehlermeldungen dokumentieren** — ✅ überholt (2026-07-26): `csv.error.*`-Keys sind im Code tot (kein Aufrufer in `web-app/src`), der CSV-Parser wirft aktuell keine Fehler. Das Spaltenschema selbst ist bereits in `import-csv.md` dokumentiert (Abschnitt C).
 - [x] **EOS-Import-Dialoge** — ✅ überholt (2026-07-26): Beide Keys existieren nicht mehr, ersetzt durch `EosMergePreviewDialog.vue` — bereits in `import-eos.md` dokumentiert (siehe Abschnitt S).
 

@@ -69,8 +69,8 @@ Den Kanal anklicken (aktivieren), dann auf das **×**-Symbol rechts in der Zeile
 Bei Hover über eine Kanalzeile erscheint rechts (vor dem Löschen-Button) der Button **„Zuweisen"** mit drei Optionen:
 
 - **Im Grundriss platzieren** – öffnet den [Grundriss](./grundriss) und platziert den Kanal dort
-- **Beleuchtungsgestell-Slot zuweisen** – öffnet den [Setup](./setup)-Bereich zur Zuweisung an ein Gestell
-- **Zugstange zuweisen** – öffnet den [Setup](./setup)-Bereich zur Platzierung auf einer Zugstange
+- **Beleuchtungsgestell-Slot zuweisen** – öffnet [Setup — Beleuchtungsgestelle](./setup-gestelle) zur Zuweisung an ein Gestell
+- **Zugstange zuweisen** – öffnet [Setup — Zugstangen](./setup-zugstangen) zur Platzierung auf einer Zugstange
 
 Ist der Kanal bereits einem Gestell-Slot oder einer Zugstange zugewiesen, wird der Einbauort zusätzlich als kleines Badge unterhalb der Notiz angezeigt.
 
