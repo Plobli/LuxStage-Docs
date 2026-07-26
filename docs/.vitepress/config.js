@@ -4,7 +4,7 @@ export default {
       allowedHosts: ['docs.luxstage.app']
     }
   },
-  title: 'LuxStage',
+  title: 'LuxStage Docs',
   description: 'Professionelles Beleuchtungsmanagement für das Theater',
 
   head: [
