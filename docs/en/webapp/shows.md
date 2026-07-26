@@ -42,6 +42,10 @@ If a venue is selected, the new show automatically inherits the channel structur
 
 Simply click on the desired show row. The show opens in the **Channels** tab.
 
+## Change show metadata afterwards
+
+In the opened show, the **show name** can be clicked and edited directly. Clicking the **date** (or "Info", if no date is set yet) next to the name opens a dialog to edit date, subtitle, and season.
+
 ## Archive a show
 
 Hovering over a show row reveals an **archive icon** on the right. After confirming, the show disappears from the home page and appears in the **Archive**.
