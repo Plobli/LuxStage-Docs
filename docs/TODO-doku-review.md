@@ -63,7 +63,7 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 - [x] **Sidebar-Gruppe „Shows"** enthält auch „Einstellungen" — ✅ erledigt (2026-07-26): neue Gruppe „Verwaltung"/„Management" mit Archiv, Spielort-Vorlage, Einstellungen (DE+EN).
 - [x] **Kein Glossar** — ✅ erledigt (2026-07-26): neue Seite `glossar.md` (DE+EN) mit allen genannten Begriffen, in Guide-, Web-App- und iOS-Sidebar verlinkt.
 - [x] **`docs/android-plan.md`** — ✅ erledigt (2026-07-26): nach `LuxStage-Docs/android-plan.md` verschoben, außerhalb des VitePress-Build-Ordners.
-- [ ] **Keine Seite zu Tastaturkürzeln gesamt** — Kürzel stehen verteilt in `kanaele.md` (Undo/Redo) und `grundriss.md` (Editor). Sammelseite wäre nützlich.
+- [x] **Keine Seite zu Tastaturkürzeln gesamt** — ✅ erledigt (2026-07-26): neue Seite `tastaturkuerzel.md` (DE+EN), in Sidebar unter „Referenz" eingetragen.
 
 ## G. Prüfaufgaben (vor Umsetzung verifizieren)
 
