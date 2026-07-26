@@ -64,7 +64,7 @@ Backup erstellen und wiederherstellen sind ausschließlich Admins zugänglich �
 
 **Backup erstellen**
 
-Lädt alle Show-Daten als ZIP-Archiv herunter.
+Lädt alle Show-Daten als ZIP-Archiv herunter. Der Dateiname enthält nur das Datum (z. B. `luxstage-backup-2026-07-25.zip`), keine Uhrzeit — zwei Backups am selben Tag heißen identisch und überschreiben sich im Download-Ordner.
 
 - Klick auf **„ZIP-Backup herunterladen"**
 - Der Download startet automatisch
@@ -83,6 +83,14 @@ Stellt alle Show-Daten aus einem zuvor erstellten ZIP-Backup wieder her. Fotos w
 ::: warning Achtung
 Die Datenbank (Shows, Kanäle, Abschnitte) wird vollständig durch den Backup-Stand ersetzt. Fotos werden nur ergänzt — Fotos, die im Backup fehlen, bleiben zusätzlich bestehen.
 :::
+
+Vor dem Einspielen wird das Backup geprüft: enthält das ZIP eine gültige Datenbank, ist sie unbeschädigt. Schlägt die Prüfung fehl, bleibt der aktuelle Stand **unangetastet**. Mögliche Fehlermeldungen:
+
+- „ZIP enthält keine luxstage.db"
+- „Datenbank ist beschädigt oder ungültig"
+- „Upload zu groß" — maximale Backup-Größe beim Wiederherstellen: **500 MB**. Größere Datenbestände lassen sich nur über die Kommandozeile auf dem Server wiederherstellen.
+
+Nur Fotos mit den Endungen `jpg`, `jpeg`, `png`, `gif`, `webp` werden beim Wiederherstellen zurückgespielt — andere Dateitypen im ZIP werden stillschweigend übersprungen.
 
 ---
 
