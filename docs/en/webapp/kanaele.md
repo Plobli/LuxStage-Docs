@@ -2,6 +2,10 @@
 
 The **Channels** tab is the main view of a show and displays the complete channel plan.
 
+::: tip Inline help in the app
+Next to the column headers of the channel table and in the Setup area, small help icons show brief explanations for each field directly in the app.
+:::
+
 ## Channel plan structure
 
 The table has five columns:
