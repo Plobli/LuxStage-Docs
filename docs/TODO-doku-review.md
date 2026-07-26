@@ -43,7 +43,7 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 - [ ] **`export-pdf.md` (7 Zeilen)** — fehlt: wo der Button sitzt, Vorschau-Dialog, Zusammenspiel mit „Fotos pro Druckseite", Umfang laut `features.md`-Tabelle (Titelseite, Aufbaunotizen, Fotogalerie). Die `features.md`-Tabelle ist detaillierter als die eigentliche Anleitungsseite.
 - [ ] **`export-csv.md` (7 Zeilen)** — fehlt: exportierte Spalten, Trennzeichen, Dateiname.
 - [ ] **`import-eos.md` (19 Zeilen)** — Merge-Dialog (`EosMergePreviewDialog.vue`) nur als Screenshot. Fehlt: was der Dialog anzeigt, welche Optionen es gibt, was mit bestehenden Notizen passiert.
-- [ ] **`fotos.md` (28 Zeilen)** — fehlt gegenüber `features.md` und `PhotoGallery.vue`: Mehrfach-Upload per Drag & Drop, Sortieren per Drag & Drop, Lightbox/Vollbild-Navigation, Foto löschen.
+- [x] **`fotos.md`** — ✅ erledigt (2026-07-26): Drag & Drop-Upload, Lightbox/Vollbild-Navigation und Foto löschen ergänzt (DE+EN). „Sortieren per Drag & Drop" existiert in `PhotoGallery.vue` **nicht** — Befund war falsch, nicht ergänzt.
 - [ ] **`archiv.md`** — Sortierung/Suche im Archiv prüfen und ergänzen, falls vorhanden.
 
 ## D. Fehlende Screenshots
@@ -235,12 +235,12 @@ Methodik: `photos.js`, `backup.js`, `floorplan.js` und die zugehörigen Werte au
 
 Verifiziert gegen [server/photos.js](LuxStage/server/photos.js) und [server/config.js:28-31](LuxStage/server/config.js#L28-L31).
 
-- [ ] **Jedes hochgeladene Foto wird verkleinert und neu komprimiert.** `photoMaxWidth: 1500`, `photoQuality: 70` ([photos.js:34-35](LuxStage/server/photos.js#L34-L35)). Ein 4000-px-Foto aus der Kamera landet mit 1500 px Breite und JPEG-Qualität 70 auf dem Server. **Das Original wird nicht aufbewahrt.** Für eine Dokumentations-App, in der Rigg-Details fotografiert werden, ist das eine zentrale Information — steht in `fotos.md` nicht.
-- [ ] **Alle Fotos werden in JPG umgewandelt** — unabhängig vom Ausgangsformat (`.replace(/\.[^.]+$/, '.jpg')`, [photos.js:26](LuxStage/server/photos.js#L26)). PNG-Screenshots eines Lichtplans verlieren dadurch Schärfe an Kanten und Text. Transparenz geht verloren.
-- [ ] **Maximale Uploadgröße: 50 MB** (`MAX_PHOTO_UPLOAD_BYTES`, [photos.js:125](LuxStage/server/photos.js#L125)). Bei Überschreitung bricht die Verbindung ab („Upload zu groß"). Nicht dokumentiert.
-- [ ] **Automatische Drehung nach EXIF** (`.rotate()`, [photos.js:30](LuxStage/server/photos.js#L30)) — hochkant aufgenommene Fotos erscheinen korrekt. Positiv, aber erwähnenswert.
-- [ ] **Zusätzlich entsteht ein Vorschaubild** (400 px, Qualität 60). Erklärt, warum die Galerie schnell lädt und das Vollbild kurz nachschärft.
-- [ ] **Gleichnamige Dateien überschreiben sich.** Der Dateiname wird nur bereinigt (`[^a-zA-Z0-9._-]` → `_`), es gibt keinen Eindeutigkeits-Zusatz ([photos.js:25-27](LuxStage/server/photos.js#L25-L27)). Zwei Uploads von `IMG_0001.jpg` aus verschiedenen Quellen — das zweite ersetzt das erste **ohne Warnung**. Praxisrelevant, da Kameras fortlaufend gleiche Namen vergeben. Auch als Code-Punkt vermerkt.
+- [x] **Jedes hochgeladene Foto wird verkleinert und neu komprimiert.** — ✅ erledigt (2026-07-26): Tipp-Box in `fotos.md` (DE+EN) ergänzt.
+- [x] **Alle Fotos werden in JPG umgewandelt** — ✅ erledigt (2026-07-26): im selben Hinweis ergänzt.
+- [x] **Maximale Uploadgröße: 50 MB** — ✅ erledigt (2026-07-26): im selben Hinweis ergänzt.
+- [x] **Automatische Drehung nach EXIF** — ✅ erledigt (2026-07-26): im selben Hinweis ergänzt.
+- [x] **Zusätzlich entsteht ein Vorschaubild** — ✅ erledigt (2026-07-26): im selben Hinweis ergänzt.
+- [x] **Gleichnamige Dateien überschreiben sich.** — ✅ überholt (2026-07-26): Code-Todo 9.1 hat das behoben (`uniqueName()` zählt bei Kollision hoch). Keine Doku-Änderung nötig, Verhalten ist jetzt unauffällig.
 
 ## V. `einstellungen.md` — Backup: Verhalten weicht deutlich ab
 
