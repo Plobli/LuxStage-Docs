@@ -9,8 +9,8 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 
 ## A. Fehlende Seiten (komplett undokumentiert)
 
-- [ ] **Registrierung & Login** — keine Seite vorhanden. Views existieren: `LoginView.vue`, `RegisterView.vue` (Team-Kürzel, E-Mail, Passwort, 24h-Bestätigungslink), `ConfirmView.vue`, `ForgotPasswordView.vue`, `ResetPasswordView.vue`. Server: `routes/register.js`, `routes/auth.js`. Kunde findet keine Anleitung zu „Team registrieren" oder „Passwort vergessen".
-- [ ] **Show-Health-Badge / Vollständigkeitsprüfung** — `components/show/ShowHealthBadge.vue`. Zeigt Zähler „X unvollständig" mit Filtern: kein Gerät, keine Position, keine Adresse, keine Notiz. Nirgends dokumentiert.
+- [x] **Registrierung & Login** — ✅ teilweise erledigt (2026-07-26): Neue Seite `login.md` (DE+EN) für Anmeldung und Passwort-vergessen-Flow (SMTP-abhängig), in Sidebar eingetragen. **Registrierung (Team anlegen) bewusst ausgelassen** — auf Wunsch, da SaaS-spezifisch (erzeugt `<team>.luxstage.app`, nicht relevant für Self-Hoster).
+- [x] **Show-Health-Badge / Vollständigkeitsprüfung** — ✅ erledigt (2026-07-26): Abschnitt in `kanaele.md` (DE+EN) ergänzt. Hinweis: „keine Notiz" wird laut Code aktuell **nicht** in die Zählung/Filter einbezogen (nur Gerät/Position/Adresse), Doku entsprechend auf drei Filter beschränkt.
 - [ ] **Presence / Live-Zusammenarbeit in der Web-App** — `useShowPresence.ts`, Avatare in `ShowActionBar.vue` inkl. 📱-Badge für iOS-Geräte. Nur in `features.md` als Marketingtext, keine Bedienanleitung.
 - [ ] **Automatisch generierter Text** — `GeneratedTextAccordion.vue` + `utils/generateHangerei.ts`. Erzeugt read-only Textblöcke „Beleuchtungsgestelle" und „Obermaschinerie" aus Setup-Daten (Positionen, Farbe, Kanal). Fehlt in `setup.md` und `info.md`.
 - [ ] **Update-Benachrichtigung** — `useUpdateCheck.ts`, Hinweis in App.vue. In `einstellungen.md` nur der Update-Tab beschrieben, nicht die Benachrichtigung.
