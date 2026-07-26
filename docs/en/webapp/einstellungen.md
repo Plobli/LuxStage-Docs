@@ -2,6 +2,10 @@
 
 **Settings** are accessible via the gear icon (⚙️) in the left sidebar. Every user sees the **Account** and **Display** tabs. The **Backup**, **Server**, **User Management**, **Email / SMTP**, and **Update** tabs are only visible to admins.
 
+::: tip Update notification
+If a server update is available, a small dot on the Settings icon in the sidebar indicates it — visible only to admins.
+:::
+
 ::: tip Hosted team (luxstage.app)
 On a hosted team at [luxstage.app](https://luxstage.app), the operator manages server operation, email delivery, and updates centrally.
 :::
