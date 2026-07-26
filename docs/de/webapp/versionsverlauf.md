@@ -1,6 +1,6 @@
 # Versionsverlauf
 
-LuxStage speichert automatisch einen **Versionsverlauf** aller Änderungen an einer Show. So können frühere Zustände wiederhergestellt werden.
+LuxStage speichert automatisch einen **Versionsverlauf** aller Änderungen an Kanälen und Abschnitten einer Show. So können frühere Zustände wiederhergestellt werden. Der Verlauf umfasst maximal 50 Versionen; ältere werden automatisch entfernt.
 
 ## Versionsverlauf öffnen
 
@@ -18,11 +18,12 @@ Das Panel zeigt eine Liste aller gespeicherten Versionen mit **Datum und Uhrzeit
 ## Version wiederherstellen
 
 1. Klick auf einen Versionseintrag → die Detailansicht zeigt Datum, Kanalanzahl und die vollständige Kanalliste zu diesem Zeitpunkt (Kanal, Gerät, Notizen)
-2. Klick auf **„Wiederherstellen"** unten im Panel → der Zustand der Show zu diesem Zeitpunkt wird übernommen
-3. Mit **„← Zurück"** oben lässt sich zur Versionsliste zurückkehren, ohne wiederherzustellen
+2. Klick auf **„Wiederherstellen"** unten im Panel → ein Bestätigungsdialog öffnet sich
+3. Bestätigung mit **„Ja, wiederherstellen"** setzt Kanäle und Abschnitte auf diesen Stand zurück — Fotos, Grundriss, Zugstangen und andere Daten bleiben unverändert
+4. Mit **„← Zurück"** oben lässt sich zur Versionsliste zurückkehren, ohne wiederherzustellen
 
 ::: warning Achtung
-Das Wiederherstellen einer alten Version überschreibt den aktuellen Stand. Stelle sicher, dass du den aktuellen Stand vorher gesichert hast, falls nötig.
+Das Wiederherstellen einer alten Version überschreibt den aktuellen Stand **der Kanäle und Abschnitte**. Der aktuelle Stand wird automatisch als Sicherungs-Version erfasst, bevor überschrieben wird.
 :::
 
 ## Panel schließen
