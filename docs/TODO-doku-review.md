@@ -59,8 +59,8 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 
 ## F. Struktur & Navigation
 
-- [ ] **`features.md` überschneidet sich stark mit den Anleitungsseiten** und beschreibt teils iOS-Funktionen (Einleuchten, OSC, In-App-Kamera), liegt aber unter „Web-App → Referenz". Entweder auf eine Ebene über beide Apps ziehen oder auf reine Web-App-Features kürzen.
-- [ ] **Sidebar-Gruppe „Shows"** enthält auch „Einstellungen" — gehört nicht zu einer Show. Eigene Gruppe „Verwaltung" (Archiv, Vorlagen, Einstellungen) anlegen.
+- [x] **`features.md` überschneidet sich stark mit den Anleitungsseiten** — ✅ erledigt (2026-07-26): Datei von `webapp/features.md` nach `/features.md` verschoben (Top-Level, deckt beide Apps ab), in Guide-, Web-App- und iOS-Sidebar verlinkt (DE+EN).
+- [x] **Sidebar-Gruppe „Shows"** enthält auch „Einstellungen" — ✅ erledigt (2026-07-26): neue Gruppe „Verwaltung"/„Management" mit Archiv, Spielort-Vorlage, Einstellungen (DE+EN).
 - [x] **Kein Glossar** — ✅ erledigt (2026-07-26): neue Seite `glossar.md` (DE+EN) mit allen genannten Begriffen, in Guide-, Web-App- und iOS-Sidebar verlinkt.
 - [ ] **`docs/android-plan.md`** liegt im öffentlichen docs-Ordner, ist aber interne Planung und in keiner Sidebar verlinkt. Verschieben oder aus dem Build ausschließen.
 - [ ] **Keine Seite zu Tastaturkürzeln gesamt** — Kürzel stehen verteilt in `kanaele.md` (Undo/Redo) und `grundriss.md` (Editor). Sammelseite wäre nützlich.
