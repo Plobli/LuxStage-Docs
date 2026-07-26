@@ -22,11 +22,11 @@ The table has five columns:
 
 | Column | Meaning |
 |--------|---------|
-| **CHANNEL** | Channel name in the console (left) / Dimmer address (right, after the "/"), e.g. "1/001" |
-| **COLOUR** | Colour filter (gel code), e.g. "L201/R371" or "RGB", "variable" |
-| **QTY** | Number of identical fixtures at this position |
-| **FIXTURE** | Fixture name, e.g. "ETC Source Four 26°" |
-| **NOTES** | Free-text note, e.g. "Key light stage left, narrow spot" |
+| **Chan** | Channel name in the console (left) / Dimmer address (right, after the "/"), e.g. "1/001" |
+| **Color** | Colour filter (gel code), e.g. "L201/R371" or "RGB", "variable" |
+| **Qty.** | Number of identical fixtures at this position |
+| **Device** | Fixture name, e.g. "ETC Source Four 26°" |
+| **Notes** | Free-text note, e.g. "Key light stage left, narrow spot" |
 
 Channels are grouped by **positions** (e.g. "FOH BAR LEFT", "OVERHEAD BAR 1", "SIDE BOOM SL"). The number of channels per position is shown as a number to the right of the position name.
 
@@ -39,7 +39,7 @@ Channels are grouped by **positions** (e.g. "FOH BAR LEFT", "OVERHEAD BAR 1", "S
 |-------|--------|
 | **Channel number (left)** | Click → enter number |
 | **Dimmer address (right)** | Click → enter address |
-| **Colour** | Click → dropdown with available gel codes appears (e.g. "L201 / R371 Full C.T. Blue"). Also selectable: **"No Color"** (no filter) or **free text** for custom entries (e.g. "R02" or "warm white") |
+| **Colour** | Click → dropdown with available gel codes appears (e.g. "L201 / R371 Full C.T. Blue"). Also selectable: **"No Color"** (no filter) or **"Custom"** for free-text entries (e.g. "R02" or "warm white") |
 | **Fixture** | Click → enter fixture name |
 | **Notes** | Click → enter free text |
 
@@ -88,7 +88,7 @@ When hovering over a position heading, the **"Rename position"** button appears 
 
 ## Search
 
-In the search field at the top right (**"Search …"**) channels, fixtures or notes can be filtered in real time.
+In the search field at the top right (**"Search channels …"**) channels, fixtures or notes can be filtered in real time.
 
 ## Completeness check
 

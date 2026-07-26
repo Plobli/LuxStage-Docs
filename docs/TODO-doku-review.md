@@ -133,7 +133,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 
 ## M. Zweisprachigkeit — App vs. Doku
 
-- [ ] **`de.json` und `en.json` sind vollständig synchron** (434 Keys, nur `template.apply_to_shows` fehlt in EN — ein Duplikat der `.bars/.sections/.towers`-Varianten, vermutlich unkritisch). Nur `show.template.optional` ist unübersetzt („Template (optional)"). **App-Übersetzung ist in gutem Zustand.**
+- [x] **`de.json` und `en.json` sind vollständig synchron** — ✅ bestätigt (2026-07-26): aktuell 616 Keys in beiden Dateien, exakt gleiche Anzahl. `template.apply_to_shows` in EN ergänzt (Code-Todo 11), `show.template.optional` als toter Key entfernt (Code-Todo 2.2). **App-Übersetzung weiterhin in gutem Zustand.**
 - [ ] **Die englische Doku übersetzt deutsche Fachbegriffe, die in der App englisch anders lauten.** Beispiel: `en/webapp/kanaele.md` müsste die Button-Beschriftungen der englischen App zitieren. Prüfen, ob die EN-Doku die EN-Strings aus `en.json` verwendet oder frei übersetzt wurde — bei freier Übersetzung findet der englische Nutzer die Buttons nicht wieder.
 
 ---
