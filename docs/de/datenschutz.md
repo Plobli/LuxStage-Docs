@@ -68,9 +68,9 @@ Im App Store sind folgende Angaben hinterlegt:
 
 **Data Not Linked to You** — es werden keine Daten mit deiner Person verknüpft oder an Dritte übermittelt.
 
-::: warning Impressum
-Für den gehosteten Dienst luxstage.app fehlt aktuell ein verlinktes Impressum. Nachzutragen.
-:::
+## Impressum
+
+Das Impressum für den gehosteten Dienst luxstage.app findest du unter [luxstage.app/impressum.html](https://luxstage.app/impressum.html).
 
 ## Änderungen dieser Datenschutzerklärung
 

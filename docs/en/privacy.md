@@ -1,10 +1,20 @@
 # Privacy Policy
 
-*Last updated: May 2026*
+*Last updated: July 2026*
+
+This privacy policy applies to both the **iOS app** and the **web app**, regardless of whether you self-host LuxStage or use it as a hosted service at [luxstage.app](https://luxstage.app).
 
 ## Overview
 
-LuxStage is designed to **collect no personal data**. The app communicates exclusively with the LuxStage server you operate yourself — there is no communication with third-party servers.
+LuxStage is designed to **collect no personal data**. Both apps communicate exclusively with the LuxStage server — with self-hosting, your own server; with the hosted service, the operator's server. There is no communication with third-party servers.
+
+## Web app and self-hosting
+
+The web app runs in the browser and stores only the server address and the selected display language locally (`localStorage`). Show data (channel plans, photos, floor plans, user accounts) is processed and stored exclusively on the LuxStage server.
+
+With **self-hosting**, you are the responsible data controller under GDPR and are yourself responsible for data security, access protection, and any data processing agreements (e.g. with a hosting provider for the server).
+
+With the **hosted service** (luxstage.app), the LuxStage operator is the responsible party for data stored there.
 
 ## What data is stored?
 
@@ -57,6 +67,10 @@ The following information is provided in the App Store:
 | Photos | Optional, local | Only to your own server |
 
 **Data Not Linked to You** — no data is linked to your identity or shared with third parties.
+
+## Legal Notice
+
+The legal notice (Impressum) for the hosted service luxstage.app can be found at [luxstage.app/impressum.html](https://luxstage.app/impressum.html).
 
 ## Changes to this Privacy Policy
 
