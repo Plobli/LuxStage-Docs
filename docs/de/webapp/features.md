@@ -51,17 +51,17 @@ Steuere das Pult direkt aus der App.
 
 Kabelwege, Stände, Absprachen mit der Regie, Besonderheiten der Spielstätte — Aufbaunotizen sind an jede Show angehängt und werden in Echtzeit synchronisiert.
 
-**Rich-Text-Editor mit Markdown**
-WYSIWYG-Editor mit Formatierungsoptionen — Fettdruck, Listen, Überschriften (H1–H4), Links und Bilder. Wer lieber Markdown schreibt, kann das direkt tun.
+**Rich-Text-Editor**
+WYSIWYG-Editor mit Formatierungsoptionen — Fettdruck, Kursiv, Überschrift, Aufzählung, nummerierte Liste und Tabellen.
 
 **Strukturierte Felder**
-Neben freiem Text: selbst definierbare Felder pro Sektion für Höhenangaben oder Positionen mit Maßangaben.
+Neben freiem Text: selbst definierbare Felder pro Sektion für Höhenangaben oder Positionen mit Maßangaben, inklusive optionaler Einheit.
 
-**Template-Sektionen**
-Jede Spielstätte bringt ihre eigenen Standard-Sektionen mit — „Aufbau", „Besonderheiten" u.v.m. Pro Show individuell anpassbar.
+**Frei anlegbare Abschnitte**
+Jede Spielort-Vorlage bringt eigene Standard-Abschnitte mit — „Aufbau", „Hinweise" u.v.m. Zusätzlich lassen sich pro Show eigene Abschnitte (Text oder Felder) anlegen.
 
 **Live-Synchronisation**
-Mehrere Nutzer können gleichzeitig bearbeiten. Änderungen erscheinen in Echtzeit..
+Mehrere Nutzer können gleichzeitig bearbeiten. Änderungen erscheinen in Echtzeit.
 
 ---
 
@@ -122,15 +122,15 @@ Ein Nutzer editiert am Laptop, ein anderer prüft auf dem iPhone — beide sehen
 
 ---
 
-## Spielstätten-Vorlagen
+## Spielort-Vorlagen
 
 ### Einmal anlegen, immer verwenden
 
-Spielstätten mit fester Kanalstruktur einmal als Vorlage speichern — bei jeder neuen Produktion per Klick übernehmen. Kanallisten, Notiz-Sektionen und strukturierte Felder werden geerbt und sind pro Show individuell anpassbar.
+Spielorte mit fester Kanalstruktur einmal als Vorlage speichern — bei jeder neuen Produktion per Klick übernehmen. Kanallisten, Notiz-Abschnitte und strukturierte Felder werden geerbt und sind pro Show individuell anpassbar.
 
 **Vorlage enthält:**
-- **Kanalliste** — Scheinwerfer, DMX-Adressen, Gerätetypen und Positionen der Spielstätte
-- **Notiz-Sektionen** — „Aufbau", „Besonderheiten" und beliebig viele eigene
+- **Kanalliste** — Scheinwerfer, DMX-Adressen, Gerätetypen und Positionen des Spielorts
+- **Notiz-Abschnitte** — „Aufbau", „Hinweise" und beliebig viele eigene
 - **Strukturierte Felder** — Maße, Positionen
 - **Grundriss** – Grundriss der Szenenfläche
 
