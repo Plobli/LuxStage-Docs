@@ -2,7 +2,7 @@
 
 Theatre and lighting terms as used in LuxStage.
 
-**Lighting rig** — A tower or rig with several numbered spots (slots) for fixtures. Managed in the [Setup](./webapp/setup) area.
+**Lighting rig** — A tower or rig with several numbered spots (slots) for fixtures. Managed in the [Setup](./webapp/setup-gestelle) area.
 
 **DMX** — Digital Multiplex, the standard control protocol for stage lighting. Every fixture is assigned a DMX address, through which the lighting console addresses it.
 
