@@ -59,6 +59,12 @@ Ein Hintergrundbild (z. B. ein Scan des Bühnenplans) kann auf zwei Wegen hinzug
 - **Über die Spielort-Vorlage:** Wird in der Spielort-Vorlage hinterlegt und automatisch in alle Shows übernommen
 - **Manuell:** Klick auf das **↑ Upload**-Symbol in der Werkzeugleiste → Bilddatei auswählen
 
+Erlaubte Formate: **PNG, JPG, SVG, WebP**. Ein PDF-Bühnenplan wird nicht unterstützt und muss vorher umgewandelt werden — bei falschem Format erscheint „Ungültiger Dateityp. Erlaubt: PNG, JPG, SVG, WebP".
+
+::: warning Nur ein Hintergrundbild pro Vorlage
+Ein neues Hintergrundbild ersetzt das alte sofort und ohne Rückfrage. Anders als Fotos im Fotos-Tab wird das Hintergrundbild **nicht komprimiert oder verkleinert** — ein großer Scan bleibt in voller Größe erhalten und wird bei jedem Öffnen des Grundrisses neu geladen. Für schnelles Laden lohnt es sich, das Bild vorher selbst zu verkleinern.
+:::
+
 Zum Entfernen: Klick auf das **⊠**-Symbol.
 
 ## Als PNG exportieren
