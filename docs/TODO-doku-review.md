@@ -128,8 +128,8 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [x] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — ✅ erledigt (2026-07-26): Beispiel „1/001" ergänzt (DE+EN).
 - [ ] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** und behandelt zwei getrennte Themen (Gestelle, Zugstangen). Aufteilen in zwei Seiten, passend zu den zwei Sidebar-Einträgen der App.
 - [ ] **Keine Seite „Was tun bei Problemen?"** für die Web-App. Fehlermeldungen, die der Nutzer real sieht — `error.network` („Keine Verbindung zum Server"), `offline.banner`, `csv.error.*` („Pflicht-Spalte fehlt: {column}", „Ungültige Kanal-Nummer in Zeile {line}") — sind nirgends erklärt. Troubleshooting gibt es nur in `installation.md` und nur für den Server.
-- [ ] **CSV-Fehlermeldungen dokumentieren** — `csv.error.missing_header`, `csv.error.invalid_channel`, `csv.error.invalid_address`, `csv.error.duplicate_channel` verraten die **Pflichtspalten** des Imports. Genau das fehlt in `import-csv.md` (siehe C).
-- [ ] **EOS-Import-Dialoge** — `eos.import.confirm_empty` („0 aktive Kanäle – trotzdem importieren?") und `eos.reimport` („{n} Kanäle nicht mehr aktiv … Trotzdem importieren?") sind Entscheidungen, die der Nutzer treffen muss, ohne dass die Doku die Konsequenz erklärt. Beim Re-Import besonders relevant.
+- [x] **CSV-Fehlermeldungen dokumentieren** — ✅ überholt (2026-07-26): `csv.error.*`-Keys sind im Code tot (kein Aufrufer in `web-app/src`), der CSV-Parser wirft aktuell keine Fehler. Das Spaltenschema selbst ist bereits in `import-csv.md` dokumentiert (Abschnitt C).
+- [x] **EOS-Import-Dialoge** — ✅ überholt (2026-07-26): Beide Keys existieren nicht mehr, ersetzt durch `EosMergePreviewDialog.vue` — bereits in `import-eos.md` dokumentiert (siehe Abschnitt S).
 
 ## M. Zweisprachigkeit — App vs. Doku
 

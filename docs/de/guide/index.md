@@ -19,19 +19,21 @@ Die native SwiftUI-App für iPhone und iPad. Schnell, responsiv und für Touch o
 
 Die Web-Anwendung läuft im Browser auf Mac, Windows, iPad oder jedem anderen Gerät. Die Installation des selbstgehosteten Servers erfolgt mit nur zwei Befehlen z.B. auf einem Raspberry Pi 4 oder eigenem VPS.
 
-## Workflow
+## Schnellstart in 10 Minuten
 
-### 1. Spielstätte einrichten
-Vorlage für die Spielstätte anlegen – Kanalstruktur einmal definieren, bei jeder neuen Produktion sofort verfügbar.
+Nach der [Installation](./installation) — diese Reihenfolge führt am schnellsten zur ersten Show:
 
-### 2. Kanäle planen & einleuchten
-Aus EOS importieren oder manuell befüllen. iOS-App und Web-App sind synchron – Alle Beleuchter sehen immer dasselbe.
+### 1. Spielort-Vorlage anlegen
+[Spielort-Vorlage anlegen](/de/webapp/spielstaette-vorlage) — Kanalstruktur einmal definieren (per CSV-Import oder manuell), bei jeder neuen Produktion sofort verfügbar. Optional: Beim Self-Hosting sinnvoll direkt nach der Installation, bevor die erste Show angelegt wird.
 
-### 3. Show einleuchten
-Der Plan mit allen Anweisungen zum fokussieren der Scheinwerfer liegt digital vor und alle Scheinwerfer können direkt angesteuert werden – kein seperater Papierkram notwendig.
+### 2. Show anlegen
+[Shows](/de/webapp/shows) — neue Show erstellen und optional der Spielort-Vorlage zuordnen. Kanalstruktur und Grundriss werden automatisch übernommen.
+
+### 3. Kanäle planen & einleuchten
+[Aus EOS importieren](/de/webapp/import-eos) oder [Kanäle](/de/webapp/kanaele) manuell befüllen. iOS-App und Web-App sind synchron – alle Beleuchter sehen immer denselben Stand.
 
 ### 4. Exportieren & archivieren
-Kanalplan als PDF ausgeben und drucken. Shows archivieren und bei Wiederaufnahmen reaktivieren – mit vollständigem Versionsverlauf.
+[PDF exportieren](/de/webapp/export-pdf) zum Ausdrucken, Show bei Abschluss [archivieren](/de/webapp/archiv) — mit vollständigem [Versionsverlauf](/de/webapp/versionsverlauf) für später.
 
 ## Nächste Schritte
 
