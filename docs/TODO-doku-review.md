@@ -126,7 +126,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [x] **Kein durchgehender „Von null zur ersten Show"-Pfad.** — ✅ erledigt (2026-07-26): `guide/index.md` (DE+EN) zu „Schnellstart in 10 Minuten" mit direkten Links zu jedem Schritt umgebaut.
 - [x] **Fachbegriffe ungeklärt** — ✅ erledigt (2026-07-26): alle genannten Begriffe im neuen `glossar.md` erklärt (siehe Abschnitt F).
 - [x] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — ✅ erledigt (2026-07-26): Beispiel „1/001" ergänzt (DE+EN).
-- [ ] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** und behandelt zwei getrennte Themen (Gestelle, Zugstangen). Aufteilen in zwei Seiten, passend zu den zwei Sidebar-Einträgen der App.
+- [x] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** — ✅ erledigt (2026-07-26): aufgeteilt in `setup-gestelle.md` und `setup-zugstangen.md` (DE+EN), alle internen Links und die Sidebar angepasst.
 - [x] **Keine Seite „Was tun bei Problemen?"** — ✅ erledigt (2026-07-26): neue Seite `troubleshooting.md` (DE+EN), in Sidebar unter „Referenz" eingetragen. `csv.error.*` nicht aufgenommen — Keys sind tot (siehe unten).
 - [x] **CSV-Fehlermeldungen dokumentieren** — ✅ überholt (2026-07-26): `csv.error.*`-Keys sind im Code tot (kein Aufrufer in `web-app/src`), der CSV-Parser wirft aktuell keine Fehler. Das Spaltenschema selbst ist bereits in `import-csv.md` dokumentiert (Abschnitt C).
 - [x] **EOS-Import-Dialoge** — ✅ überholt (2026-07-26): Beide Keys existieren nicht mehr, ersetzt durch `EosMergePreviewDialog.vue` — bereits in `import-eos.md` dokumentiert (siehe Abschnitt S).
