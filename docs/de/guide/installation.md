@@ -60,7 +60,12 @@ Hostname [luxstage]: ⏎
 Externe Domain []: ⏎
 ```
 
-**Admin-Passwort** — Mindestens 8 Zeichen. Du wirst damit als `admin` angemeldet:
+**Admin-E-Mail** — Dient zugleich als Login-Name:
+```
+Admin-E-Mail (dient als Login): du@beispiel.de
+```
+
+**Admin-Passwort** — Mindestens 8 Zeichen:
 ```
 Admin-Passwort: ••••••••
 ```
@@ -69,8 +74,8 @@ Admin-Passwort: ••••••••
 Du brauchst es für die erste Anmeldung.
 :::
 
-::: tip Techniker-Passwort
-Das Script generiert am Ende automatisch ein separates Passwort für das `tech`-Konto. Schreib es dir auf!
+::: tip Weitere Nutzer
+Das Script legt nur das Admin-Konto an. Techniker und weitere Administratoren fügst du nach der Anmeldung unter **Einstellungen → Benutzer** hinzu — jeweils mit eigener E-Mail-Adresse.
 :::
 
 ## Schritt 4 — Was wird eingerichtet
@@ -100,19 +105,20 @@ Nach dem Neustart öffne einen Browser:
 
 ### Zugangsdaten
 
-| Konto | Benutzername | Passwort |
-|-------|-------------|----------|
-| Admin | `admin` | Passwort aus der Installation |
-| Techniker | `tech` | Auto-generiert vom Installer |
+| Konto | Login | Passwort |
+|-------|-------|----------|
+| Admin | Deine E-Mail aus der Installation | Passwort aus der Installation |
+
+Der Login-Name ist immer die E-Mail-Adresse.
 
 ### Benutzerrollen
 
-| Benutzername | Rolle | Rechte |
-|-------------|-------|--------|
-| `admin` | Administrator | Alles, inkl. Vorlagen, Backup, Updates |
-| `tech` | Techniker | Produktionen lesen und bearbeiten, keine Vorlagen/Backup |
+| Rolle | Rechte |
+|-------|--------|
+| Administrator | Alles, inkl. Vorlagen, Backup, Updates |
+| Techniker | Produktionen lesen und bearbeiten, keine Vorlagen/Backup |
 
-Das tech-Passwort wird am Ende der Installation angezeigt.
+Weitere Nutzer legst du unter **Einstellungen → Benutzer** an. Ist SMTP eingerichtet, bekommen sie ihr Startpasswort per E-Mail.
 
 ## Troubleshooting
 
