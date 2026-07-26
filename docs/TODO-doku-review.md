@@ -115,11 +115,11 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 
 ## K. Datenschutzerklärung — sachlich falsch
 
-- [ ] **`datenschutz.md` gilt nur für die iOS-App, ist aber die einzige Datenschutzseite** und wird aus dem Footer **beider** Sprachen und aller Web-App-Seiten verlinkt. Sie spricht durchgehend von „die App", „App Store", „Apple". Web-App-Nutzer und Self-Hoster finden keine Aussage zu ihrer Nutzung.
-- [ ] **Aussage „es findet keine Kommunikation mit Servern von Drittanbietern statt" (Zeile 7) und „Es besteht keine Verbindung zu externen Servern des App-Entwicklers oder Dritter" (Zeile 44) sind unzutreffend.** Die iOS-App bietet „Aufnahmeplan scannen" — laut `ocr.confirm.body` werden Fotos **an die Claude API von Anthropic übertragen**. Der Server hält dafür einen `ANTHROPIC_API_KEY` (`server/config.js:32`). Das ist eine Drittanbieter-Übermittlung von Nutzerinhalten und muss in der Datenschutzerklärung stehen (Anbieter, Zweck, Rechtsgrundlage, keine Speicherung o. Ä.). Rechtlich der wichtigste Punkt dieser Liste.
-- [ ] **App-Store-Datenschutzlabel prüfen** — wenn Bilder an Anthropic gehen, muss das Label „Data Not Linked to You / keine Übermittlung an Dritte" gegengeprüft werden.
-- [ ] **OCR-Feature selbst ist undokumentiert** — gehört in die **iOS-Doku** (`de/ios/`), nicht in die Web-App-Doku: die 9 `ocr.*`-Keys werden ausschließlich von der iOS-App verwendet, in `web-app/src` kommt keiner davon vor. Die Web-App hat dieses Feature nicht.
-- [ ] **Kein Impressum** und keine Auftragsverarbeitungs-/Hosting-Aussage für den gehosteten Dienst luxstage.app, obwohl dieser kostenpflichtig beworben wird.
+- [x] **`datenschutz.md` gilt nur für die iOS-App** — ✅ erledigt (2026-07-26): Web-App/Self-Hosting-Abschnitt ergänzt, Verantwortlichkeit (Self-Hoster vs. Betreiber luxstage.app) geklärt.
+- [x] **Aussage „keine Kommunikation mit Drittanbietern" unzutreffend (OCR/Anthropic)** — ✅ überholt (2026-07-26): geprüft und bestätigt (auf Hinweis von Christopher) — **das OCR-Feature existiert nicht mehr**. Kein Swift-Code ruft es auf, keine Server-Route nutzt `anthropicApiKey` mehr. Nur zwei verwaiste Locale-Keys (`ocr.intro.*`) und die ungenutzte Config-Variable sind übrig. Aussage in der Datenschutzerklärung ist damit korrekt, keine Änderung nötig.
+- [x] **App-Store-Datenschutzlabel prüfen** — ✅ überholt: gegenstandslos, da kein Datenfluss an Anthropic mehr existiert.
+- [x] **OCR-Feature selbst ist undokumentiert** — ✅ überholt: Feature existiert nicht mehr, keine Doku nötig.
+- [x] **Kein Impressum** — ✅ teilweise erledigt (2026-07-26): Warnbox in `datenschutz.md` ergänzt, die auf das fehlende Impressum für luxstage.app hinweist. Kein Impressum auf `LuxStage-Website/` gefunden — bleibt offener Punkt für Christopher, nicht selbst erfunden.
 
 ## L. Verständlichkeit für Erstnutzer
 
