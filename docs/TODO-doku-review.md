@@ -220,10 +220,10 @@ Verifiziert gegen [EosMergePreviewDialog.vue](LuxStage/web-app/src/components/Eo
 
 ## T. Shows- und Archiv-Ansicht
 
-- [ ] **Standardsortierung ist „Stand" absteigend** ([ShowsView.vue:172-173](LuxStage/web-app/src/views/ShowsView.vue#L172-L173)), nicht alphabetisch. Erneutes Klicken kehrt die Richtung um, ein Pfeil (↑/↓) zeigt sie an. Beim Wechsel auf „Name" wird aufsteigend vorbelegt, sonst absteigend.
-- [ ] **Sortiert wird innerhalb der Spielort-Gruppen**, die Gruppen selbst stehen immer alphabetisch ([ShowsView.vue:216-222](LuxStage/web-app/src/views/ShowsView.vue#L216-L222)). Die Doku erweckt den Eindruck einer durchgehenden Liste.
-- [ ] **Spalten blenden sich abhängig von der Fensterbreite aus:** „Spielzeit" erst ab `lg`, „Stand" und „Bearbeitung" erst ab `sm`. Die Doku erwähnt das nur bei „Spielzeit". Auf dem iPad im Hochformat fehlen mehrere Spalten.
-- [ ] **Das Archiv bietet keine Sortierung.** `archiv.md` schreibt „gleiche Darstellung wie in der normalen Shows-Übersicht" — die sortierbaren Spaltenköpfe fehlen dort jedoch. Offener Prüfpunkt aus Runde 1 damit geklärt: **nein**, keine Sortierung, keine Suche.
+- [x] **Standardsortierung ist „Stand" absteigend** — ✅ erledigt (2026-07-26): in `shows.md` (DE+EN) ergänzt.
+- [x] **Sortiert wird innerhalb der Spielort-Gruppen** — ✅ erledigt (2026-07-26): in `shows.md` (DE+EN) klargestellt.
+- [x] **Spalten blenden sich abhängig von der Fensterbreite aus** — ✅ erledigt (2026-07-26): Tipp-Box in `shows.md` (DE+EN) ergänzt.
+- [x] **Das Archiv bietet keine Sortierung.** — ✅ erledigt (2026-07-26): `archiv.md` (DE+EN) korrigiert. Offener Prüfpunkt aus Runde 1 damit geklärt: **nein**, keine Sortierung, keine Suche.
 
 ---
 
