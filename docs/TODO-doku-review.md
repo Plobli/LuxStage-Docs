@@ -19,24 +19,23 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 
 ## B. Inhaltliche Fehler / Widersprüche
 
-- [ ] **Terminologie uneinheitlich: Vorlage / Template / Spielort / Spielstätte / Bühne.**
-  **App-Seite ist erledigt (2026-07-26):** Web-App und iOS sagen jetzt durchgehend **„Spielort-Vorlage"** (englisch „venue template") — siehe 2.2 in [TODO-webapp-code.md](./TODO-webapp-code.md). Der Begriff wurde bewusst so gewählt, weil die Doku überwiegend schon „Spielort-Vorlage" schreibt. **Die Doku muss jetzt nachziehen**, nicht umgekehrt.
-  - Sidebar-Eintrag: „Spielstätten-Vorlage anlegen" → auf „Spielort-Vorlage" ändern
-  - Dateiname: `spielstaette-vorlage.md` → Umbenennung auf `spielort-vorlage.md` erwägen (betrifft `config.js` und alle internen Links, auch die EN-Seiten)
-  - Seitenüberschrift und Fließtext darin: **„Bühnen-Template" an 20+ Stellen** → „Spielort-Vorlage"
-  - Weitere „Bühnen-Template"-Stellen: `de/ios/einstellungen.md` (Zeilen 15, 17, 20), `de/ios/osc.md` (Zeilen 5, 7), `de/webapp/grundriss.md:58` („Spielort-Template"), `de/webapp/info.md:3` („Spielort-Template")
-  - „Kanaltemplate" in `de/webapp/index.md:29`, `de/webapp/shows.md:34`, `de/ios/shows.md:20`
-  - `features.md`: „Spielstätten-Vorlagen"
-  - EN-Pendants aller genannten Dateien mitziehen → „venue template"
+- [x] **Terminologie uneinheitlich: Vorlage / Template / Spielort / Spielstätte / Bühne.** — ✅ erledigt (2026-07-26)
+  Web-App und iOS sagen jetzt durchgehend **„Spielort-Vorlage"** (englisch „venue template") — siehe 2.2 in [TODO-webapp-code.md](./TODO-webapp-code.md). Doku nachgezogen:
+  - Sidebar-Eintrag in `webapp/index.md` auf „Spielort-Vorlage" geändert
+  - Dateiname `spielstaette-vorlage.md` **nicht** umbenannt (Aufwand/Nutzen), aber Inhalt komplett auf „Spielort-Vorlage" umgestellt
+  - Alle „Bühnen-Template"-Stellen ersetzt: `spielstaette-vorlage.md` (20+ Stellen), `de/ios/einstellungen.md`, `de/ios/osc.md`, `de/webapp/grundriss.md:58`, `de/webapp/info.md:3`
+  - „Kanaltemplate" → „Kanalstruktur" in `de/webapp/index.md`, `de/webapp/shows.md`, `de/ios/shows.md`
+  - `features.md`: „Spielstätten-Vorlagen" → „Spielort-Vorlagen"
+  - EN-Pendants aller genannten Dateien mitgezogen → „venue template" / „venue"
   - Web-App-Route bleibt `/templates`, View `TemplatesView.vue` (interne Bezeichner unverändert)
 - [ ] **`webapp/index.md`: „Die Seitenleiste enthält vier Symbole"** — Router hat Shows, Archiv, Vorlagen, Einstellungen = 4. Prüfen, ob Zählung und Reihenfolge noch stimmen, wenn Registrierung/Login ergänzt wird.
 - [ ] **`installation.md`: Zugangsdaten `admin` / `tech` als „Benutzername"** — Web-App und `users.js` arbeiten mit E-Mail-Adressen. Klären, ob der Installer wirklich reine Benutzernamen anlegt, und ggf. korrigieren.
 - [ ] **`einstellungen.md`: Rollen** — nennt nur `admin` und `techniker`. Prüfen, ob durch das Operator-Panel eine dritte Rolle existiert und ob „Techniker" wirklich keine Vorlagen bearbeiten darf (Aussage steht in `features.md` und `installation.md` leicht abweichend).
-- [ ] **`setup.md` Tipp-Box** — sagt, der iOS-„Aufbau"-Tab zeige Inhalte aus dem Info-Tab. Gegen aktuellen iOS-Stand verifizieren.
-- [ ] **`features.md`: „Alle 10 Minuten wird ein Snapshot gespeichert"** — Intervall gegen `server/history.js` prüfen.
-- [ ] **`features.md`, Abschnitt Aufbaunotizen** — Tippfehler: „Änderungen erscheinen in Echtzeit.." (doppelter Punkt).
-- [ ] **`features.md`: „Rich-Text-Editor mit Markdown … Links und Bilder"** — `MarkdownEditor.vue` bietet laut Toolbar nur Fett, Kursiv, Überschrift, Aufzählung, nummerierte Liste, Tabelle. Links/Bilder/H1–H4 verifizieren oder Text korrigieren.
-- [ ] **`info.md`: Werkzeugleiste** — listet dieselben Buttons, nennt aber „Überschrift" ohne Ebenen. Mit `features.md` abgleichen (dort H1–H4).
+- [x] **`setup.md` Tipp-Box** — ✅ bereits korrekt: verweist auf Info-Tab, unverändert übernommen.
+- [x] **`features.md`: „Alle 10 Minuten wird ein Snapshot gespeichert"** — ✅ erledigt (2026-07-26): Intervall stimmt (`INTERVAL_MS`, `history.js:20`), bestätigt.
+- [x] **`features.md`, Abschnitt Aufbaunotizen** — ✅ erledigt (2026-07-26): doppelter Punkt entfernt.
+- [x] **`features.md`: „Rich-Text-Editor mit Markdown … Links und Bilder"** — ✅ erledigt (2026-07-26): gegen `MarkdownEditor.vue` verifiziert, Text auf tatsächliche Buttons korrigiert (Fett, Kursiv, Überschrift, Aufzählung, nummerierte Liste, Tabelle — kein H1–H4, keine Links/Bilder).
+- [x] **`info.md`: Werkzeugleiste** — ✅ erledigt (2026-07-26): `features.md` an `info.md` angeglichen (beide „Überschrift" ohne Ebenen).
 
 ## C. Zu dünne Seiten
 
@@ -98,8 +97,8 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [ ] **Inline-Hilfe (⌘-Icons) in der App** — `HelpIcon` an jeder Spaltenüberschrift der Kanaltabelle und im Setup-Bereich. Diese Hilfetexte (`channel.help.*`) sind teils **präziser als die Doku**, z. B. die Farb-Legende. Doku sollte erwähnen, dass es diese Hilfe gibt.
 - [ ] **Doppelte-Adresse-Warnung** (`channel.dup_address` = „Doppelte DMX-Adresse!", `channel.dup_channel` = „Doppelte Kanalnummer!") — in `features.md` als Marketingpunkt erwähnt, in `kanaele.md` (der eigentlichen Anleitung) fehlt sie.
 - [ ] **Show-Metadaten nachträglich ändern** (`show.edit` = „Show bearbeiten", `ShowHeader.vue` Meta-Dialog) — `shows.md` beschreibt nur das Anlegen. Wie ändert man Datum, Untertitel oder Spielzeit später? Nicht dokumentiert.
-- [ ] **„Abschnitt hinzufügen" direkt in der Show** (`sections.add`, `section.dialog.title` = „Neuer Tab", Auswahl Text/Felder) — `info.md` behauptet, Abschnitte würden „durch das Spielort-Template vorgegeben". Tatsächlich kann der Nutzer pro Show eigene Abschnitte anlegen, inkl. Typwahl. Fehlt komplett.
-- [ ] **Feld-Einheit** (`sections.field.unit` = „Einheit") — `info.md` beschreibt Felder-Tabellen als zweispaltig (Label/Wert). Es gibt eine dritte Spalte „Einheit". Auch `template.unit_hint` („z.B. Meter") bestätigt das.
+- [x] **„Abschnitt hinzufügen" direkt in der Show** — ✅ erledigt (2026-07-26): neuer Abschnitt „Eigenen Abschnitt anlegen" in `info.md` (DE+EN).
+- [x] **Feld-Einheit** — ✅ erledigt (2026-07-26): dritte Spalte „Einheit" in `info.md` (DE+EN) ergänzt.
 - [ ] **Foto löschen** (`photo.delete`, `show.photo.delete.confirm`) — `fotos.md` erklärt Hinzufügen und Beschriften, aber nicht das Löschen.
 - [ ] **Kanal-Farbwahl „No Color" / Freitext** (`color.no_color`, `color.picker.custom`) — `kanaele.md` nennt nur das Dropdown mit Gel-Codes. Freitexteingabe („z.B. R02 oder warm weiß") und „No Color" fehlen.
 - [ ] **404-Seite** (`not_found.*`) — unkritisch, nur der Vollständigkeit halber.
@@ -110,8 +109,8 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [ ] **Passwort-Mindestlänge.** `installation.md` sagt „Mindestens 8 Zeichen". Die App meldet beim Ändern (`settings.account.change_password.error.short`): „Passwort muss mindestens **4** Zeichen lang sein". `RegisterView.vue` sagt wieder „Mindestens 8 Zeichen". Drei Stellen, zwei Werte — im Code klären, dann einheitlich dokumentieren.
 - [ ] **Passwort vergessen.** Die Login-Seite zeigt „Passwort vergessen?" und dann den Hinweis (`auth.reset.hint`): „**Wende dich an deinen Administrator**". Gleichzeitig existieren `ForgotPasswordView.vue` und `ResetPasswordView.vue` mit E-Mail-Flow. Welcher Weg gilt für den Nutzer? Muss die Doku eindeutig beantworten — vermutlich abhängig davon, ob SMTP konfiguriert ist.
 - [ ] **Login-Feld heißt „E-Mail-Adresse"** (`auth.username`), die Fehlermeldung aber „Bitte **Benutzername** und Passwort prüfen" (`auth.login.error`), und `installation.md` nennt Zugangsdaten `admin` / `tech` ohne E-Mail-Form. Für einen Erstnutzer nach der Installation ist damit unklar, was er ins Login-Feld tippt. **Kritischster Punkt der gesamten Doku** — betrifft den allerersten Schritt.
-- [ ] **Beleuchtungsgestelle aus Vorlage.** `setup.md` sagt, sie müssten „manuell über ‚Aus Vorlage einfügen…' im Anlegen-Dialog" hinzugefügt werden. Die App sagt (`template.tower.hint`): „Über **'Einfügen'** im **Bearbeiten**-Dialog". Anlegen vs. Bearbeiten, unterschiedliche Button-Beschriftung.
-- [ ] **`info.md` beschreibt Abschnitte als vorgegeben** — siehe H/I. Der Nutzer kann sie selbst anlegen und löschen.
+- [x] **Beleuchtungsgestelle aus Vorlage.** — ✅ erledigt (2026-07-26): `setup.md` (DE+EN) auf „Einfügen im Bearbeiten-Dialog" korrigiert.
+- [x] **`info.md` beschreibt Abschnitte als vorgegeben** — ✅ erledigt (2026-07-26): siehe I, Abschnitt „Eigenen Abschnitt anlegen" ergänzt.
 - [ ] **`einstellungen.md`: „Passwort zurücksetzen"** ist dort unter „Konto" beschrieben, ist aber laut `settings.account.reset_password.*` eine Admin-Funktion für **andere** Benutzer (zeigt das neue Passwort im Klartext an). Ein Techniker sucht dort vergeblich. Zuordnung und Sichtbarkeit klarstellen.
 
 ## K. Datenschutzerklärung — sachlich falsch
@@ -149,7 +148,7 @@ Verifiziert gegen [install.sh](LuxStage/install.sh) und [server/bootstrap.js](Lu
 
 - [ ] **Der Installer fragt das Admin-Passwort ZWEIMAL ab.** Die Doku zeigt nur eine Eingabezeile. `install.sh:48-49` fragt „Admin-Passwort" und „Admin-Passwort bestätigen". Nach **drei Fehlversuchen bricht die Installation ab** (`install.sh:64`) — nicht dokumentiert.
 - [ ] **Prompt-Text weicht ab.** Doku: `Systemnutzer [luxstage]:`. Tatsächlich: `Systemnutzer für LuxStage [luxstage]:` (`install.sh:30`).
-- [ ] **Externe Domain: Doku zeigt falsches Format.** Die Doku schreibt „gib deine Domain ein (z. B. `luxstage.example.com`)". Der Installer **verlangt zwingend das Schema** und bricht sonst ab: `[[ $EXTERNAL_DOMAIN =~ ^https?:// ]] || fail "Domain muss mit http:// oder https:// beginnen."` (`install.sh:41`). Wer der Doku folgt, scheitert. **Konkreter Abbruchfehler durch falsche Doku.**
+- [x] **Externe Domain: Doku zeigt falsches Format.** — ✅ erledigt (2026-07-26): DE + EN auf `https://luxstage.example.com` (mit Schema) korrigiert.
 - [ ] **Zugangsdaten sind tatsächlich Benutzernamen, keine E-Mail-Adressen.** `bootstrap.js` legt via `INSERT INTO users (username, ...)` die Konten `admin` und `tech` an. Damit ist der offene Punkt aus Runde 2 geklärt: Die Doku hat recht, **die App ist falsch beschriftet** (`auth.username` = „E-Mail-Adresse"). Gehört in die Code-ToDo, nicht in die Doku.
 - [ ] **Voraussetzungen fehlen komplett.** Der Installer benötigt: Root/`sudo` (`install.sh:11`), ein **TTY** (kein Pipe-Aufruf), Internetzugang, **`apt-get`** — also Debian/Ubuntu/Raspberry Pi OS. Die Doku sagt pauschal „Linux". Auf Fedora, Arch oder Alpine schlägt das Script fehl. Muss ausdrücklich stehen.
 - [ ] **Der Installer ändert den System-Hostname** (`hostnamectl set-hostname`) und **editiert `/etc/hosts`** (`install.sh:124-125`). Ein Eingriff mit Auswirkungen über LuxStage hinaus — muss in der Warnbox stehen.
@@ -163,31 +162,31 @@ Verifiziert gegen [install.sh](LuxStage/install.sh) und [server/bootstrap.js](Lu
 
 Verifiziert gegen [server/history.js](LuxStage/server/history.js).
 
-- [ ] **Maximal 50 Versionen pro Show** (`MAX_HISTORY = 50`, `history.js:22`). Ältere werden **automatisch gelöscht**. Die Doku erweckt den Eindruck eines unbegrenzten Verlaufs. Wichtigste fehlende Information der Seite.
+- [x] **Maximal 50 Versionen pro Show** — ✅ erledigt (2026-07-26): in `versionsverlauf.md` (DE+EN) ergänzt.
 - [ ] **Snapshots nur bei tatsächlicher Änderung.** `history.js` bildet einen SHA-256-Hash über Kanäle und Abschnitte; bei Gleichheit entsteht kein Eintrag (`history.js:53`). Erklärt dem Nutzer, warum bei ruhigen Phasen keine Einträge auftauchen.
 - [ ] **Zusätzlicher Snapshot beim Öffnen einer Show** (`takeSnapshotNow`, `history.js:107`) — nicht nur alle 10 Minuten.
-- [ ] **Das 10-Minuten-Intervall stimmt** (`INTERVAL_MS`, `history.js:20`). Offener Prüfpunkt aus Runde 1 erledigt. ✓
+- [x] **Das 10-Minuten-Intervall stimmt** (`INTERVAL_MS`, `history.js:20`). Offener Prüfpunkt aus Runde 1 erledigt. ✓
 - [ ] **Archivierte Shows erhalten keine Snapshots** (`WHERE archived = 0`, `history.js:46`). Relevant vor dem Archivieren.
-- [ ] **Der Verlauf umfasst nur Kanäle und Abschnitte** — **nicht** Fotos, Grundriss, Zugstangen oder Beleuchtungsgestelle. Die Doku sagt „Versionsverlauf aller Änderungen an einer Show", was zu weit greift. Nutzer könnte fälschlich annehmen, ein gelöschtes Foto sei wiederherstellbar. **Wichtige Korrektur.**
+- [x] **Der Verlauf umfasst nur Kanäle und Abschnitte** — ✅ erledigt (2026-07-26): in `versionsverlauf.md` (DE+EN) klargestellt, inkl. Bestätigungsdialog-Text.
 
 ## P. `grundriss.md` — Tastaturkürzel-Tabelle fehlerhaft
 
 Verifiziert gegen den Handler in [FloorplanEditor.vue:1439-1470](LuxStage/web-app/src/components/FloorplanEditor.vue#L1439-L1470).
 
-- [ ] **„Kanal platzieren (C)" funktioniert nicht wie beschrieben.** Die Bedingung lautet `if (e.key === 'c' && activeTool.value !== 'select')` — das Kürzel greift **nur, wenn nicht das Auswählen-Werkzeug aktiv ist**. Die Doku sagt „Werkzeug ‚Kanal platzieren' (C) auswählen"; da „Auswählen" das Standardwerkzeug ist, passiert beim ersten Druck nichts. Zudem reagiert nur Kleinbuchstabe `c`, alle anderen Werkzeuge akzeptieren Groß- und Kleinschreibung. Sieht nach Code-Bug aus, siehe Code-ToDo.
-- [ ] **Leertaste = temporäres Verschieben** (`spaceHeld`, `:1439`) — Standardgeste in Grafikprogrammen, fehlt in der Tabelle.
-- [ ] **Umschalt+Pfeiltaste verschiebt um 10 statt 1 Einheit** (`const step = e.shiftKey ? 10 : 1`, `:1453`). Die Doku nennt nur „Pfeiltasten".
-- [ ] **Rückschritt (Backspace) löscht ebenfalls** (`:1451`) — Doku nennt nur „Entf".
-- [ ] **„Einrasten" hat kein Kürzel** — die Doku führt es korrekt mit „–". ✓
-- [ ] **Ansicht zurücksetzen: F und Strg+0 stimmen** (`:1449`, `:1470`). ✓ Ebenso Kopieren/Einfügen/Duplizieren/Alles auswählen und Rückgängig/Wiederholen. ✓
-- [ ] **Esc ist mehrstufig** (`:1450`): bricht laufende Kanal-Platzierung ab, wechselt zum Auswählen-Werkzeug **und** hebt die Auswahl auf. Doku: „Werkzeug abbrechen".
+- [x] **„Kanal platzieren (C)" funktioniert nicht wie beschrieben.** — ✅ überholt (2026-07-26): Code-Todo 7.2 hat den Bug behoben (Bedingung entfernt, Großbuchstabe ergänzt). Doku-Text war bereits korrekt, keine Änderung nötig.
+- [x] **Leertaste = temporäres Verschieben** — ✅ erledigt (2026-07-26): in `grundriss.md` (DE+EN) ergänzt.
+- [x] **Umschalt+Pfeiltaste verschiebt um 10 statt 1 Einheit** — ✅ erledigt (2026-07-26): in `grundriss.md` (DE+EN) ergänzt.
+- [x] **Rückschritt (Backspace) löscht ebenfalls** — ✅ erledigt (2026-07-26): in `grundriss.md` (DE+EN) ergänzt.
+- [x] **„Einrasten" hat kein Kürzel** — die Doku führt es korrekt mit „–". ✓
+- [x] **Ansicht zurücksetzen: F und Strg+0 stimmen** (`:1449`, `:1470`). ✓ Ebenso Kopieren/Einfügen/Duplizieren/Alles auswählen und Rückgängig/Wiederholen. ✓
+- [x] **Esc ist mehrstufig** — ✅ erledigt (2026-07-26): in `grundriss.md` (DE+EN) als „Werkzeug abbrechen / Auswahl aufheben" ergänzt.
 - [ ] **`composables/floorplan/useFloorplanState.ts` ist eine leere Datei (0 Zeilen)** — für die Doku irrelevant, gehört aber aufgeräumt.
 
 ## Q. PDF-Export — Doku verspricht zu viel
 
 Verifiziert gegen [server/pdf.js](LuxStage/server/pdf.js).
 
-- [ ] **„Fotos pro Druckseite" wirkt im PDF NICHT.** `pdf.js:314` setzt `const PHOTOS_PER_PAGE = 4` fest, ebenso `COLS = 2` / `ROWS = 2`. Die Einstellung wird in `pdf.js` nirgends gelesen — sie beeinflusst ausschließlich die Browser-Druckansicht der Fotogalerie ([PhotoGallery.vue:165](LuxStage/web-app/src/components/show/PhotoGallery.vue#L165)). **Sowohl `fotos.md` als auch `export-pdf.md` und `einstellungen.md` behaupten das Gegenteil.** Bug, siehe Code-ToDo — bis zur Behebung muss die Doku klarstellen: Einstellung gilt für den Browser-Druck, das PDF nutzt immer 4.
+- [x] **„Fotos pro Druckseite" wirkt im PDF NICHT.** — ✅ überholt (2026-07-26): Code-Todo 7.1 hat das Verhalten geändert — die Einstellung liegt jetzt serverseitig und wirkt auf **beide** Ausgaben gleich. `fotos.md`, `export-pdf.md`, `einstellungen.md` (DE+EN) entsprechend bestätigt/korrigiert.
 - [ ] **Der Grundriss ist im PDF enthalten** (`generatePDF(..., floorplan, unit)`, `pdf.js:65`). In der `features.md`-Tabelle fehlt er — die zählt nur Titelseite, Kanalliste, Aufbaunotizen und Fotogalerie.
 - [ ] **Fotos ohne lesbare Datei werden übersprungen** (`validPhotos`-Filter, `pdf.js:300`) — stillschweigend. Erklärt fehlende Fotos im Export.
 - [ ] **Foto-Beschriftungen werden einzeilig abgeschnitten** (`lineBreak: false, ellipsis: true`, `pdf.js:346`). Nutzer sollten wissen, dass lange Beschriftungen im PDF gekürzt erscheinen.
