@@ -80,6 +80,15 @@ Beim Hovern über eine Positionsüberschrift erscheint der Button **„Position 
 
 Im Suchfeld oben rechts (**„Suchen …"**) können Kanäle, Geräte oder Notizen in Echtzeit gefiltert werden.
 
+## Vollständigkeitsprüfung
+
+Neben der Kanaltabelle zeigt ein Badge, ob die Show vollständig ist:
+
+- **Grüner Haken** – alle Kanäle vollständig ausgefüllt
+- **Gelbes Warnsymbol mit Zahl** – Anzahl der Kanäle mit fehlenden Angaben
+
+Ein Klick auf das Badge öffnet die Aufschlüsselung nach fehlender Angabe (kein Gerät, keine Position, keine Adresse). Klick auf eine Zeile filtert die Kanaltabelle auf genau diese Kanäle; ein **×** neben dem aktiven Filter setzt ihn zurück.
+
 ## Tastaturkürzel
 
 | Aktion | Kürzel |
