@@ -48,6 +48,7 @@ export default {
             {
               text: 'Shows',
               items: [
+                { text: 'Anmeldung', link: '/de/webapp/login' },
                 { text: 'Shows', link: '/de/webapp/shows' },
                 { text: 'Spielstätten-Vorlage anlegen', link: '/de/webapp/spielstaette-vorlage' },
                 { text: 'Kanäle', link: '/de/webapp/kanaele' },
@@ -143,6 +144,7 @@ export default {
             {
               text: 'Shows',
               items: [
+                { text: 'Login', link: '/en/webapp/login' },
                 { text: 'Shows', link: '/en/webapp/shows' },
                 { text: 'Venue Template', link: '/en/webapp/spielstaette-vorlage' },
                 { text: 'Channels', link: '/en/webapp/kanaele' },
