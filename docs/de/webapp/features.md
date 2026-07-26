@@ -104,6 +104,7 @@ Mit einem Klick einen vollständigen, druckfertigen Bericht generieren. Das PDF 
 | Titelseite | Produktionsname, Datum, Spielstätte |
 | Kanalliste | Sortiert nach Position & Kanal, mit DMX, Gerät, Gel, Notizen |
 | Aufbaunotizen | Alle Sektionen inkl. strukturierter Felder |
+| Grundriss | Bühnengrundriss, sofern hinterlegt |
 | Fotogalerie | Alle Produktionsfotos eingebettet |
 
 ---
