@@ -53,3 +53,7 @@ Pro Show ist nur **ein** Felder-Abschnitt gleichzeitig möglich.
 ## Abschnitte schließen
 
 Jeder Abschnitt hat ein **×**-Symbol oben rechts zum Einklappen/Schließen der Sektion.
+
+## Automatisch generierter Text
+
+Im „Aufbau"-Abschnitt erscheint unterhalb der eigenen Notizen ein schreibgeschützter Bereich mit automatisch generiertem Text — separat für **Beleuchtungsgestelle** und **Obermaschinerie** (Zugstangen), sofern im [Setup](./setup) Daten hinterlegt sind. Der Text fasst die belegten Positionen, Kanäle, Geräte und Farben zusammen und lässt sich per Klick markieren und kopieren (z. B. für Cue-Sheets oder E-Mails an die Regie). Er wird nicht manuell bearbeitet, sondern aktualisiert sich automatisch mit den Setup-Daten.
