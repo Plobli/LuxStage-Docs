@@ -2,6 +2,12 @@
 
 LuxStage speichert automatisch einen **Versionsverlauf** aller Änderungen an Kanälen und Abschnitten einer Show. So können frühere Zustände wiederhergestellt werden. Der Verlauf umfasst maximal 50 Versionen; ältere werden automatisch entfernt.
 
+## Wann werden Versionen gespeichert?
+
+- Automatisch alle 10 Minuten — aber nur, wenn sich Kanäle oder Abschnitte seit dem letzten Snapshot tatsächlich geändert haben. In ruhigen Phasen ohne Änderungen entstehen deshalb keine neuen Einträge.
+- Zusätzlich beim Öffnen einer Show, unabhängig vom 10-Minuten-Takt.
+- **Archivierte Shows** erhalten keine automatischen Snapshots mehr. Vor dem Archivieren lohnt sich ein Blick auf den aktuellen Stand.
+
 ## Versionsverlauf öffnen
 
 Klick auf den Button **„Verlauf"** in der oberen Menüleiste einer Show. Ein seitliches Panel öffnet sich auf der rechten Seite.
