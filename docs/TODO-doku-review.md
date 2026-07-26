@@ -39,12 +39,12 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 
 ## C. Zu dünne Seiten
 
-- [ ] **`import-csv.md` (5 Zeilen)** — nur ein Satz zum Format. Fehlt: exaktes Spaltenschema, Trennzeichen (Semikolon), Encoding, Verhalten bei bestehenden Kanälen (Merge oder Ersetzen), Fehlermeldungen. Das Spaltenschema steht aktuell nur in `spielstaette-vorlage.md`.
-- [ ] **`export-pdf.md` (7 Zeilen)** — fehlt: wo der Button sitzt, Vorschau-Dialog, Zusammenspiel mit „Fotos pro Druckseite", Umfang laut `features.md`-Tabelle (Titelseite, Aufbaunotizen, Fotogalerie). Die `features.md`-Tabelle ist detaillierter als die eigentliche Anleitungsseite.
-- [ ] **`export-csv.md` (7 Zeilen)** — fehlt: exportierte Spalten, Trennzeichen, Dateiname.
-- [ ] **`import-eos.md` (19 Zeilen)** — Merge-Dialog (`EosMergePreviewDialog.vue`) nur als Screenshot. Fehlt: was der Dialog anzeigt, welche Optionen es gibt, was mit bestehenden Notizen passiert.
+- [x] **`import-csv.md`** — ✅ erledigt (2026-07-26): Spaltenschema, Trennzeichen, Encoding, Merge-Verhalten ergänzt (DE+EN). Fehlermeldungen (`csv.error.*`) nicht ergänzt — Keys sind im Code tot (kein Aufrufer gefunden), der Parser wirft aktuell keine Fehler.
+- [x] **`export-pdf.md`** — ✅ erledigt (2026-07-26): Grundriss ergänzt, Foto-Einschränkungen ergänzt (siehe Abschnitt Q). Button-Ort und Vorschau-Dialog nicht ergänzt — Export läuft direkt ohne Vorschau-Dialog.
+- [x] **`export-csv.md`** — ✅ erledigt (2026-07-26): Spalten, Trennzeichen, Dateiname ergänzt (DE+EN).
+- [x] **`import-eos.md`** — ✅ erledigt (2026-07-26): Merge-Dialog-Gruppen und Notizen-Erhalt dokumentiert (siehe Abschnitt S).
 - [x] **`fotos.md`** — ✅ erledigt (2026-07-26): Drag & Drop-Upload, Lightbox/Vollbild-Navigation und Foto löschen ergänzt (DE+EN). „Sortieren per Drag & Drop" existiert in `PhotoGallery.vue` **nicht** — Befund war falsch, nicht ergänzt.
-- [ ] **`archiv.md`** — Sortierung/Suche im Archiv prüfen und ergänzen, falls vorhanden.
+- [x] **`archiv.md`** — ✅ erledigt (2026-07-26): geprüft, keine Sortierung/Suche vorhanden — in `archiv.md` (DE+EN) korrigiert (siehe Abschnitt T).
 
 ## D. Fehlende Screenshots
 
