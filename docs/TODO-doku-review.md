@@ -92,7 +92,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 
 ## I. Undokumentierte Funktionen (Runde 2)
 
-- [ ] **„Auf alle Shows anwenden"** (`template.apply_to_shows.*`) — überträgt fehlende Zugstangen, Abschnitte oder Beleuchtungsgestelle aus einer Vorlage auf **alle** zugeordneten Shows, mit Ergebnismeldung („{shows} Shows geprüft, {bars} Zugstangen hinzugefügt"). Massenoperation über bestehende Produktionen — und in der Doku kein Wort. Gehört prominent in `spielstaette-vorlage.md`, inkl. der Aussage, dass nur **fehlende** Elemente ergänzt werden.
+- [x] **„Auf alle Shows anwenden"** — ✅ erledigt (2026-07-26): Abschnitt in `spielstaette-vorlage.md` (DE+EN) ergänzt, inkl. Hinweis auf ungefährliche Operation (nur fehlende Elemente).
 - [ ] **Offline-Banner** (`offline.banner` = „Keine Verbindung zum Server – Änderungen werden nicht gespeichert") — das **widerspricht direkt** der FAQ-Aussage „Funktioniert LuxStage auch offline? Ja. … Änderungen werden synchronisiert, sobald die Verbindung wiederhergestellt ist." Die Web-App speichert offline **nicht**. FAQ korrigieren — sonst Datenverlust beim Nutzer, der sich auf die Zusage verlässt.
 - [ ] **Inline-Hilfe (⌘-Icons) in der App** — `HelpIcon` an jeder Spaltenüberschrift der Kanaltabelle und im Setup-Bereich. Diese Hilfetexte (`channel.help.*`) sind teils **präziser als die Doku**, z. B. die Farb-Legende. Doku sollte erwähnen, dass es diese Hilfe gibt.
 - [ ] **Doppelte-Adresse-Warnung** (`channel.dup_address` = „Doppelte DMX-Adresse!", `channel.dup_channel` = „Doppelte Kanalnummer!") — in `features.md` als Marketingpunkt erwähnt, in `kanaele.md` (der eigentlichen Anleitung) fehlt sie.

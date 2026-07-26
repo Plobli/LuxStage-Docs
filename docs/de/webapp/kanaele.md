@@ -8,7 +8,7 @@ Die Tabelle hat fünf Spalten:
 
 | Spalte | Bedeutung |
 |--------|-----------|
-| **KANAL** | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem „/") |
+| **KANAL** | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem „/"), z. B. „1/001" |
 | **FARBE** | Farbfilter (Gel-Code), z. B. „L201/R371" oder „RGB", „variable" |
 | **ANZ.** | Anzahl identischer Geräte an dieser Position |
 | **GERÄT** | Leuchtenbezeichnung, z. B. „ETC Source Four 26°" |
@@ -25,13 +25,19 @@ Die Kanäle sind nach **Positionen** gruppiert (z. B. „FOH BAR LEFT", „OVERH
 |------|--------|
 | **Kanalzahl links** | Klicken → Nummer eingeben|
 | **Dimmer-Adresse rechts** | Klicken → Adresse eingeben |
-| **Farbe** | Klicken → Dropdown mit verfügbaren Gel-Codes erscheint (z. B. „L201 / R371 Full C.T. Blue") |
+| **Farbe** | Klicken → Dropdown mit verfügbaren Gel-Codes erscheint (z. B. „L201 / R371 Full C.T. Blue"). Zusätzlich wählbar: **„No Color"** (kein Farbfilter) oder **Freitext** für eigene Angaben (z. B. „R02" oder „warm weiß") |
 | **Gerät** | Klicken → Gerätebezeichnung eingeben |
 | **Notizen** | Klicken → Freitext eingeben |
 
 ## Kanal-Status umschalten
 
-Die **Kanalnummer** erscheint grün (Notiz hinzugefügt), gelb (nach dem Import eines EOS-CSV, aber ohne Notiz) oder grau (keine Notiz).
+Die **Kanalnummer** erscheint in drei Farben:
+
+- **Weiß** – ohne Notiz
+- **Grün** – Notiz vorhanden
+- **Gelb** – in der Show aktiv (z. B. nach EOS-Import), aber die Notiz fehlt noch
+
+Dieselbe Legende steht auch als Inline-Hilfe (Hilfe-Icon) neben der Kanaltabelle in der App.
 
 ## Kanal hinzufügen
 
@@ -53,6 +59,10 @@ Bei Hover über eine Kanalzeile erscheint rechts (vor dem Löschen-Button) der B
 - **Zugstange zuweisen** – öffnet den [Setup](./setup)-Bereich zur Platzierung auf einer Zugstange
 
 Ist der Kanal bereits einem Gestell-Slot oder einer Zugstange zugewiesen, wird der Einbauort zusätzlich als kleines Badge unterhalb der Notiz angezeigt.
+
+::: tip Warnung bei Duplikaten
+Vergibst du eine DMX-Adresse oder Kanalnummer doppelt, warnt die Tabelle mit „Doppelte DMX-Adresse!" bzw. „Doppelte Kanalnummer!".
+:::
 
 ## Reihenfolge ändern (Drag & Drop)
 
