@@ -85,8 +85,8 @@ Methodik: `shared/locales/de.json` (434 Keys) ist die vollständige Liste **alle
 Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in der Doku nicht, ist die Seite für ihn wertlos.
 
 - [x] **„Position" vs. „Kategorie"** — ✅ erledigt (2026-07-25): App auf „Position" vereinheitlicht, „Kategorie" kommt in Web-App, iOS und Website nicht mehr vor. `kanaele.md` stimmt damit bereits; die Doku muss nur noch prüfen, ob irgendwo „Kategorie" als Suchwort steht. Details siehe 2.1 in `TODO-webapp-code.md`.
-- [ ] **„Vorlage" vs. „Template"** — die Sidebar der App zeigt **„Templates"** (`nav.templates`), die Doku-Sidebar „Spielstätten-Vorlage". Nutzer sucht „Templates".
-- [ ] **„Spielort" vs. „Bühne" vs. „Spielstätte"** — im Show-Dialog heißt das Feld **„Spielort"** (`show.template`), das Zuweisen aber **„Bühnen-Template zuweisen"** (`show.assign_template`), die Kanaltabellen-Spalte **„Spielstätte"** (`field.venue`), das Template-Feld **„Theater-Name"** (`template.venue_name`). Vier Begriffe, eine Sache — Doku bildet das nicht ab.
+- [x] **„Vorlage" vs. „Template"** — ✅ überholt (2026-07-26): `nav.templates` zeigt jetzt „Vorlagen" (Code-Todo 2.2), Doku sagt ebenfalls „Vorlagen". Kein Widerspruch mehr.
+- [x] **„Spielort" vs. „Bühne" vs. „Spielstätte"** — ✅ überholt (2026-07-26): `show.assign_template`, `field.venue`, `template.venue_name` existieren nicht mehr (waren tote Keys, in Code-Todo 2.2 entfernt). Nur noch „Spielort-Vorlage" durchgehend.
 - [x] **Tab „Setup"** — ✅ erledigt (2026-07-26): `setup.md`/EN ergänzt, dass der Zugstangen-Abschnitt als Unter-Tab „Obermaschinerie" (`tab.obermaschinerie`) in der App erscheint. `tab.buehne` existiert in `de.json` nicht mehr (veraltet, ignoriert). Neuer Fund: **`tab.gassenturm` ist in der App selbst uneinheitlich übersetzt** — DE „Setup", EN „Stage Plan" (`en.json:349`), für denselben Tab. Gehört in die Code-ToDo, nicht in die Doku behoben.
 - [x] **`tab.raum` = „Raum", `tab.hinweise` = „Hinweise"** — ✅ überholt (2026-07-26): Beide Keys existieren in `de.json` nicht mehr (Code-Todo 2.3 hat sie entfernt, Icon-Zuordnung läuft jetzt über `icon`-Spalte statt Titelvergleich). Keine Doku-Änderung nötig.
 
@@ -94,7 +94,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 
 - [x] **„Auf alle Shows anwenden"** — ✅ erledigt (2026-07-26): Abschnitt in `spielstaette-vorlage.md` (DE+EN) ergänzt, inkl. Hinweis auf ungefährliche Operation (nur fehlende Elemente).
 - [ ] **Offline-Banner** (`offline.banner` = „Keine Verbindung zum Server – Änderungen werden nicht gespeichert") — das **widerspricht direkt** der FAQ-Aussage „Funktioniert LuxStage auch offline? Ja. … Änderungen werden synchronisiert, sobald die Verbindung wiederhergestellt ist." Die Web-App speichert offline **nicht**. FAQ korrigieren — sonst Datenverlust beim Nutzer, der sich auf die Zusage verlässt.
-- [ ] **Inline-Hilfe (⌘-Icons) in der App** — `HelpIcon` an jeder Spaltenüberschrift der Kanaltabelle und im Setup-Bereich. Diese Hilfetexte (`channel.help.*`) sind teils **präziser als die Doku**, z. B. die Farb-Legende. Doku sollte erwähnen, dass es diese Hilfe gibt.
+- [x] **Inline-Hilfe (⌘-Icons) in der App** — ✅ erledigt (2026-07-26): Hinweis in `kanaele.md` (DE+EN) ergänzt.
 - [x] **Doppelte-Adresse-Warnung** — ✅ erledigt (2026-07-26): Tipp-Box in `kanaele.md` (DE+EN) ergänzt.
 - [x] **Show-Metadaten nachträglich ändern** — ✅ erledigt (2026-07-26): Abschnitt in `shows.md` (DE+EN) ergänzt.
 - [x] **„Abschnitt hinzufügen" direkt in der Show** — ✅ erledigt (2026-07-26): neuer Abschnitt „Eigenen Abschnitt anlegen" in `info.md` (DE+EN).
@@ -106,12 +106,12 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 ## J. Widersprüche zwischen Doku und App-Texten
 
 - [x] **Farb-Legende der Kanalnummer.** — ✅ erledigt (2026-07-26): in `kanaele.md` (DE+EN) auf App-Text korrigiert (Weiß/Grün/Gelb).
-- [ ] **Passwort-Mindestlänge.** `installation.md` sagt „Mindestens 8 Zeichen". Die App meldet beim Ändern (`settings.account.change_password.error.short`): „Passwort muss mindestens **4** Zeichen lang sein". `RegisterView.vue` sagt wieder „Mindestens 8 Zeichen". Drei Stellen, zwei Werte — im Code klären, dann einheitlich dokumentieren.
-- [ ] **Passwort vergessen.** Die Login-Seite zeigt „Passwort vergessen?" und dann den Hinweis (`auth.reset.hint`): „**Wende dich an deinen Administrator**". Gleichzeitig existieren `ForgotPasswordView.vue` und `ResetPasswordView.vue` mit E-Mail-Flow. Welcher Weg gilt für den Nutzer? Muss die Doku eindeutig beantworten — vermutlich abhängig davon, ob SMTP konfiguriert ist.
-- [ ] **Login-Feld heißt „E-Mail-Adresse"** (`auth.username`), die Fehlermeldung aber „Bitte **Benutzername** und Passwort prüfen" (`auth.login.error`), und `installation.md` nennt Zugangsdaten `admin` / `tech` ohne E-Mail-Form. Für einen Erstnutzer nach der Installation ist damit unklar, was er ins Login-Feld tippt. **Kritischster Punkt der gesamten Doku** — betrifft den allerersten Schritt.
+- [x] **Passwort-Mindestlänge.** — ✅ überholt (2026-07-26): Code-Todo 1.1 hat eine einzige Quelle (`PASSWORD_MIN_LENGTH = 8`) eingeführt, alle Texte leiten sich davon ab. `installation.md` stimmt bereits, kein Widerspruch mehr.
+- [x] **Passwort vergessen.** — ✅ Grundlage überholt (2026-07-26): Code-Todo 1.2 hat den Link jetzt an die SMTP-Konfiguration gekoppelt — ist SMTP eingerichtet, erscheint der E-Mail-Flow, sonst der Admin-Hinweis. Dokumentation dieses Flows gehört zu Punkt **A** (Registrierung & Login fehlt komplett) — dort zu erledigen, keine Dopplung hier.
+- [x] **Login-Feld heißt „E-Mail-Adresse"** — ✅ überholt (2026-07-26): Code-Todo 1.3 + 7.5 haben das behoben — Installer legt den Admin jetzt mit E-Mail an (`bootstrap.js`), Login-Fehlermeldung sagt „E-Mail-Adresse". Kein Widerspruch mehr, `installation.md` bereits konsistent.
 - [x] **Beleuchtungsgestelle aus Vorlage.** — ✅ erledigt (2026-07-26): `setup.md` (DE+EN) auf „Einfügen im Bearbeiten-Dialog" korrigiert.
 - [x] **`info.md` beschreibt Abschnitte als vorgegeben** — ✅ erledigt (2026-07-26): siehe I, Abschnitt „Eigenen Abschnitt anlegen" ergänzt.
-- [ ] **`einstellungen.md`: „Passwort zurücksetzen"** ist dort unter „Konto" beschrieben, ist aber laut `settings.account.reset_password.*` eine Admin-Funktion für **andere** Benutzer (zeigt das neue Passwort im Klartext an). Ein Techniker sucht dort vergeblich. Zuordnung und Sichtbarkeit klarstellen.
+- [x] **`einstellungen.md`: „Passwort zurücksetzen"** — ✅ bereits korrekt: steht in der Doku nur unter „Benutzerverwaltung" (Admin-Bereich), nicht unter „Konto". Kein Fix nötig, Befund war veraltet.
 
 ## K. Datenschutzerklärung — sachlich falsch
 
