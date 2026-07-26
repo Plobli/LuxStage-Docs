@@ -24,16 +24,16 @@ The web application runs in the browser on Mac, Windows, iPad or any other devic
 After [installation](./installation) — this order gets you to your first show fastest:
 
 ### 1. Create a venue template
-[Venue template](/en/webapp/spielstaette-vorlage) — define the channel structure once (via CSV import or manually), available immediately for every new production. Optional: makes sense right after self-hosting installation, before creating the first show.
+[Venue template](/en/webapp/venue-template) — define the channel structure once (via CSV import or manually), available immediately for every new production. Optional: makes sense right after self-hosting installation, before creating the first show.
 
 ### 2. Create a show
 [Shows](/en/webapp/shows) — create a new show and optionally assign it a venue template. Channel structure and floor plan are inherited automatically.
 
 ### 3. Plan & focus channels
-[Import from EOS](/en/webapp/import-eos) or fill in [channels](/en/webapp/kanaele) manually. The iOS app and web app are in sync – all lighting technicians always see the same state.
+[Import from EOS](/en/webapp/import-eos) or fill in [channels](/en/webapp/channels) manually. The iOS app and web app are in sync – all lighting technicians always see the same state.
 
 ### 4. Export & archive
-[Export as PDF](/en/webapp/export-pdf) for printing, [archive](/en/webapp/archiv) the show once done — with a full [version history](/en/webapp/versionsverlauf) for later.
+[Export as PDF](/en/webapp/export-pdf) for printing, [archive](/en/webapp/archive) the show once done — with a full [version history](/en/webapp/version-history) for later.
 
 ## Next steps
 
