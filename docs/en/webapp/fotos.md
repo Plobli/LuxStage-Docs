@@ -21,8 +21,8 @@ Each photo has two fields:
 
 ## Print photos
 
-Under **Settings → Account → Photos per print page** you can specify how many photos fit on an A4 page when printing (default: 4).
+Under **Settings → Account → Photos per print page** you can specify how many photos fit on an A4 page (default: 4). This setting applies to both browser printing and PDF export.
 
 ::: tip Tip
-The PDF export (via **Export → PDF**) also includes the photos from the Photos tab, if present.
+The PDF export (via **Export → PDF**) includes the photos from the Photos tab (if present) and uses the same setting.
 :::

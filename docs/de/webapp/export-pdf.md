@@ -4,4 +4,4 @@ Exportiert den vollständigen Kanalplan als druckfertiges **PDF-Dokument**. Der 
 
 - Showname und Datum
 - Vollständige Kanaltabelle mit allen Positionen
-- Fotos (sofern vorhanden, immer 4 pro Seite — die Einstellung „Fotos pro Druckseite" wirkt nur auf die Browser-Druckansicht, nicht auf das PDF)
+- Fotos (sofern vorhanden, Anzahl gemäß der Einstellung „Fotos pro Druckseite")

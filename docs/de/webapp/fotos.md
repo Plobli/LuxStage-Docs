@@ -21,8 +21,8 @@ Jedes Foto bietet zwei Felder:
 
 ## Fotos drucken
 
-Über **Einstellungen → Konto → Fotos pro Druckseite** lässt sich festlegen, wie viele Fotos beim Browser-Druck auf eine A4-Seite passen (Standard: 4). Diese Einstellung beeinflusst **nicht** den PDF-Export.
+Über **Einstellungen → Konto → Fotos pro Druckseite** lässt sich festlegen, wie viele Fotos auf eine A4-Seite passen (Standard: 4). Diese Einstellung wirkt auf Browser-Druck und PDF-Export gleichermaßen.
 
 ::: tip Tipp
-Der PDF-Export (über **Exportieren → PDF**) enthält die Fotos des Fotos-Tabs (sofern vorhanden) – immer mit 4 pro Seite.
+Der PDF-Export (über **Exportieren → PDF**) enthält die Fotos des Fotos-Tabs (sofern vorhanden) und nutzt die gleiche Einstellung.
 :::
