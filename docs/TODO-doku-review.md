@@ -61,7 +61,7 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 
 - [ ] **`features.md` überschneidet sich stark mit den Anleitungsseiten** und beschreibt teils iOS-Funktionen (Einleuchten, OSC, In-App-Kamera), liegt aber unter „Web-App → Referenz". Entweder auf eine Ebene über beide Apps ziehen oder auf reine Web-App-Features kürzen.
 - [ ] **Sidebar-Gruppe „Shows"** enthält auch „Einstellungen" — gehört nicht zu einer Show. Eigene Gruppe „Verwaltung" (Archiv, Vorlagen, Einstellungen) anlegen.
-- [ ] **Kein Glossar** — Begriffe wie Position, Slot, Zugstange, Beleuchtungsgestell, Gel, Kanal vs. Dimmer-Adresse werden vorausgesetzt. Glossarseite ergänzen.
+- [x] **Kein Glossar** — ✅ erledigt (2026-07-26): neue Seite `glossar.md` (DE+EN) mit allen genannten Begriffen, in Guide-, Web-App- und iOS-Sidebar verlinkt.
 - [ ] **`docs/android-plan.md`** liegt im öffentlichen docs-Ordner, ist aber interne Planung und in keiner Sidebar verlinkt. Verschieben oder aus dem Build ausschließen.
 - [ ] **Keine Seite zu Tastaturkürzeln gesamt** — Kürzel stehen verteilt in `kanaele.md` (Undo/Redo) und `grundriss.md` (Editor). Sammelseite wäre nützlich.
 
@@ -124,7 +124,7 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 ## L. Verständlichkeit für Erstnutzer
 
 - [x] **Kein durchgehender „Von null zur ersten Show"-Pfad.** — ✅ erledigt (2026-07-26): `guide/index.md` (DE+EN) zu „Schnellstart in 10 Minuten" mit direkten Links zu jedem Schritt umgebaut.
-- [ ] **Fachbegriffe ungeklärt** (verschärft Punkt F): Slot, Zugstange, Obermaschinerie, Gassenturm, Gel, Hängerei, Portalbrücke, Dimmer-Adresse vs. Kanalnummer, DMX. Die App erklärt „Slot" per Inline-Hilfe besser als die Doku.
+- [x] **Fachbegriffe ungeklärt** — ✅ erledigt (2026-07-26): alle genannten Begriffe im neuen `glossar.md` erklärt (siehe Abschnitt F).
 - [x] **`kanaele.md`: „KANAL | Kanalname im Pult (links) / Dimmer-Adresse (rechts nach dem ‚/')"** — ✅ erledigt (2026-07-26): Beispiel „1/001" ergänzt (DE+EN).
 - [ ] **`setup.md` ist mit 110 Zeilen die längste Anleitungsseite** und behandelt zwei getrennte Themen (Gestelle, Zugstangen). Aufteilen in zwei Seiten, passend zu den zwei Sidebar-Einträgen der App.
 - [ ] **Keine Seite „Was tun bei Problemen?"** für die Web-App. Fehlermeldungen, die der Nutzer real sieht — `error.network` („Keine Verbindung zum Server"), `offline.banner`, `csv.error.*` („Pflicht-Spalte fehlt: {column}", „Ungültige Kanal-Nummer in Zeile {line}") — sind nirgends erklärt. Troubleshooting gibt es nur in `installation.md` und nur für den Server.
