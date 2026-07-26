@@ -23,7 +23,7 @@ Bei einem gehosteten Team unter [luxstage.app](https://luxstage.app) übernimmt 
 
 **Fotos pro Druckseite**
 
-Legt fest, wie viele Fotos beim Drucken auf eine A4-Seite passen.
+Legt fest, wie viele Fotos beim **Browser-Druck** auf eine A4-Seite passen. Diese Einstellung beeinflusst **nicht** den PDF-Export (der immer 4 Fotos pro Seite verwendet).
 
 - Auswahl: 1, 2, 4, 6, 8, 9, 12
 
