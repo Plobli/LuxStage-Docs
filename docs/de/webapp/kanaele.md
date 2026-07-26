@@ -2,6 +2,10 @@
 
 Der **Kanäle**-Tab ist die Hauptansicht einer Show und zeigt den vollständigen Kanalplan.
 
+::: tip Inline-Hilfe in der App
+Neben den Spaltenüberschriften der Kanaltabelle und im Setup-Bereich zeigen kleine Hilfe-Icons Kurzerklärungen zu den jeweiligen Feldern direkt in der App.
+:::
+
 ## Aufbau des Kanalplans
 
 Die Tabelle hat fünf Spalten:

@@ -96,12 +96,12 @@ Der Nutzer sucht nach dem Wort, das auf seinem Bildschirm steht. Findet er es in
 - [ ] **Offline-Banner** (`offline.banner` = „Keine Verbindung zum Server – Änderungen werden nicht gespeichert") — das **widerspricht direkt** der FAQ-Aussage „Funktioniert LuxStage auch offline? Ja. … Änderungen werden synchronisiert, sobald die Verbindung wiederhergestellt ist." Die Web-App speichert offline **nicht**. FAQ korrigieren — sonst Datenverlust beim Nutzer, der sich auf die Zusage verlässt.
 - [ ] **Inline-Hilfe (⌘-Icons) in der App** — `HelpIcon` an jeder Spaltenüberschrift der Kanaltabelle und im Setup-Bereich. Diese Hilfetexte (`channel.help.*`) sind teils **präziser als die Doku**, z. B. die Farb-Legende. Doku sollte erwähnen, dass es diese Hilfe gibt.
 - [x] **Doppelte-Adresse-Warnung** — ✅ erledigt (2026-07-26): Tipp-Box in `kanaele.md` (DE+EN) ergänzt.
-- [ ] **Show-Metadaten nachträglich ändern** (`show.edit` = „Show bearbeiten", `ShowHeader.vue` Meta-Dialog) — `shows.md` beschreibt nur das Anlegen. Wie ändert man Datum, Untertitel oder Spielzeit später? Nicht dokumentiert.
+- [x] **Show-Metadaten nachträglich ändern** — ✅ erledigt (2026-07-26): Abschnitt in `shows.md` (DE+EN) ergänzt.
 - [x] **„Abschnitt hinzufügen" direkt in der Show** — ✅ erledigt (2026-07-26): neuer Abschnitt „Eigenen Abschnitt anlegen" in `info.md` (DE+EN).
 - [x] **Feld-Einheit** — ✅ erledigt (2026-07-26): dritte Spalte „Einheit" in `info.md` (DE+EN) ergänzt.
 - [x] **Foto löschen** — ✅ erledigt (2026-07-26): Abschnitt „Foto löschen" in `fotos.md` (DE+EN) ergänzt (siehe Abschnitt U).
 - [x] **Kanal-Farbwahl „No Color" / Freitext** — ✅ erledigt (2026-07-26): in `kanaele.md` (DE+EN) ergänzt.
-- [ ] **404-Seite** (`not_found.*`) — unkritisch, nur der Vollständigkeit halber.
+- [x] **404-Seite** — bewusst nicht dokumentiert (unkritisch, selbsterklärend).
 
 ## J. Widersprüche zwischen Doku und App-Texten
 
