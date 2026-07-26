@@ -12,7 +12,7 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 - [x] **Registrierung & Login** — ✅ teilweise erledigt (2026-07-26): Neue Seite `login.md` (DE+EN) für Anmeldung und Passwort-vergessen-Flow (SMTP-abhängig), in Sidebar eingetragen. **Registrierung (Team anlegen) bewusst ausgelassen** — auf Wunsch, da SaaS-spezifisch (erzeugt `<team>.luxstage.app`, nicht relevant für Self-Hoster).
 - [x] **Show-Health-Badge / Vollständigkeitsprüfung** — ✅ erledigt (2026-07-26): Abschnitt in `kanaele.md` (DE+EN) ergänzt. Hinweis: „keine Notiz" wird laut Code aktuell **nicht** in die Zählung/Filter einbezogen (nur Gerät/Position/Adresse), Doku entsprechend auf drei Filter beschränkt.
 - [x] **Presence / Live-Zusammenarbeit in der Web-App** — ✅ erledigt (2026-07-26): Abschnitt in `kanaele.md` (DE+EN) ergänzt.
-- [ ] **Automatisch generierter Text** — `GeneratedTextAccordion.vue` + `utils/generateHangerei.ts`. Erzeugt read-only Textblöcke „Beleuchtungsgestelle" und „Obermaschinerie" aus Setup-Daten (Positionen, Farbe, Kanal). Fehlt in `setup.md` und `info.md`.
+- [x] **Automatisch generierter Text** — ✅ erledigt (2026-07-26): Abschnitt in `info.md` (DE+EN) ergänzt.
 - [x] **Update-Benachrichtigung** — ✅ erledigt (2026-07-26): Tipp-Box in `einstellungen.md` (DE+EN) ergänzt.
 - [ ] **Gehostete Variante (SaaS) / Betreiber-Panel** — `server/routes/operator.js`, `Dockerfile.saas`, `docker-compose.saas.yml`, Mandantenverwaltung. Doku erwähnt luxstage.app nur als Tipp-Box, ohne eigene Seite (Registrierung, Mandanten, Kündigung/Löschung).
 - [ ] **Docker-Installation** — `installation.md` verweist nur in einer Tipp-Box auf `docker-compose.yml`, ohne Schritte. Entweder ausführen oder bewusst als „siehe Repo" belassen.
