@@ -82,6 +82,7 @@ export default {
             {
               text: 'Referenz',
               items: [
+                { text: 'Tastaturkürzel', link: '/de/webapp/tastaturkuerzel' },
                 { text: 'Was tun bei Problemen?', link: '/de/webapp/troubleshooting' },
               ]
             },
@@ -189,6 +190,7 @@ export default {
             {
               text: 'Reference',
               items: [
+                { text: 'Keyboard Shortcuts', link: '/en/webapp/tastaturkuerzel' },
                 { text: 'Troubleshooting', link: '/en/webapp/troubleshooting' },
               ]
             },
