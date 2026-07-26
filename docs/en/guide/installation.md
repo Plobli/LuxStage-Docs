@@ -1,6 +1,6 @@
 # Installation
 
-Automated installation on Linux or Raspberry Pi. A script takes care of everything — Node.js, reverse proxy, and database.
+Automated installation on Debian, Ubuntu, or Raspberry Pi OS. A script takes care of everything — Node.js, reverse proxy, and database.
 
 ::: tip Don't want to run your own server?
 This guide covers self-hosting. Alternatively, LuxStage is available as a hosted service at [luxstage.app](https://luxstage.app) — no server installation required.
@@ -8,6 +8,12 @@ This guide covers self-hosting. Alternatively, LuxStage is available as a hosted
 
 ::: warning Install at your own risk
 Please back up your data and only run the script on systems over which you have full control.
+:::
+
+::: warning Requirements
+The script requires **root/sudo privileges**, an **interactive terminal session** (not a pipe like `curl | sudo bash`), internet access, and **`apt-get`** — so it only works on **Debian, Ubuntu, or Raspberry Pi OS**, not Fedora, Arch, or Alpine.
+
+The script **changes the system hostname** (`hostnamectl set-hostname`) and **edits `/etc/hosts`** — an intervention that reaches beyond LuxStage itself.
 :::
 
 ## Step 1 — SSH access to the server
@@ -26,7 +32,7 @@ ssh user@raspberry.local
 
 ## Step 2 — Run the installation script
 
-The script downloads everything and configures the server automatically.
+The script downloads the latest [GitHub release](https://github.com/Plobli/LuxStage/releases) (not the `main` branch) and configures the server automatically. The version after installation can therefore differ from the current `main` branch.
 
 Run these two commands:
 
@@ -47,7 +53,7 @@ The script asks you a few questions. Press Enter for the default values.
 
 **System user** — The LuxStage service runs under this user:
 ```
-System user [luxstage]: ⏎
+System user for LuxStage [luxstage]: ⏎
 ```
 
 **Hostname** — The app will then be accessible at `http://luxstage.local`:
@@ -65,13 +71,14 @@ External domain []: ⏎
 Admin email (used as login): you@example.com
 ```
 
-**Admin password** — At least 8 characters:
+**Admin password** — At least 8 characters, asked twice for confirmation:
 ```
-Admin password: ••••••••
+Admin password (min. 8 characters): ••••••••
+Confirm admin password: ••••••••
 ```
 
 ::: info Remember the admin password
-You will need it for the first login.
+You will need it for the first login. After three failed attempts (empty password, too short, or confirmation mismatch), the installation aborts.
 :::
 
 ::: tip Additional users
@@ -84,16 +91,17 @@ The script only creates the admin account. Add technicians and further administr
 - **Web app** — accessible in the browser, full functionality
 - **Caddy reverse proxy** — automatic HTTPS, no port needed
 - **SQLite database** — a single file, no separate database service required
+- **CORS** — assembled automatically from hostname, server IP, and external domain. If you later access the app from another address not known at install time, you'll get CORS errors.
 
-## Step 5 — Restart
+The script also installs these third-party packages: `build-essential`, `python3`, `unzip`, `caddy`, `avahi-daemon`, plus **nvm, Node.js 22, and PM2** via a third-party script from GitHub. Relevant for systems under compliance requirements.
 
-The script suggests restarting at the end. Run:
+## Step 5 — Restart (recommended)
+
+At the end, the script recommends a restart so the new hostname takes effect — it is **not strictly required**, LuxStage is already running via PM2 beforehand. Recommended:
 
 ```bash
 sudo reboot
 ```
-
-The server restarts and the LuxStage services start automatically.
 
 ## First access
 
