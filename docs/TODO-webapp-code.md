@@ -191,7 +191,11 @@ Alternativ per Git: `git show <commit>:LuxStageApp/locale_de.json`
 **Fix:** Einen Begriff festlegen. Empfehlung: **„Spielstätte"** für den Ort, **„Spielstätten-Vorlage"** für das Template-Objekt, `nav.templates` entsprechend auf „Vorlagen". Danach Doku einmalig angleichen.
 </details>
 
-### 2.3 Doppelte und tote Tab-Keys
+### 2.3 Doppelte und tote Tab-Keys — ✅ **erledigt (2026-07-26)**
+Gelöst über eine neue Spalte `icon` in `section_defs` und `template_section_defs`. Der vorhandene `type` taugte dafür nicht: er unterscheidet nur `markdown` und `kv-table`, also die **Darstellungsart**, nicht die Bedeutung.
+
+<details><summary>Ursprünglicher Befund</summary>
+
 - `tab.buehne` = „Beleuchtungsgestelle" und `tab.towers` = „Beleuchtungsgestelle" — identischer Text, zwei Keys.
 - `tab.raum` = „Raum" und `tab.hinweise` = „Hinweise" — werden nur noch über einen **Titel-Stringvergleich** aufgelöst: [ShowDetailView.vue:795](LuxStage/web-app/src/views/ShowDetailView.vue#L795)
   ```js
@@ -200,6 +204,32 @@ Alternativ per Git: `git show <commit>:LuxStageApp/locale_de.json`
   Das Icon hängt am wörtlichen deutschen Abschnittstitel. Benennt ein Nutzer den Abschnitt um oder stellt auf Englisch um, verschwindet das Icon. In einer zweisprachigen App fehlerhaft.
 
 **Fix:** Icon-Zuordnung über einen stabilen Typ/Slug statt über den Anzeigetitel. Ungenutzte Keys entfernen.
+</details>
+
+**Beim Umsetzen gefunden — zwei schwerere Fälle derselben Ursache:**
+
+1. [ShowDetailView.vue](LuxStage/web-app/src/views/ShowDetailView.vue) legte bei **jedem Laden** einen Abschnitt „Aufbau" an, wenn keiner mit genau diesem Titel existierte. Hatte der Nutzer den vorhandenen umbenannt, entstand bei jedem Öffnen der Show ein weiterer.
+2. Der generierte Text (Beleuchtungsgestelle / Obermaschinerie) hing über `aufbauSectionId` am selben Vergleich und verschwand beim Umbenennen.
+
+Dass die Fragilität real ist, belegt die Migration `migration_section_rename_2026` in [db-init.js](LuxStage/server/db-init.js): sie benannte „Stände"→„Raum" und „Besonderheiten"→„Hinweise" um — die Icon-Zuordnung im Frontend musste damals mitgeändert werden.
+
+**Umgesetzt — Schema:**
+- Neue Spalte `icon TEXT NOT NULL DEFAULT ''` in `section_defs` und `template_section_defs`.
+- Migration ergänzt die Spalte in Bestandsdatenbanken und setzt sie **einmalig** aus den heutigen Titeln: `Hinweise`→`warning`, `Raum`→`room`, `Aufbau`→`setup`. Läuft bewusst **nach** der Titel-Umbenennung, weil sie aus den Titeln ableitet.
+- Alle vier `INSERT`-Stellen und beide Lese-Funktionen erweitert: [db/sections.js](LuxStage/server/db/sections.js), [db/templates.js](LuxStage/server/db/templates.js) (Vorlage schreiben **und** `applyTemplateToShow`), [db/shows.js](LuxStage/server/db/shows.js) (`_copyTemplateToShow`). Nötig, weil `writeShowSectionDefs` alle Defs löscht und neu schreibt — ohne Durchleitung wäre `icon` beim ersten Speichern weg.
+
+**Umgesetzt — Frontend:**
+- Icon-Wahl über eine `SECTION_ICONS`-Map statt Titelvergleich. Unbekannte oder leere Werte fallen auf `IconAufbau` zurück.
+- `aufbauSectionId` und die Auto-Anlage prüfen `icon === 'setup'` statt `title === 'Aufbau'`.
+- `'(kein Titel)'` war hardcodiert und liegt jetzt als `sections.untitled` in beiden Locales.
+
+**Umgesetzt — Keys:**
+- `tab.raum` und `tab.hinweise` gelöscht (kein Aufrufer).
+- `tab.buehne` und `tab.towers` auf `tab.towers` zusammengeführt — der Name passt zur Tabelle `towers`. Deutsch waren beide „Beleuchtungsgestelle", englisch wichen sie ab: „Lighting racks" vs. „Lighting Rigs". Jetzt „Lighting rigs", passend zu den übrigen ~9 `gassenturm.*`-Texten, die durchgehend „lighting rig" sagen.
+
+**Nicht angefasst (gehört zu Abschnitt 3):** Der Titel `'Aufbau'` beim Anlegen und `label: 'Medien'` in der Sidebar sind weiter hardcodiert deutsch.
+
+**Randbefund, nicht behoben:** Die Auto-Anlage ruft `PUT /api/shows/:slug/section-defs`, das laut [routes/sections.js:35](LuxStage/server/routes/sections.js#L35) `requireAdmin` verlangt. Das `await` steht im `try` des Ladevorgangs, ein 403 bricht also das Laden ab. Nach der Migration existiert der Abschnitt bei allen Bestandsshows, und Shows aus einer Vorlage erben ihn — der Fall trifft nur eine leere, von einem Techniker angelegte Show ohne Vorlage. Siehe neue Zeile `8a`.
 
 ---
 
@@ -573,7 +603,8 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | ~~4~~ | ~~4. Offline-Banner verifizieren~~ | ✅ | Banner funktionierte; Netzfehler melden jetzt sofort, FAQ korrigiert |
 | ~~5~~ | ~~2.1 Kategorie → Position~~ | ✅ | Keys, Props und interne Namen vereinheitlicht |
 | ~~7~~ | ~~2.2 Spielort-Begriffe vereinheitlichen~~ | ✅ | „Spielort-Vorlage" in Web + iOS; Doku zieht im Doku-Review nach |
-| 8 | 2.3 Icon-Zuordnung entkoppeln | Stunden | Behebt Bug bei Sprachumschaltung |
+| ~~8~~ | ~~2.3 Icon-Zuordnung entkoppeln~~ | ✅ | Neue Spalte `icon`; behebt zusätzlich doppelte Aufbau-Abschnitte |
+| 8a | **Neu aus 2.3:** Auto-Anlage des Aufbau-Abschnitts verlangt Admin | offen | Trifft nur leere Shows ohne Vorlage |
 | 9 | 3. übrige hardcodierte Strings | Halber Tag | Vollständige Zweisprachigkeit |
 | 10 | 5.x UI-Kontext ergänzen | Nach Bedarf | Reduziert Supportfragen |
 | 11 | 3. i18n Register/Forgot-Seiten | Halber Tag | Ersteindruck für EN-Neukunden |
