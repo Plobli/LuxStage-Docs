@@ -106,5 +106,5 @@ Zugstangen lassen sich per Drag & Drop in der Liste neu anordnen.
 Über das Lesezeichen-Symbol lässt sich eine Zugstange in die Spielort-Vorlage übernehmen. Auswählbar sind dabei Grundstruktur (immer enthalten) sowie je Scheinwerfer Position, Kanalnummer, Gerät und Anmerkungen.
 
 ::: tip Hinweis
-Zugstangen aus der Spielort-Vorlage werden beim Erstellen einer neuen Show automatisch übernommen (ohne Scheinwerfer-Zuordnung). Beleuchtungsgestelle aus der Vorlage müssen dagegen manuell über „Aus Vorlage einfügen…" im Anlegen-Dialog hinzugefügt werden.
+Zugstangen aus der Spielort-Vorlage werden beim Erstellen einer neuen Show automatisch übernommen (ohne Scheinwerfer-Zuordnung). Beleuchtungsgestelle aus der Vorlage müssen dagegen manuell über „Einfügen" im Bearbeiten-Dialog hinzugefügt werden.
 :::
