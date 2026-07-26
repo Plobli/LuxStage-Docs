@@ -1,6 +1,6 @@
 # Installation
 
-Automatische Installation auf Linux oder Raspberry Pi. Ein Script kümmert sich um alles — Node.js, Reverse Proxy und Datenbank.
+Automatische Installation auf Debian, Ubuntu oder Raspberry Pi OS. Ein Script kümmert sich um alles — Node.js, Reverse Proxy und Datenbank.
 
 ::: tip Kein eigener Server gewünscht?
 Diese Anleitung gilt für Self-Hosting. Alternativ gibt es LuxStage als gehosteten Service unter [luxstage.app](https://luxstage.app) — ganz ohne eigene Server-Installation.
@@ -8,6 +8,12 @@ Diese Anleitung gilt für Self-Hosting. Alternativ gibt es LuxStage als gehostet
 
 ::: warning Installation auf eigene Gefahr
 Bitte sichern Sie Ihre Daten und führen Sie das Script nur auf Systemen aus, auf denen Sie vollständige Kontrolle haben.
+:::
+
+::: warning Voraussetzungen
+Das Script benötigt **root/sudo-Rechte**, eine **interaktive Terminal-Sitzung** (kein Pipe-Aufruf wie `curl | sudo bash`), Internetzugang und **`apt-get`** — funktioniert also nur auf **Debian, Ubuntu oder Raspberry Pi OS**, nicht auf Fedora, Arch oder Alpine.
+
+Das Script **ändert den System-Hostnamen** (`hostnamectl set-hostname`) und **editiert `/etc/hosts`** — ein Eingriff, der über LuxStage hinausgeht.
 :::
 
 ## Schritt 1 — SSH-Zugang zum Server
@@ -26,7 +32,7 @@ ssh user@raspberry.local
 
 ## Schritt 2 — Installations-Script ausführen
 
-Das Script lädt alles herunter und konfiguriert den Server automatisch.
+Das Script lädt das neueste [GitHub-Release](https://github.com/Plobli/LuxStage/releases) herunter (nicht den `main`-Branch) und konfiguriert den Server automatisch. Der Versionsstand nach der Installation kann daher vom aktuellen `main`-Branch abweichen.
 
 Führe diese zwei Befehle aus:
 
@@ -47,7 +53,7 @@ Das Script fragt dir ein paar Fragen. Drücke Enter für die Standardwerte.
 
 **Systemnutzer** — Unter diesem Nutzer läuft der LuxStage-Dienst:
 ```
-Systemnutzer [luxstage]: ⏎
+Systemnutzer für LuxStage [luxstage]: ⏎
 ```
 
 **Hostname** — Die App ist danach unter `http://luxstage.local` erreichbar:
@@ -65,13 +71,14 @@ Externe Domain []: ⏎
 Admin-E-Mail (dient als Login): du@beispiel.de
 ```
 
-**Admin-Passwort** — Mindestens 8 Zeichen:
+**Admin-Passwort** — Mindestens 8 Zeichen, wird zur Bestätigung zweimal abgefragt:
 ```
-Admin-Passwort: ••••••••
+Admin-Passwort (mind. 8 Zeichen): ••••••••
+Admin-Passwort bestätigen: ••••••••
 ```
 
 ::: info Admin-Passwort merken
-Du brauchst es für die erste Anmeldung.
+Du brauchst es für die erste Anmeldung. Nach drei Fehlversuchen (leeres Passwort, zu kurz, oder Wiederholung stimmt nicht überein) bricht die Installation ab.
 :::
 
 ::: tip Weitere Nutzer
@@ -84,16 +91,17 @@ Das Script legt nur das Admin-Konto an. Techniker und weitere Administratoren f�
 - **Web-App** — im Browser aufrufbar, volle Funktionalität
 - **Caddy Reverse Proxy** — automatisches HTTPS, kein Port nötig
 - **SQLite-Datenbank** — eine Datei, kein separater Datenbankdienst nötig
+- **CORS** — wird automatisch aus Hostname, Server-IP und externer Domain zusammengestellt. Rufst du die App später unter einer weiteren Adresse auf, die hier nicht bekannt war, gibt es CORS-Fehler.
 
-## Schritt 5 — Neustart
+Zusätzlich installiert das Script folgende Fremdpakete: `build-essential`, `python3`, `unzip`, `caddy`, `avahi-daemon`, sowie über ein Fremdscript von GitHub **nvm, Node.js 22 und PM2**. Relevant für Systeme mit Compliance-Vorgaben.
 
-Das Script schlägt am Ende vor zu restarten. Führe aus:
+## Schritt 5 — Neustart (empfohlen)
+
+Am Ende empfiehlt das Script einen Neustart, damit der neue Hostname aktiv wird — **zwingend nötig ist er nicht**, LuxStage läuft bereits vorher über PM2. Empfohlen:
 
 ```bash
 sudo reboot
 ```
-
-Der Server startet neu und die LuxStage-Services starten automatisch.
 
 ## Erster Zugriff
 
