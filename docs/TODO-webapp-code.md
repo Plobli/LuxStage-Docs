@@ -299,27 +299,78 @@ Korrigiert in:
 
 Kein Bug, aber Supportaufkommen — hier hilft eine kleine UI-Ergänzung mehr als eine Doku-Seite.
 
-### 5.1 „Auf alle Shows anwenden" — Massenoperation ohne Vorschau
+### 5.1 „Auf alle Shows anwenden" — ✅ **erledigt (2026-07-26)**
+
+<details><summary>Ursprünglicher Befund</summary>
+
 `template.apply_to_shows.*`, [TemplatesView.vue:116,231](LuxStage/web-app/src/views/TemplatesView.vue#L116). Der Bestätigungsdialog nennt weder die Zahl der betroffenen Shows noch deren Namen; das Ergebnis erscheint erst danach („{shows} Shows geprüft, {bars} Zugstangen hinzugefügt").
 
 **Fix:** Betroffene Shows **vor** der Ausführung anzeigen. Da nur fehlende Elemente ergänzt werden, ist die Operation ungefährlich — das sollte im Dialog stehen, sonst traut sich niemand.
+</details>
 
-### 5.2 Farb-Legende nur als Tooltip
+**Umgesetzt:** Eigener Vorschau-Dialog statt `useConfirm` — der kann nur Text, keine Liste. Er lädt die zugeordneten Shows über das vorhandene `/api/shows` (kein neuer Endpunkt nötig, `listShows()` liefert `SELECT *` inkl. `template`) und filtert auf `s.template === editingName`. Das deckt sich mit der Server-Bedingung `template = ? AND archived = 0`, weil `/api/shows` ohnehin nur unarchivierte Shows liefert. Der Dialog nennt die Zahl, listet die Namen und sagt ausdrücklich, dass nur fehlende Elemente ergänzt werden. Der Anwenden-Knopf ist gesperrt, solange keine Show zugeordnet ist.
+
+**Zwei Bugs mitbehoben:**
+- Das Ergebnis kam per nativem `alert()` — jetzt ein regulärer Dialog.
+- Der `alert()`-Aufruf übergab `bars` und `sections`, aber **nicht** `towers`. Beim Beleuchtungsgestell-Scope stand daher wörtlich `{towers}` in der Meldung. Der Server liefert `towersAdded` seit immer.
+
+**Randbefund, nicht behoben:** Server und Locale unterstützen den Scope `bars`, das Frontend bietet dafür aber keinen Knopf an — nur `sections` und `towers`. Entweder ergänzen oder die ungenutzten Locale-Keys entfernen.
+
+### 5.2 Farb-Legende nur als Tooltip — ✅ **erledigt (2026-07-26)**
+
+<details><summary>Ursprünglicher Befund</summary>
+
 `channel.help.status` erklärt Weiß/Grün/Gelb der Kanalnummer — auffindbar nur über das Hilfe-Icon der Spaltenüberschrift. Zentrale Information zum Arbeitsstand.
 
 **Fix:** Dauerhafte Legende erwägen, z. B. neben dem Health-Badge.
+</details>
 
-### 5.3 Inline-Hilfe ist teils besser als die Doku
+**Umgesetzt:** Dauerhafte Legende in [ShowActionBar.vue](LuxStage/web-app/src/components/show/ShowActionBar.vue), links vom Health-Badge. Drei farbige Punkte mit Kurztext, neue Keys `channel.legend.default|active|eos`. Nur bei aktiver Kanaltabelle und erst ab `lg` sichtbar — die Zeile ist sonst zu voll. Die Farben sind aus [ChannelRow.vue:293-294](LuxStage/web-app/src/components/channel/ChannelRow.vue#L293) übernommen (`text-green-600 dark:text-green-400`, `text-amber-400`), damit Legende und Tabelle nicht auseinanderlaufen.
+
+### 5.3 Inline-Hilfe unvollständig verteilt — ✅ **erledigt (2026-07-26)**
+
+<details><summary>Ursprünglicher Befund</summary>
+
 Die `HelpIcon`-Texte zu Slot, Farbe, Anzahl und Zuweisung erklären Fachbegriffe präziser als die Doku-Seiten. Sie sind nur unvollständig verteilt: Kanaltabelle und Gassenturm-Ansicht haben sie, Zugstangen, Info-Tab und Grundriss nicht.
 
 **Fix:** `HelpIcon` konsistent auf alle erklärungsbedürftigen Felder ausrollen. Diese Texte lassen sich anschließend direkt in Doku und Glossar übernehmen.
+</details>
 
-### 5.4 EOS-Import-Dialoge ohne Konsequenzangabe
+**Umgesetzt** — neue Hilfetexte, bewusst nur dort, wo etwas nicht selbsterklärend ist:
+- **Zugstangen:** Länge (`zugstange.field.length.help` — nennt, dass Positionen von der Mitte gemessen werden) und Bemaßung (`zugstange.scale.help`). Das Feld „Position auf Stange (0 = Mitte)" trägt die Erklärung schon im Label, dort kein Icon.
+- **Info-Tab:** `section.add.help` erklärt den Unterschied Textabschnitt/Felder **und** warum der Felder-Knopf verschwindet — pro Show ist nur ein `kv-table`-Abschnitt möglich (`hasKvTableType()` in [SectionEditor.vue:435](LuxStage/web-app/src/components/show/SectionEditor.vue#L435)), was vorher unkommentiert passierte.
+- **Grundriss:** `floorplan.ruler.purpose` im Maßstab-Dialog. Bewusst dort statt als Icon in der Werkzeugleiste — `SidebarBtn` kennt nur `title`, und der Tooltip „Maßstab kalibrieren" existiert schon. Formulierung nach Prüfung von `commitRuler` auf das beschränkt, was wirklich passiert: der Maßstab wird gesetzt und **platzierte Zugstangen** werden auf ihre echte Länge skaliert (nicht Kanäle oder Gestelle).
+
+Zusätzlich drei hardcodierte Platzhalter in FloorplanEditor übersetzt (`z. B. 6`, zweimal `Suchen…`), die der Punkt-9-Grep verpasst hatte — er suchte nur nach Großbuchstaben-Anfängen.
+
+### 5.4 EOS-Import-Dialoge ohne Konsequenzangabe — ✅ **erledigt (2026-07-26)**
+
+**Befund war überholt.** Die beiden genannten Dialoge existieren nicht mehr: `eos.import.confirm_empty.*` und `eos.reimport.*` waren **sechs tote Keys** ohne jeden Aufrufer. Der EOS-Import nutzt inzwischen [EosMergePreviewDialog.vue](LuxStage/web-app/src/components/EosMergePreviewDialog.vue), der farbcodiert zeigt, welche Kanäle neu aktiv, nicht mehr aktiv oder unangetastet sind.
+
+<details><summary>Ursprünglicher Befund</summary>
+
 `eos.import.confirm_empty.message` = „Keine aktiven Kanäle gefunden. Trotzdem importieren?" und `eos.reimport.message` = „Folgende Kanäle spielen in der neuen Version nicht mehr mit: {channels}. Trotzdem importieren?"
 
 Der Nutzer erfährt nicht, was bei „Ja" mit seinen bestehenden Notizen passiert.
 
 **Fix:** Dialogtexte um die Folge ergänzen (z. B. „Notizen bleiben erhalten, der Status wechselt auf inaktiv").
+</details>
+
+**Die Lücke bestand aber weiter:** Der Vorschau-Dialog zeigte, *welche* Kanäle betroffen sind, nicht was mit deren Daten passiert. Nach Prüfung des Merge-Codes ([useShowChannels.ts:305-318](LuxStage/web-app/src/composables/useShowChannels.ts#L305-L318)) — er legt nur fehlende Kanäle an und schreibt `eosActiveChannels`, löscht nichts — ist `eos.preview.consequence` ergänzt: „Es wird nichts gelöscht: Geräte, Farben und Notizen bleiben in allen Kanälen erhalten. Fehlende Kanäle werden angelegt, nicht mehr aktive nur als inaktiv markiert."
+
+**Die sechs toten Keys wurden entfernt.**
+
+<details><summary>Gelöschte Keys im Wortlaut</summary>
+
+```json
+"eos.import.confirm_empty.title":   "0 aktive Kanäle"                     | "0 active channels"
+"eos.import.confirm_empty.message": "Keine aktiven Kanäle gefunden. Trotzdem importieren?" | "No active channels found. Import anyway?"
+"eos.import.confirm_empty.confirm": "Importieren"                          | "Import"
+"eos.reimport.title":               "{n} Kanäle nicht mehr aktiv"          | "{n} channels no longer active"
+"eos.reimport.message":             "Folgende Kanäle spielen in der neuen Version nicht mehr mit: {channels}. Trotzdem importieren?" | "The following channels are no longer active: {channels}. Import anyway?"
+"eos.reimport.confirm":             "Importieren"                          | "Import"
+```
+</details>
 
 ---
 
@@ -537,6 +588,13 @@ Zwei Probleme:
 
 **Nicht angefasst:** 8.6 (Rollback-Erkennung über Textvergleich) — betrifft Fehlerbehandlung, nicht Übersetzung, eigener Punkt.
 
+**Lücke, bei Punkt 10 aufgefallen (Zeile `10a`):** Der verwendete Grep suchte nach Texten mit Großbuchstaben-Anfang und hat dadurch **`placeholder`-Attribute mit Kleinbuchstaben** übersehen — vor allem Beispielwerte der Form `z. B. …`. Betroffen sind rund 14 Stellen, die meisten in [TemplatesView.vue](LuxStage/web-app/src/views/TemplatesView.vue) (Zeilen 48, 405, 429, 458, 462, 466, 490, 494, 498), dazu [ShowsView.vue:90,94](LuxStage/web-app/src/views/ShowsView.vue#L90) und [RegisterView.vue:30](LuxStage/web-app/src/views/RegisterView.vue#L30). Drei weitere in FloorplanEditor wurden bei 5.3 direkt mitbehoben.
+
+Zum Auffinden des Rests:
+```
+grep -rnoE 'placeholder="[^"{][^"]*"' web-app/src/views/ web-app/src/components/
+```
+
 ### 8.6 Rollback-Erkennung über Textvergleich — **fragil**
 [UpdateView.vue:193](LuxStage/web-app/src/views/settings/UpdateView.vue#L193):
 ```js
@@ -612,7 +670,6 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | ~~1b~~ | ~~7.2 Kürzel „C" im Grundriss~~ | ✅ | Bedingung entfernt, Caps ergänzt |
 | ~~2~~ | ~~1.2 `auth.reset.hint` korrigieren~~ | ✅ | Reset-Link jetzt an SMTP-Konfiguration gekoppelt |
 | ~~3~~ | ~~1.3 / 7.5 Login-Feldbeschriftung~~ | ✅ | Installer legt Admin jetzt mit E-Mail an |
-| 3a | **7.5 Rest:** Bestandskonto `admin` nach Update nicht mehr anmeldbar | offen | Muss vor dem nächsten Release geklärt werden |
 | ~~3b~~ | ~~7.1 Fotos pro Seite im PDF~~ | ✅ | Wert serverseitig, PDF liest ihn |
 | ~~3c~~ | ~~7.6 Verlaufs-Umfang benennen~~ | ✅ | Limit, Umfang und Rückfrage im Panel |
 | ~~3d~~ | ~~Restore überschreibt den aktuellen Stand ungesichert~~ | ✅ | Sicherungs-Snapshot vor dem Überschreiben |
@@ -622,7 +679,8 @@ Folge: Nach der Wiederherstellung eines älteren Backups liegen Fotos im Verzeic
 | ~~8~~ | ~~2.3 Icon-Zuordnung entkoppeln~~ | ✅ | Neue Spalte `icon`; behebt zusätzlich doppelte Aufbau-Abschnitte |
 | 8a | **Neu aus 2.3:** Auto-Anlage des Aufbau-Abschnitts verlangt Admin | offen | Trifft nur leere Shows ohne Vorlage |
 | ~~9~~ | ~~3. übrige hardcodierte Strings~~ | ✅ | ~96 Stellen in 14 Dateien, labels-Defaults, tote Datei entfernt |
-| 10 | 5.x UI-Kontext ergänzen | Nach Bedarf | Reduziert Supportfragen |
+| ~~10~~ | ~~5.x UI-Kontext ergänzen~~ | ✅ | Vorschau-Dialog, Farb-Legende, Hilfetexte; 5.4 war überholt |
+| 10a | **Nachtrag zu 9:** ~14 hardcodierte `placeholder`-Attribute mit Kleinbuchstaben-Anfang | offen | Vom Punkt-9-Grep verpasst |
 | 11 | 3. i18n Register/Forgot-Seiten | Halber Tag | Ersteindruck für EN-Neukunden |
 
 Die Punkte 1–3 sind reine Textänderungen in `shared/locales/*.json` und zusammen in unter einer Stunde erledigt.
