@@ -53,3 +53,7 @@ Only **one** fields-type section is allowed per show at a time.
 ## Collapsing sections
 
 Each section has an **×** symbol in the top right to collapse/close the section.
+
+## Automatically generated text
+
+In the "Setup" section, below your own notes, a read-only area shows automatically generated text — separately for **lighting rigs** and **fly system** (bars), provided data has been entered in [Setup](./setup). The text summarises occupied positions, channels, fixtures, and colours, and can be selected and copied with a click (e.g. for cue sheets or emails to the director). It is not edited manually — it updates automatically along with the setup data.
