@@ -14,8 +14,8 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 - [x] **Presence / Live-Zusammenarbeit in der Web-App** — ✅ erledigt (2026-07-26): Abschnitt in `kanaele.md` (DE+EN) ergänzt.
 - [x] **Automatisch generierter Text** — ✅ erledigt (2026-07-26): Abschnitt in `info.md` (DE+EN) ergänzt.
 - [x] **Update-Benachrichtigung** — ✅ erledigt (2026-07-26): Tipp-Box in `einstellungen.md` (DE+EN) ergänzt.
-- [ ] **Gehostete Variante (SaaS) / Betreiber-Panel** — `server/routes/operator.js`, `Dockerfile.saas`, `docker-compose.saas.yml`, Mandantenverwaltung. Doku erwähnt luxstage.app nur als Tipp-Box, ohne eigene Seite (Registrierung, Mandanten, Kündigung/Löschung).
-- [ ] **Docker-Installation** — `installation.md` verweist nur in einer Tipp-Box auf `docker-compose.yml`, ohne Schritte. Entweder ausführen oder bewusst als „siehe Repo" belassen.
+- [x] **Gehostete Variante (SaaS) / Betreiber-Panel** — bewusst nicht dokumentiert (Entscheidung Christopher, 2026-07-26): intern, nicht für die öffentliche Kunden-Doku bestimmt.
+- [x] **Docker-Installation** — ✅ erledigt (2026-07-26): vollständiger Abschnitt in `installation.md` (DE+EN) mit Schritten, `.env`-Beispiel und Hinweis auf fehlendes automatisches HTTPS.
 
 ## B. Inhaltliche Fehler / Widersprüche
 
