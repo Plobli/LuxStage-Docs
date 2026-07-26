@@ -1,5 +1,7 @@
 # Export PDF
 
+Click the **"Export"** button in the top menu bar of a show → select **"PDF"**. The download starts directly, with no preview dialog.
+
 Exports the complete channel plan as a print-ready **PDF document**. The export contains:
 
 - Show name and date
