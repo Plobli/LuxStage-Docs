@@ -14,7 +14,13 @@ Two options: self-hosted – for example on a Raspberry Pi in the local theatre 
 
 ## Does LuxStage work offline?
 
-Yes. Both the iOS app and the web app display saved data even without an active server connection. Changes are synchronised as soon as the connection is restored.
+For reading yes, for editing no.
+
+The iOS app keeps recently loaded shows, channels, sections and photos locally and continues to display them without a server connection. It is built for reading: ticking off channels and adding or deleting photos require a connection, and editing the data itself happens in the web app.
+
+The web app requires an active server connection. If it drops, a banner appears and the show view is locked so no input is lost.
+
+Neither app offers offline editing with later synchronisation.
 
 ## Does LuxStage support multiple users?
 
