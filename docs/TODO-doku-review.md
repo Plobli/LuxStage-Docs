@@ -53,9 +53,9 @@ Stand: 2026-07-25. Vergleich `LuxStage-Docs/docs/{de,en}/` gegen `LuxStage/web-a
 
 ## E. Zweisprachigkeit (EN)
 
-- [ ] Alle DE-Seiten haben ein EN-Pendant mit identischer Zeilenzahl — inhaltlich übersetzt, strukturell synchron. **Gut.** Bei jeder Änderung aus A–D beide Sprachen mitziehen.
-- [ ] **EN-Dateinamen sind deutsch**: `en/webapp/kanaele.md`, `spielstaette-vorlage.md`, `en/ios/aufbau.md`, `einleuchten.md`. URLs für englische Kunden unverständlich (`/en/webapp/kanaele`). Umbenennen auf `channels.md`, `venue-template.md`, `setup.md`, `focus.md` — inkl. Anpassung `config.js` und aller internen Links. (Optional, aber sichtbar nach außen.)
-- [ ] **`en/webapp/versionsverlauf.md`** → `version-history.md`, `en/webapp/fotos.md` → `photos.md`, `en/webapp/archiv.md` → `archive.md`, `en/webapp/einstellungen.md` → `settings.md`, `en/webapp/grundriss.md` → `floor-plan.md`.
+- [x] Alle DE-Seiten haben ein EN-Pendant — ✅ weiterhin gepflegt, bei jeder Änderung in diesem Review beide Sprachen mitgezogen.
+- [x] **EN-Dateinamen sind deutsch** — ✅ erledigt (2026-07-26): `en/webapp/kanaele.md`→`channels.md`, `spielstaette-vorlage.md`→`venue-template.md`, `en/ios/aufbau.md`→`setup.md`, `einleuchten.md`→`focus.md`. Alle internen Links und `config.js` angepasst.
+- [x] **`en/webapp/versionsverlauf.md`** → `version-history.md`, `fotos.md` → `photos.md`, `archiv.md` → `archive.md`, `einstellungen.md` → `settings.md`, `grundriss.md` → `floor-plan.md` — ✅ erledigt (2026-07-26). Zusätzlich mitgezogen: `en/glossar.md` → `glossary.md`, `en/webapp/tastaturkuerzel.md` → `keyboard-shortcuts.md`, `en/ios/einstellungen.md` → `settings.md`.
 
 ## F. Struktur & Navigation
 
