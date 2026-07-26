@@ -59,6 +59,12 @@ A background image (e.g. a scan of the stage plan) can be added in two ways:
 - **Via the template floor plan:** Stored in the venue template and automatically inherited by all shows
 - **Manually:** Click the **↑ Upload** icon in the toolbar → select an image file
 
+Allowed formats: **PNG, JPG, SVG, WebP**. A PDF stage plan is not supported and must be converted first — an incorrect format shows "Invalid file type. Allowed: PNG, JPG, SVG, WebP".
+
+::: warning Only one background image per template
+A new background image replaces the old one immediately, without confirmation. Unlike photos in the Photos tab, the background image is **not compressed or resized** — a large scan stays at full size and is reloaded every time the floor plan is opened. For faster loading, it's worth resizing the image yourself beforehand.
+:::
+
 To remove: click the **⊠** icon.
 
 ## Export as PNG
