@@ -2,6 +2,10 @@
 
 Die **Einstellungen** sind über das Zahnrad-Symbol (⚙️) in der linken Seitenleiste erreichbar. Die Tabs **Konto** und **Darstellung** sieht jede Nutzerin und jeder Nutzer. Die Tabs **Backup**, **Server**, **Benutzerverwaltung**, **E-Mail / SMTP** und **Update** sind nur für Admins sichtbar.
 
+::: tip Update-Benachrichtigung
+Ist ein Server-Update verfügbar, zeigt ein kleiner Punkt am Einstellungen-Symbol in der Seitenleiste einen Hinweis darauf — sichtbar nur für Admins.
+:::
+
 ::: tip Gehostetes Team (luxstage.app)
 Bei einem gehosteten Team unter [luxstage.app](https://luxstage.app) übernimmt der Betreiber Serverbetrieb, Mailversand und Updates zentral.
 :::
