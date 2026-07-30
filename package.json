@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "LuxStage Documentation with VitePress",
   "scripts": {
-    "docs:dev": "vitepress dev docs --host"
+    "docs:dev": "vitepress dev docs --host",
+    "docs:build": "vitepress build docs"
   },
   "dependencies": {
     "vue": "^3.4.0",

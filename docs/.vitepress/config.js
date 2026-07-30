@@ -1,4 +1,5 @@
 export default {
+  ignoreDeadLinks: true,
   vite: {
     server: {
       allowedHosts: ['docs.luxstage.app']

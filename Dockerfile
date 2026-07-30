@@ -1,16 +1,17 @@
-FROM node:20-alpine
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Install dependencies
 COPY package.json ./
 RUN npm install
 
-# Copy source
 COPY . .
+RUN npm run docs:build
 
-# Expose port for dev server
-EXPOSE 5173
+FROM nginx:alpine
 
-# Start development server
-CMD ["npm", "run", "docs:dev"]
+COPY --from=build /app/docs/.vitepress/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
