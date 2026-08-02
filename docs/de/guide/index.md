@@ -1,23 +1,30 @@
 # Übersicht
 
-LuxStage ist die professionelle App für Beleuchtungsdokumentation im Theater oder auf Events — als native iOS-App und als Web-App.
+LuxStage ist eine App für Beleuchtungsdokumentation am Theater oder auf Events — als Web-App und iOS-App.
 
-## Zwei Apps. Ein System.
+### LuxStage-Server
 
-Ob am Mischpult oder auf der Bühne – LuxStage ist genau dort, wo du bist.
+Der Server verwaltet die Datenbank mit Shows, Vorlagen usw. Außerdem stellt der Server die Web-App bereit, welche über einen beliebigen Browser aufgerufen werden kann.
 
-### LuxStage für iOS
+Die Installation des selbstgehosteten Servers erfolgt mit wenigen Befehlen z.B. auf einem Raspberry Pi 4 oder eigenem VPS.
 
-Die native SwiftUI-App für iPhone und iPad. Schnell, responsiv und für Touch optimiert — ob am Mischpult oder auf der Bühne.
-
-- Optimiert für iPhone & iPad
-- Native SwiftUI – kein Browser nötig
-- Echtzeit-Sync mit dem Server
-- Offline-Lesemodus
+::: tip Kein eigener Server gewünscht?
+Diese Anleitung gilt für Self-Hosting. Alternativ gibt es LuxStage als gehosteten Service unter [luxstage.app](https://luxstage.app) — ganz ohne eigene Server-Installation.
+:::
 
 ### LuxStage im Browser
 
-Die Web-Anwendung läuft im Browser auf Mac, Windows, iPad oder jedem anderen Gerät. Die Installation des selbstgehosteten Servers erfolgt mit nur zwei Befehlen z.B. auf einem Raspberry Pi 4 oder eigenem VPS.
+Die Web-Anwendung läuft im Browser auf Mac, Windows, iPad oder jedem anderen Gerät. Hier wird die Dokumentation der Show angelegt.
+
+### LuxStage für iOS
+
+Die App für iPhone und iPad zum Aufrufen der Dokumentation und Steuerung von Scheinwerfern
+
+- Optimiert für iPhone & iPad
+- Echtzeit-Sync mit dem Server
+- Offline-Lesemodus
+- OSC-Steuerung von ETC Lichtpulten
+- Einleuchtmodus mit Notizen zu jeder Position und 1-Klick-Steuerung der Scheinwerfer
 
 ## Schnellstart in 10 Minuten
 

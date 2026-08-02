@@ -9,7 +9,9 @@ export default {
   description: 'Professionelles Beleuchtungsmanagement für das Theater',
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/img/logo.png' }]
+    ['link', { rel: 'icon', type: 'image/png', href: '/img/logo.png' }],
+    ['script', { defer: '', src: 'https://umami.moschu.net/script.js', 'data-website-id': 'ab4c6ea3-8423-4402-a3b3-a54149f5bb04' }],
+    ['script', { defer: '', src: 'https://umami.moschu.net/recorder.js', 'data-website-id': 'ab4c6ea3-8423-4402-a3b3-a54149f5bb04' }]
   ],
 
   locales: {
